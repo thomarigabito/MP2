@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: margin-box;
 }
 .container-fluid{
     margin: 0;
