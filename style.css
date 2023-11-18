@@ -34,7 +34,6 @@ nav{
 }
 .bannerimg{
     grid-area: bannerimg;
-    background-color: aqua;
     height: fit-content;
 }
 .bannertxt{
