@@ -90,15 +90,15 @@ nav{
 }
 .mission{
     grid-area: mission;
-    background-color: beige;
+    /* background-color: beige; */
 }
 .vission{
     grid-area: vission;
-    background-color: rgb(233, 201, 163);
+    /* background-color: rgb(233, 201, 163); */
 }
 .objective{
     grid-area: objective;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
 }
 
 
