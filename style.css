@@ -139,8 +139,9 @@ nav{
     /* background-color: rgb(244, 206, 158); */
 }
 footer{
-    display: flex;
-    height: 150px;
+    padding: 0;
+    margin: 0;
+    /* height: 150px; */
     background-color: cadetblue;
 }
 
