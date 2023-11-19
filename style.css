@@ -3,13 +3,18 @@
     padding:0;
     box-sizing: margin-box;
 }
+body{
+    background: linear-gradient(
+        to bottom right,
+        #45c270, #21cdc3
+    );
+}
 .container-fluid{
     margin: 0;
     padding: 0;
 }
 img{
     max-width: 100%;
-    aspect-ratio: 1/1;
 }
 
 nav{
@@ -19,6 +24,11 @@ nav{
     position: sticky;
     top: 0;
     z-index: 10;
+
+}
+.navbar-brand {
+    margin-left: 1rem;
+    width: 60px;
     padding: 0;
 }
 
@@ -26,28 +36,35 @@ nav{
 .banner{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: .9fr 200px;
+    grid-template-rows: 1fr 200px;
     grid-template-areas: 
-        'bannerimg bannerimg bannerimg bannerimg'
-        'bannertxt bannertxt bannertxt bannertxt';
+        'bannertxt bannertxt bannerimg bannerimg'
+        'bannertxt bannertxt bannerimg bannerimg ';
     height: fit-content;
 }
 .bannerimg{
     grid-area: bannerimg;
     height: fit-content;
+    margin: 0 auto;
 }
 .bannertxt{
     grid-area: bannertxt;
-    background-color: aquamarine;
+    margin: auto;
+
+    /* background-color: aquamarine; */
+}
+.explore{
+    border-radius: 10px;
+    margin: 1rem;
 }
 .carousel-item img{
     height: 90vh;
     object-fit:cover;
 }
 .bannertext{
-    position: absolute;
+    /* position: absolute;
     top: 45%;
-    left: 10%;
+    left: 10%; */
     background-color: rgba(161, 135, 135, 0.4);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(1px);
@@ -67,7 +84,7 @@ nav{
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
     grid-template-areas: 'mission vission objective';
-    height: 50vh;
+    min-height: fit-content;
     text-align: center;
     /* grid-gap: 2rem; */
 }
@@ -93,18 +110,33 @@ nav{
     'form form house'
     'feedback feedback feedback';
     height: 100vh;
+    
 }
-.form{
+
+.forms{
     grid-area:form ;
-    background-color: rgb(229, 189, 139);
+    /* background-color: rgb(229, 189, 139); */
+    background-color: rgba(161, 135, 135, 0.4);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(1px);
+    margin: 0 auto;
+    padding: 1rem 2rem;
 }
+.contactfrm{
+    width: 400px;
+    height: fit-content;
+}
+
 .feedback{
     grid-area: feedback;
-    background-color: rgb(244, 244, 190);
+    background-color: rgba(161, 135, 135, 0.3);
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    /* background-color: rgb(244, 244, 190); */
 }
 .house{
     grid-area: house;
-    background-color: rgb(244, 206, 158);
+    /* background-color: rgb(244, 206, 158); */
 }
 footer{
     display: flex;
