@@ -102,12 +102,27 @@
         <div class="about">
             <div class="mission">
                 <h1>mission</h1>
+                <p>"At Budget Bliss Residences, our mission is to redefine the journey to homeownership by seamlessly blending
+                affordability with the joy of finding your ideal home. We are committed to providing a platform where individuals can
+                explore housing options tailored to their budgets without compromising on quality or comfort. Our dedication to
+                transparency, innovation, and sustainable practices empowers you to make informed decisions, turning the dream of
+                homeownership into an accessible and gratifying reality. Join us on a mission to create homes that not only suit your
+                financial aspirations but also enrich your life with comfort and bliss."</p>
             </div>
             <div class="vission">
                 <h1>vission</h1>
+                <p>"Envisioning a future where every individual finds their perfect sanctuary effortlessly, Budget Bliss Residences aims to
+                be the catalyst for a housing revolution. We aspire to create a world where budget-friendly living meets exceptional
+                quality, and the pursuit of a dream home is a joyful and stress-free experience. Our vision is to set new standards in
+                affordability, sustainability, and comfort, making homeownership an attainable reality for all. Join us as we pave the
+                way for a community where every residence is a haven of budget-friendly bliss.</p>
             </div>
             <div class="objective">
                 <h1>objective</h1>
+                <p>"Budget Bliss Residences is on a mission to democratize homeownership. Our objectives are clear: empower you with easy
+                access to homes that align with your budget, pioneer affordability without compromise, and redefine the housing
+                landscape with sustainability and resilience at its core. Join us in the pursuit of homes that bring joy, comfort, and
+                financial ease, ensuring your journey to homeownership is as exciting as the destination itself."</p>
 
             </div>
         </div>
@@ -122,11 +137,11 @@
             <form action="/action_page.php">
                 <div class="mb-1 mt-1">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+                    <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="username" required>
                 </div>
                 <div class="mb-1 mt-1">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" autocomplete="user-email" required>
                 </div>
                 <div class="mb-1 mt-1">
                     <label for="comment">Comments:</label>
@@ -141,34 +156,41 @@
         <div class="feedback">
             <p id="feed">Feedback-section</p>
         </div>
+        <div class="computation">
+            <p id="sampComp"></p>
+        </div>
         <div class="house">
             <h3>Sample Housing Computation</h3>
             <div class="computationfrm">
-                <form action="/action_page.php">
+                <form>
                     <div class="mb-1 mt-1">
-                        <label for="name">What do you want to Compute?</label>
+                        <label for="loanCompute">What do you want to Compute?</label>
                         <input type="text" class="form-control" id="loanCompute" placeholder="Enter name" name="laon-Compute">
                     </div>
                     <div class="mb-1 mt-1">
-                        <label for="loan">Desire Loan Amount?</label>
-                        <input type="number" class="form-control" id="loanAmount" value="0.00" name="loan-amount">
+                        <label for="loanAmount">Desire Loan Amount?</label>
+                        <input type="number" class="form-control" id="loanAmount" name="loan-amount">
                     </div>
                     <div class="mb-1 mt-1">
-                        <label for="payment">Preferred Payment Period.</label>
-                        <input type="number" class="form-control" id="loanPayment" value="0.00" name="loan-payment">
+                        <label for="loanPayment">Preferred Payment Period.</label>
+                        <input type="number" class="form-control" id="loanPayment"  name="loan-payment">
                     </div>
                     <div class="mb-1 mt-1">
-                        <label for="loan">Preferred Fixed Pricing Period:</label>
-                        <input type="number" class="form-control" id="loanPeriod" value="" name="loan-period">
+                        <label for="loanPercent">Preferred Fixed Pricing Period:</label>
+                        <select name="" id="" class="form-select">
+                            <input type="number" class="form-control" id="loanPercent" name="loan-period">
+                            <option value="">3</option>
+                        </select>
+                        
                     </div>
-                    <button type="submit" class="btn btn-success mb-1 mt-1" style="padding: 5px 165px; border-radius: 10px;">Compute</button>
+                    <button type="button" class="btn btn-success mb-1 mt-1" style="padding: 5px 165px; border-radius: 10px;" onclick="myComputation()">Compute</button>
                 </form>
             </div>
         </div>
     </div>
    </div>
 
-   <footer class="container">
+   <!-- <footer class="container">
         <div class="social">
             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a>
@@ -180,7 +202,53 @@
         <div>
 
         </div>
-   </footer>
+   </footer> -->
+<footer>
+    <div class="content">
+        <div class="top">
+            <div class="logo-details">
+                <img src="Assets/logo.png">
+            </div>
+        </div>
+        <div class="link-boxes">
+            <ul class="box">
+                <li class="link_name">Company</li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">Our partners</a></li>
+            </ul>
+            <ul class="box">
+                <li class="link_name">Services</li>
+                <li><a href="#">Web development</a></li>
+                <li><a href="#">App development</a></li>
+                <li><a href="#">Logo design</a></li>
+                <li><a href="#">Card design</a></li>
+            </ul>
+            <ul class="box">
+                <li class="link_name">Account</li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">My account</a></li>
+                <li><a href="#">Prefrences</a></li>
+                <li><a href="#">Purchase</a></li>
+            </ul>
+            <ul class="box input-box">
+                <li class="link_name">Subscribe to newsletter</li>
+                <li><input type="text" placeholder="Enter your email"></li>
+                <li><input type="button" value="Subscribe"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-details">
+        <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 <a href="#">Budget Bliss Residences</a>All rights reserved</span>
+            <span class="policy_terms">
+                <a href="#">Privacy policy</a>
+                <a href="#">Terms & condition</a>
+            </span>
+        </div>
+    </div>
+</footer>
 
 
 
