@@ -45,26 +45,45 @@
 
   <!---------------LOG-IN PAGE SECTIION----------------------------->
 
-  <div class="container login-container">
-    <h2 class="text-center mb-4">Login Page</h2>
+ 
+    <div class="container" style="height: 90vh;">
 
-    <form>
-      <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter your username" required>
-      </div>
+        <div class="wrapper">
+        <h2 class="text-center mb-4"> Login Page </h2>   
 
-      <br />
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-      </div>
+        <form class="form">
+            <div class="username">
+                <input type="text" class="form-control" id="username" placeholder="Email" required>  
+                <i class="fa-solid fa-at at"></i>
+            </div>
+            <div class="pass">
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                <i class="fa-solid fa-lock lock"></i>
+            </div>
 
-      <br />
-      <button type="button" class="btn btn-primary btn-block">Login</button>
-    </form>
-  </div>
-  <br /> <br /> 
+            <div class="remember">
+
+                <div>
+                    <a href="signup.html"><span class="page-link-label">Forgot Password?</span></a>   
+                </div>
+                
+            </div>
+
+            <div class="login">
+                <button type="button" class="btn btn-primary btn-block" id="login">Login</button>   
+            </div>
+            
+            <p class="sign-up-label">
+                Don't have an account?<span class="sign-up-link"><a href="signup.html">Sign up</a></span>
+            </p>
+            
+        </div>
+
+        
+        </form>   
+        </div>
+    </div>
+
     <!---------------FOOTER SECTIION----------------------------->
 
     <footer>
