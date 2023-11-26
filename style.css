@@ -5,10 +5,35 @@
     font-family: 'Poppins' , 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
-    background: linear-gradient(
-        to bottom right,
-        #45c270, #21cdc3
-    );
+    background-image: repeating-linear-gradient(274deg, rgba(106, 108, 89, 0.04) 0px, 
+    rgba(106, 108, 89, 0.04) 1px, 
+    transparent 1px, transparent 11px,
+    rgba(106, 108, 89, 0.04) 11px,
+    rgba(106, 108, 89, 0.04) 12px,
+    transparent 12px, transparent 32px), 
+    repeating-linear-gradient(319deg, 
+    rgba(106, 108, 89, 0.04) 0px, 
+    rgba(106, 108, 89, 0.04) 1px, 
+    transparent 1px, transparent 11px, 
+    rgba(106, 108, 89, 0.04) 11px, 
+    rgba(106, 108, 89, 0.04) 12px,
+    transparent 12px, transparent 32px), 
+    repeating-linear-gradient(229deg, 
+    rgba(106, 108, 89, 0.04) 0px, 
+    rgba(106, 108, 89, 0.04) 1px, 
+    transparent 1px, transparent 11px, 
+    rgba(106, 108, 89, 0.04) 11px, 
+    rgba(106, 108, 89, 0.04) 12px, 
+    transparent 12px, transparent 32px), 
+    repeating-linear-gradient(364deg,
+    rgba(106, 108, 89, 0.04) 0px, 
+    rgba(106, 108, 89, 0.04) 1px, 
+    transparent 1px, transparent 11px, 
+    rgba(106, 108, 89, 0.04) 11px, 
+    rgba(106, 108, 89, 0.04) 12px, 
+    transparent 12px, transparent 32px), 
+    linear-gradient(319deg, rgb(69, 194, 112),
+    rgb(33, 205, 195));
 }
 .container-fluid{
     margin: 0;
@@ -86,12 +111,11 @@ select.form-control {
 /*------------ About Section ------------------*/
 .about{
     display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, auto);
     grid-template-areas: 'mission vission objective';
     min-height: fit-content;
     text-align: center;
     grid-column-gap: 2rem;
-    padding: 2rem;
     margin: 1rem 0;
 }
 .about p{
@@ -120,69 +144,96 @@ select.form-control {
 /*-------------- Contact Section --------------*/
 .contact{
     display: grid;
-    grid-template-columns: 400px 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 450px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
     grid-template-areas: 
     'form feedback '
     'house feedback';
-    grid-gap: .95rem;
+    grid-row-gap: 1rem;
     min-height:fit-content ;  
+    margin: 2rem;
      
 }
 
 .forms{
     grid-area: form;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255);
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(1px);
     border-radius: 8px;
     margin: 0 auto;
     padding: 1rem 2rem;
-    width: 400px ;
+    width: 100% ;
 }
 .house{
     grid-area: house;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgb(255, 255, 255);
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(1px);
+    border-radius: 10px;
     margin: 0 auto;
     padding: 1rem 2rem;
-    width: 400px;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 0 15px lightgray;
 
 }
 .computationfrm {
     width: 100%;
     height: fit-content;
 }
+.computationfrm h3{
+    font-size: 1.25rem;
+} 
 .computationfrm .btn{
-    width: 80%;
-    padding: 5px 165px;
+    width: 100%;
+    padding: 5px;
     border-radius: 10px;
+    align-items: center;
 }
 
+/*------------- Computation Output ----------------*/
 .computation{
     grid-area: computation;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    height: 20px;
+    height: fit-content;
+    margin: 0 2rem;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    margin-bottom:1.75rem ;
 }
 
 .mainComputation{
-    border:solid 1px;
+
 }
 .otherInfo{
-    border: solid 1px;
+    border-left: solid 1px;
+    border-right: solid 1px;
+    padding: .50rem;
 }
 .reminder{
-    border: solid 1px;  
+    padding: .50rem;
+}
+.reminder h4{
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 /*--------------- Feedback Section ---------------*/
 .feedback{
+    display: flex;
     grid-area: feedback;
-    background-color: rgba(161, 135, 135, 0.3);
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px); */
+    border: #000 1px solid;
 }
 
 
@@ -192,9 +243,9 @@ footer{
     padding: 0;
     margin: 0;
     background: linear-gradient(to top right,
-                #30824d, #6dd6d1);
+                #30824d45, #6dd6d159);
     -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     width: 100%;
 }
 footer .content {
@@ -228,13 +279,25 @@ footer .content .link-boxes .box {
     width: 60%;
     flex-wrap: wrap;
 }
-
+footer .content .link-boxes .socials{
+    color: white;
+    font-size: 2rem;
+    width: 60%;
+    flex-wrap: wrap;
+}
+footer .content .link-boxes .socials a {
+    color:#fff;
+}
+footer .content .link-boxes .socials a:hover {
+    color: lime
+}
 .content .link-boxes .box .link_name {
     color: #fff;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 10px;
     position: relative;
+    cursor: pointer;
 }
 
 .link-boxes .box .link_name::before {
@@ -264,6 +327,7 @@ footer .content .link-boxes .box {
 .content .link-boxes .box li a:hover {
     opacity: 1;
     text-decoration: underline;
+    color: lime;
 }
 
 .content .link-boxes .input-box {

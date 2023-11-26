@@ -40,7 +40,7 @@
                     <a class="nav-link" href="signup.html">Models</a>
                 </li>
                 <li class="btn nav-item btn-sm btn-outline-secondary m-1">
-                    <a class="nav-link" href="signup.html">Sign Up</a>
+                    <a class="nav-link" href="loginpage.html">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -188,17 +188,7 @@
             <p id="feed">Feedback-section</p>
         </div>
 
-        <div class="computation collapse" id="computation">
-            <div class="mainComputation">
-                <p id="sampComp"></p>
-            </div>
-            <div class="otherInfo"> 
-
-            </div>
-            <div class="reminder">
-
-            </div>
-        </div>
+        
 
         <div class="house">
             <div class="computationfrm">
@@ -273,27 +263,33 @@
                         
                     </div>
                     <div>
-                    <button type="button" class="btn btn-success mb-1 mt-1" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">Compute</button>
+                    <button type="button" class="btn btn-success" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">Compute</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+        <div class="computation collapse" id="computation">
+            <div class="mainComputation">
+                <p id="sampComp"></p>
+            </div>
+            <div class="otherInfo">
+                <p>The income required for your desired loan amount <br /> is approximately:<span id="amount"></span></p>
+            </div>
+            <div class="reminder">
+                <h4>Please be reminded that:</h4>
+                <ol>
+                    <li>Rates are effective as of July 1, 2023 and may change without prior notice</li>
+                    <li>Result appeared on this calculator is for reference only and NOT official.</li>
+                    <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.</li>
+                    <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
+                    <li>Terms and conditions apply.
+</li>
+                </ol>
+            </div>
+        </div>
    </div>
 
-   <!-- <footer class="container">
-        <div class="social">
-            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <div>
-
-        </div>
-        <div>
-
-        </div>
-   </footer> -->
 <footer>
     <div class="content">
         <div class="top">
@@ -302,6 +298,12 @@
             </div>
         </div>
         <div class="link-boxes">
+            <ul class="box socials">
+                <li class="link_name">Socials</li>
+                <l1><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></l1>
+                <l1><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></l1>
+                <l1><a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a></l1>
+            </ul>
             <ul class="box">
                 <li class="link_name">Company</li>
                 <li><a href="#">Home</a></li>

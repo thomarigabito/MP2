@@ -16,7 +16,8 @@ function myComputation() {
     let interest = amount * payment * percent
    
     interest = Number(interest)
-    document.getElementById("sampComp").innerHTML = "Principal & interest "+ interest;
+    document.getElementById("sampComp").innerHTML = "Principal & interest " + interest;
+    document.getElementById("amount").innerHTML = "4000";
 
 }   
 
