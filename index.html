@@ -47,7 +47,7 @@
     </nav>
 
     <!---------------BANNER SECTIION----------------------------->
-   <div class="container">
+   <div class="container-fluid">
         <div class="banner">
             <div class="bannerimg">
                 <div id="banner" class="carousel slide" data-bs-ride="carousel" style="margin: auto;">
@@ -101,7 +101,7 @@
 
 
    <!-----------ABOUT SECTION---------------------->
-   <div class="container">
+   <div class="container-fluid">
         <div class="about" id="accordion">
             <div class="mission">
                 <span><a  data-bs-toggle="collapse" data-bs-target="#missions"><i class="fa-solid fa-flag" ></i></a></span>
@@ -159,7 +159,8 @@
 
    <!------------CONTACT SECTION----------------------------->
 
-   <div class="container">
+   <div class="container-fluid">
+ 
     <div class="contact">
 
         <div class="forms">
@@ -200,9 +201,8 @@
         </div>
 
         <div class="house">
-            <h3>Sample Housing Computation</h3>
-
             <div class="computationfrm">
+                <h3>Sample Housing Computation</h3>
                 <form>
                     <div class="mb-1 mt-1">
                         <label for="loanCompute">What do you want to Compute?</label>
@@ -272,7 +272,9 @@
                         </select>
                         
                     </div>
-                    <button type="button" class="btn btn-success mb-1 mt-1" style="padding: 5px 165px; border-radius: 10px;" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">Compute</button>
+                    <div>
+                    <button type="button" class="btn btn-success mb-1 mt-1" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">Compute</button>
+                    </div>
                 </form>
             </div>
         </div>

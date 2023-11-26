@@ -40,15 +40,14 @@ select.form-control {
 }
 
 
-
+/*------------- Image Banner ---------------*/
 
 .banner{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 200px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-        'bannertxt bannertxt bannerimg bannerimg'
-        'bannertxt bannertxt bannerimg bannerimg ';
+        'bannertxt bannerimg';
     height: fit-content;
 }
 
@@ -60,36 +59,31 @@ select.form-control {
 .bannertxt{
     grid-area: bannertxt;
     margin: auto;
-
-    /* background-color: aquamarine; */
 }
 .explore{
     border-radius: 10px;
     margin: 1rem;
 }
 .carousel-item img{
+    width: 100%;
     height: 90vh;
     object-fit:cover;
 }
 .bannertext{
-    /* position: absolute;
-    top: 45%;
-    left: 10%; */
     background-color: rgba(161, 135, 135, 0.4);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(1px);
     padding: 2rem;
 }
+
 .bannertext h1 {
     color:rgb(255, 255, 255);
     font-size: 50px;
-    text-transform: capitalize;
-    
-    
+    text-transform: capitalize;   
 }
 
 
-
+/*------------ About Section ------------------*/
 .about{
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -99,7 +93,6 @@ select.form-control {
     grid-column-gap: 2rem;
     padding: 2rem;
     margin: 1rem 0;
-    /* grid-gap: 2rem; */
 }
 .about p{
     text-align: justify
@@ -115,50 +108,56 @@ select.form-control {
 }
 .mission{
     grid-area: mission;
-    /* background-color: beige; */
+
 }
 .vission{
     grid-area: vission;
-    /* background-color: rgb(233, 201, 163); */
 }
 .objective{
     grid-area: objective;
-    /* background-color: blanchedalmond; */
 }
 
-
+/*-------------- Contact Section --------------*/
 .contact{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto 1fr;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    'form form house house'
-    'computation computation computation computation'
-    'feedback feedback feedback feedback';
-    height: 100vh;   
+    'form feedback '
+    'house feedback';
+    grid-gap: .95rem;
+    min-height:fit-content ;  
+     
 }
 
 .forms{
     grid-area: form;
-    background-color: rgba(161, 135, 135, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(1px);
+    border-radius: 8px;
     margin: 0 auto;
     padding: 1rem 2rem;
     width: 400px ;
 }
 .house{
     grid-area: house;
-    background-color: rgba(161, 135, 135, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(1px);
     margin: 0 auto;
     padding: 1rem 2rem;
-    /* background-color: rgb(244, 206, 158); */
+    width: 400px;
+
 }
 .computationfrm {
-    width: 400px;
+    width: 100%;
     height: fit-content;
+}
+.computationfrm .btn{
+    width: 80%;
+    padding: 5px 165px;
+    border-radius: 10px;
 }
 
 .computation{
@@ -178,13 +177,12 @@ select.form-control {
     border: solid 1px;  
 }
 
-
+/*--------------- Feedback Section ---------------*/
 .feedback{
     grid-area: feedback;
     background-color: rgba(161, 135, 135, 0.3);
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px);
-    /* background-color: rgb(244, 244, 190); */
 }
 
 
@@ -193,19 +191,12 @@ select.form-control {
 footer{
     padding: 0;
     margin: 0;
-    /* height: 150px; */
-    background-color: cadetblue;
-}
-
-footer {
     background: linear-gradient(to top right,
                 #30824d, #6dd6d1);
     -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     width: 100%;
 }
-
-
 footer .content {
     max-width: 1250px;
     margin: auto;
@@ -345,7 +336,35 @@ footer .bottom-details .bottom_text {
     margin-right: 10px;
 }
 
-@media  screen {
+@media only screen and (max-width: 768px) {
+    .conta
+    .bannerimg {
+            width:100%
+        }
+    .contact {  
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-row-gap: 1rem;
+        grid-template-areas:
+            'house house' 
+            'form form'
+            'computation computation'
+            'feedback feedback';
+        height: fit-content;
+    }
+    .bannertext h1 {
+        color: rgb(255, 255, 255);
+        text-wrap: wrap;
+        font-size: 20px;
+        text-transform: capitalize;
+    }
+    .house {
+        width: 90%;
+
+    }
+    .forms{
+        width: 90%;
+    }
     
 }
 
