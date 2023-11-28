@@ -109,6 +109,22 @@ form p a:hover {
   transition: background 1s;
   cursor: pointer;
 }
+.btn-field-login{
+  width: 100%;
+}
+.btn-field-login button {
+  width: 48%;
+  margin-bottom: 10px;
+  background: linear-gradient( to right,#3c00a1, rgba(60, 17, 153, 0.647)) ;
+  color: #fff;
+  font-size: 16px;
+  height: 30px;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  transition: background 1s;
+  cursor: pointer;
+}
 .btn-field button.disable{
   background: #eaeaea;
   color: #3c00a0;
