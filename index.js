@@ -4,6 +4,11 @@ let amount;
 let payment;
 let percent;
 let interest;
+
+
+
+
+
     
 function myComputation() {
     amount = Number(amount);
@@ -13,11 +18,9 @@ function myComputation() {
     payment = document.getElementById("loanPayment").value;
     percent = document.getElementById("paymentPeriod").value;
     
-    let interest = amount * payment * percent
-   
-    interest = Number(interest)
-    document.getElementById("sampComp").innerHTML = "Principal & interest " + interest;
-    document.getElementById("amount").innerHTML = "4000";
-
+    let interest = amount * payment * percent;
+    interest = Number(interest);
+    document.getElementById("loanAmount").innerHTML = interest;
+    console.log(interest);
 }   
 

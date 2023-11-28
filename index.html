@@ -210,8 +210,8 @@
                         <label for="loanCompute">What do you want to Compute?</label>
                         <select class="form-control" id="loanCompute" name="paymentPeriod" required>
                             <option value=></option>
-                            <option value="">How much you can borrow based on your income?</option>
-                            <option value="">How much you can borrow based on the value of the property</option>
+                            <option value="a">How much you can borrow based on your income?</option>
+                            <option value="b">How much you can borrow based on the value of the property</option>
                         </select>
                     </div>
                     <div class="mb-1 mt-1">
@@ -281,22 +281,19 @@
             </div>
         </div>
     </div>
+
         <div class="computation collapse" id="computation">
-            <div class="mainComputation">
-                <p id="sampComp"></p>
-            </div>
             <div class="otherInfo">
-                <p>The income required for your desired loan amount <br /> is approximately:<span id="amount"></span></p>
+                <p id="loanAmount"></p>
             </div>
             <div class="reminder">
                 <h4>Please be reminded that:</h4>
                 <ol>
-                    <li>Rates are effective as of July 1, 2023 and may change without prior notice</li>
-                    <li>Result appeared on this calculator is for reference only and NOT official.</li>
-                    <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.</li>
-                    <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
-                    <li>Terms and conditions apply.
-</li>
+                    <li>Rates are effective as of July 1, 2023 and may <br /> change without prior notice</li>
+                    <li>Result appeared on this calculator is for reference <br /> only and NOT official.</li>
+                    <li>Actual loanable amount may vary depending on <br /> Pag-IBIG Fund’s validation and evaluation.</li>
+                    <li>Fixed pricing period is how long you want to<br /> lock-in your chosen rate.</li>
+                    <li>Terms and conditions apply.</li>
                 </ol>
             </div>
         </div>
