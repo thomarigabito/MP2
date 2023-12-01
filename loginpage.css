@@ -94,7 +94,8 @@ form p a:hover {
 .btn-field{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
+  align-items: center;
 }
 
 .btn-field button{
@@ -103,6 +104,7 @@ form p a:hover {
   color: #fff;
   font-size: 16px;
   height: 30px;
+  margin-top: 25px;
   border: 0;
   outline: 0;
   border-radius: 20px;
@@ -132,6 +134,14 @@ form p a:hover {
 .input-group{
   height: 280px;
 }
+.signin{
+  margin-top: 10px;
+}
+.container p{
+  font-size: 14px;
+  padding: 3px;
+  margin: 5px 0;
 
+}
 
 
