@@ -153,6 +153,21 @@ input {
     border-radius: 5px;
     padding: 15px 0 15px;
     background: #eee;
+    position: relative;
+}
+.box::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom:0;
+    right: 0;
+    /* background-color: rgba(163, 163, 163, 0.564); */
+    z-index: 5;
+    box-shadow: 0 0 35px #ffaaaa inset;
+}
+.box:hover::before {
+    box-shadow: 0 0 20px #ffaaaa;
 }
 
 .img-box {

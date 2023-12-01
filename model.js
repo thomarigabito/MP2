@@ -2,45 +2,48 @@
             {
                 id: 0,
                 image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-106399.jpg',
-                title: 'Villa',
+                title: 'Harmony Haven',
                 price: 1200000,
                 details: 'index.html'
             },
             {
                 id: 1,
                 image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-1396122.jpg',
-                title: 'Single House',
+                title: 'Serenity Suite',
                 price: 1500000,
                 details: 'index.html'
             },
             {
                 id: 2,
                 image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-1396132.jpg',
-                title: 'House Model 3',
+                title: 'Crestview Cottage',
                 price: 2300000,
                 details: 'index.html'
             },
             {
                 id: 3,
                 image: 'Assets/compilehousemodels1/pexels-curtis-adams-3555615.jpg',
-                title: 'House Model 4',
+                title: 'Radiant Retreat',
                 price: 3500000,
                 details: 'index.html'
             },
             {
                 id: 4,
                 image: 'Assets/compilehousemodels1/pexels-curtis-adams-3990589.jpg',
-                title: 'House Model 5',
+                title: 'Tranquil Terrace',
                 price: 2300000,
                 details: 'index.html'
             },
             {
                 id: 5,
                 image: 'Assets/compilehousemodels1/pexels-curtis-adams-5353946.jpg',
-                title: 'House Model 6',
+                title: 'Majestic Manor',
                 price: 4500000,
                 details: 'index.html'
             },
+            
+
+            
         ]
 
 

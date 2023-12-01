@@ -128,6 +128,8 @@ select.form-control {
     font-size: 50px;
     color: #000;
 }
+
+
 .icons{
     text-decoration: none;
     color: black
@@ -147,7 +149,11 @@ select.form-control {
 }
 .icons h1:hover{
     cursor: pointer;
-
+    color: #eee;
+}
+.about i:hover{
+    font-size: 50px;
+    color: #000;
 }
 
 
