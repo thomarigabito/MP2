@@ -28,6 +28,7 @@ signupForm.addEventListener("submit", function (event) {
   var password = signupForm.psw.value;
   var passwordRepeat = signupForm["psw-repeat"].value;
 
+
   // Validate the password match
   if (password !== passwordRepeat) {
     alert("Passwords do not match");
