@@ -74,7 +74,7 @@ signinForm.addEventListener("submit", function (event) {
     signinForm.reset();
 
     // Redirect to the hero page
-    window.location.href = "hero.html";
+    window.location.href = "index.html";
   } else {
     // Show an error message
     alert("Invalid username or password");
