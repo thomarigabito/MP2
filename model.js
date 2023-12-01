@@ -1,42 +1,42 @@
       const product = [
             {
                 id: 0,
-                image: 'compilehousemodels1/pexels-binyamin-mellish-106399.jpg',
+                image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-106399.jpg',
                 title: 'Villa',
                 price: 1200000,
                 details: 'index.html'
             },
             {
                 id: 1,
-                image: 'compilehousemodels1/pexels-binyamin-mellish-1396122.jpg',
+                image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-1396122.jpg',
                 title: 'Single House',
                 price: 1500000,
                 details: 'index.html'
             },
             {
                 id: 2,
-                image: 'compilehousemodels1/pexels-binyamin-mellish-1396132.jpg',
+                image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-1396132.jpg',
                 title: 'House Model 3',
                 price: 2300000,
                 details: 'index.html'
             },
             {
                 id: 3,
-                image: 'compilehousemodels1/pexels-curtis-adams-3555615.jpg',
+                image: 'Assets/compilehousemodels1/pexels-curtis-adams-3555615.jpg',
                 title: 'House Model 4',
                 price: 3500000,
                 details: 'index.html'
             },
             {
                 id: 4,
-                image: 'compilehousemodels1/pexels-curtis-adams-3990589.jpg',
+                image: 'Assets/compilehousemodels1/pexels-curtis-adams-3990589.jpg',
                 title: 'House Model 5',
                 price: 2300000,
                 details: 'index.html'
             },
             {
                 id: 5,
-                image: 'compilehousemodels1/pexels-curtis-adams-5353946.jpg',
+                image: 'Assets/compilehousemodels1/pexels-curtis-adams-5353946.jpg',
                 title: 'House Model 6',
                 price: 4500000,
                 details: 'index.html'
