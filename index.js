@@ -20,7 +20,6 @@ function myComputation() {
     
     let interest = amount * payment * percent;
     interest = Number(interest);
-    document.getElementById("loanAmount").innerHTML = interest;
-    console.log(interest);
+    document.getElementById("Amount").innerHTML = interest;
 }   
 
