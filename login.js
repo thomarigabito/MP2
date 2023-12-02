@@ -2,7 +2,6 @@
 var signupForm = document.getElementById("signup-form");
 var signinForm = document.getElementById("signin-form");
 
-
 // Get the signup and signin links
 var signupLink = document.getElementById("signup-link");
 var signinLink = document.getElementById("signin-link");
@@ -28,7 +27,6 @@ signupForm.addEventListener("submit", function (event) {
   var email = signupForm.email.value;
   var password = signupForm.psw.value;
   var passwordRepeat = signupForm["psw-repeat"].value;
-
 
   // Validate the password match
   if (password !== passwordRepeat) {
@@ -64,7 +62,7 @@ signinForm.addEventListener("submit", function (event) {
 
   // Get the user input values
   var username = signinForm.username.value;
-  var password = signinForm.psw.value;
+  var password = signinForm.psw2.value;
 
   // Get the user object from localStorage
   var user = JSON.parse(localStorage.getItem("user"));
@@ -81,3 +79,26 @@ signinForm.addEventListener("submit", function (event) {
     alert("Invalid username or password");
   }
 });
+
+//Hide and see for password
+function togglePasswordVisibility(eyeicon, input) {
+  if (input.type === "password") {
+    input.type = "text";
+    eyeicon.src = "eye-open.png";
+  } else {
+    input.type = "password";
+    eyeicon.src = "eye-close.png";
+  }
+}
+
+const eyeicon = document.getElementById("eyeicon");
+const psw = document.getElementById("psw");
+eyeicon.addEventListener("click", () => togglePasswordVisibility(eyeicon, psw));
+
+const eyeicon1 = document.getElementById("eyeicon1");
+const pswRepeat = document.getElementById("psw-repeat");
+eyeicon1.addEventListener("click", () => togglePasswordVisibility(eyeicon1, pswRepeat));
+
+const eyeicon2 = document.getElementById("eyeicon2");
+const psw2 = document.getElementById("psw2");
+eyeicon2.addEventListener("click", () => togglePasswordVisibility(eyeicon2, psw2));
