@@ -2,7 +2,6 @@
 var signupForm = document.getElementById("signup-form");
 var signinForm = document.getElementById("signin-form");
 
-
 // Get the signup and signin links
 var signupLink = document.getElementById("signup-link");
 var signinLink = document.getElementById("signin-link");
@@ -63,7 +62,7 @@ signinForm.addEventListener("submit", function (event) {
 
   // Get the user input values
   var username = signinForm.username.value;
-  var password = signinForm.psw.value;
+  var password = signinForm.psw2.value;
 
   // Get the user object from localStorage
   var user = JSON.parse(localStorage.getItem("user"));
@@ -80,3 +79,42 @@ signinForm.addEventListener("submit", function (event) {
     alert("Invalid username or password");
   }
 });
+
+let eyeicon = document.getElementById("eyeicon");
+let psw = document.getElementById("psw");
+
+eyeicon.onclick = function () {
+  if (psw.type == "password") {
+    psw.type = "text";
+    eyeicon.src = "eye-open.png";
+  } else {
+    psw.type = "password";
+    eyeicon.src = "eye-close.png";
+  }
+};
+
+let eyeicon1 = document.getElementById("eyeicon1");
+let pswRepeat = document.getElementById("psw-repeat");
+
+eyeicon1.onclick = function () {
+  if (pswRepeat.type == "password") {
+    pswRepeat.type = "text";
+    eyeicon1.src = "eye-open.png";
+  } else {
+    pswRepeat.type = "password";
+    eyeicon1.src = "eye-close.png";
+  }
+};
+
+let eyeicon2 = document.getElementById("eyeicon2");
+let psw2 = document.getElementById("psw2");
+
+eyeicon2.onclick = function () {
+  if (psw2.type == "password") {
+    psw2.type = "text";
+    eyeicon2.src = "eye-open.png";
+  } else {
+    psw2.type = "password";
+    eyeicon2.src = "eye-close.png";
+  }
+};
