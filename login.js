@@ -80,41 +80,25 @@ signinForm.addEventListener("submit", function (event) {
   }
 });
 
-let eyeicon = document.getElementById("eyeicon");
-let psw = document.getElementById("psw");
-
-eyeicon.onclick = function () {
-  if (psw.type == "password") {
-    psw.type = "text";
+//Hide and see for password
+function togglePasswordVisibility(eyeicon, input) {
+  if (input.type === "password") {
+    input.type = "text";
     eyeicon.src = "eye-open.png";
   } else {
-    psw.type = "password";
+    input.type = "password";
     eyeicon.src = "eye-close.png";
   }
-};
+}
 
-let eyeicon1 = document.getElementById("eyeicon1");
-let pswRepeat = document.getElementById("psw-repeat");
+const eyeicon = document.getElementById("eyeicon");
+const psw = document.getElementById("psw");
+eyeicon.addEventListener("click", () => togglePasswordVisibility(eyeicon, psw));
 
-eyeicon1.onclick = function () {
-  if (pswRepeat.type == "password") {
-    pswRepeat.type = "text";
-    eyeicon1.src = "eye-open.png";
-  } else {
-    pswRepeat.type = "password";
-    eyeicon1.src = "eye-close.png";
-  }
-};
+const eyeicon1 = document.getElementById("eyeicon1");
+const pswRepeat = document.getElementById("psw-repeat");
+eyeicon1.addEventListener("click", () => togglePasswordVisibility(eyeicon1, pswRepeat));
 
-let eyeicon2 = document.getElementById("eyeicon2");
-let psw2 = document.getElementById("psw2");
-
-eyeicon2.onclick = function () {
-  if (psw2.type == "password") {
-    psw2.type = "text";
-    eyeicon2.src = "eye-open.png";
-  } else {
-    psw2.type = "password";
-    eyeicon2.src = "eye-close.png";
-  }
-};
+const eyeicon2 = document.getElementById("eyeicon2");
+const psw2 = document.getElementById("psw2");
+eyeicon2.addEventListener("click", () => togglePasswordVisibility(eyeicon2, psw2));
