@@ -1,25 +1,25 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.box{
+.box {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(rgba(34, 74, 88, 0.9),rgba(84, 78, 111, 0.5)), url(Assets/RealEstateKeyHouse2.jpg);
+  background-image: linear-gradient(rgba(34, 74, 88, 0.9), rgba(84, 78, 111, 0.5)), url(Assets/RealEstateKeyHouse2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
-.form-box{
+.form-box {
   width: 90%;
   max-width: 450px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0px 20px 0 rgba(226, 229, 255, 0.37);
   backdrop-filter: blur(5px);
@@ -29,14 +29,14 @@
   text-align: center;
   padding: 50px 50px 60px;
 }
-.form-box h1{
+.form-box h1 {
   font-size: 30px;
   color: #3c00a0;
   margin-bottom: 45px;
   position: relative;
 }
-.form-box h1::after{
-  content: '';
+.form-box h1::after {
+  content: "";
   width: 50px;
   height: 4px;
   position: absolute;
@@ -46,7 +46,7 @@
   transform: translateX(-50%);
 }
 
-.input-field{
+.input-field {
   background: #eaeaea;
   margin: 15px 0;
   border-radius: 5px;
@@ -57,31 +57,29 @@
   overflow: hidden;
 }
 
-.input-field input{
+.input-field input {
   width: 100%;
   background: transparent;
   border: 0;
   outline: 0;
   padding: 10px 18px;
-
-
 }
-.input-field input:focus{
+.input-field input:focus {
   border: 0;
   outline: 0;
 }
 
-.input-field i{
-  margin-left: 15px ;
+.input-field i {
+  margin-left: 15px;
   color: #888;
 }
-form p{
+form p {
   text-align: left;
   font-size: 12px;
   margin-left: 5px;
   font-weight: 500;
 }
-form p a{
+form p a {
   margin-left: 3px;
   font-size: 14px;
   color: #3c00a0;
@@ -91,14 +89,14 @@ form p a{
 form p a:hover {
   text-decoration: underline;
 }
-.btn-field{
+.btn-field {
   width: 100%;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
-.btn-field button{
+.btn-field button {
   flex-basis: 48%;
   background: #3c00a0;
   color: #fff;
@@ -111,13 +109,13 @@ form p a:hover {
   transition: background 1s;
   cursor: pointer;
 }
-.btn-field-login{
+.btn-field-login {
   width: 100%;
 }
 .btn-field-login button {
   width: 48%;
   margin-bottom: 10px;
-  background: linear-gradient( to right,#3c00a1, rgba(60, 17, 153, 0.647)) ;
+  background: linear-gradient(to right, #3c00a1, rgba(60, 17, 153, 0.647));
   color: #fff;
   font-size: 16px;
   height: 30px;
@@ -127,21 +125,18 @@ form p a:hover {
   transition: background 1s;
   cursor: pointer;
 }
-.btn-field button.disable{
+.btn-field button.disable {
   background: #eaeaea;
   color: #3c00a0;
 }
-.input-group{
+.input-group {
   height: 280px;
 }
-.signin{
+.signin {
   margin-top: 10px;
 }
-.container p{
+.container p {
   font-size: 14px;
   padding: 3px;
   margin: 5px 0;
-
 }
-
-
