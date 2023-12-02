@@ -2,6 +2,7 @@
 var signupForm = document.getElementById("signup-form");
 var signinForm = document.getElementById("signin-form");
 
+
 // Get the signup and signin links
 var signupLink = document.getElementById("signup-link");
 var signinLink = document.getElementById("signin-link");
