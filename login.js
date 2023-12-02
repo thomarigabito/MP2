@@ -84,7 +84,7 @@ signinForm.addEventListener("submit", function (event) {
 function togglePasswordVisibility(eyeicon, input) {
   if (input.type === "password") {
     input.type = "text";
-    eyeicon.src = "eye-open.png";
+    eyeicon.src = "eye-open-blue.png";
   } else {
     input.type = "password";
     eyeicon.src = "eye-close.png";
