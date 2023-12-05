@@ -64,7 +64,7 @@ const categories = [...new Set(product.map((item) => {
         })
         displayItem(filteredData)
     });
-
+    
     const displayItem = (items) => {
         document.getElementById("root").innerHTML = items.map((item) => {
             var { image, title, price, details,} = item;
