@@ -41,7 +41,7 @@ var commentsData = [
     commentsData.forEach(function(comment) {
       var commentHtml = `
         <div class="col-sm-2 text-center">
-          <img src="Boyband1.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+          <img src="Assets/Boyband1.jpg" class="img-circle" height="65" width="65" alt="Avatar">
         </div>
         <div class="col-sm-10">
           <h4>${comment.author} <small>${comment.date}</small></h4>
