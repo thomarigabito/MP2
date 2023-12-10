@@ -50,74 +50,64 @@ img{
     max-width: 100%;
 }
 
-nav{
+.navbar{
+    display: flex;
+    justify-content: space-between;
     background-color: rgba(0, 0, 0, .3);
     -webkit-backdrop-filter: blur(7px);
     backdrop-filter: blur(7px);
     position: sticky;
     top: 0;
+    margin: 0;
     z-index: 10;
 }
 .navbar-brand {
     margin-left: 1rem;
     width: 60px;
-    padding: 0;
-}
-.nav-social {
-    margin-right: 1rem;
 }
 
 select.form-control {
     -webkit-appearance: menulist;
 }
-
-
-/*------------- Image Banner ---------------*/
-
-.banner{
+/*--------------Banner Section-------------------*/
+.banner-box{
     width: 100%;
     height: 90vh;
-}
-.banner .slide{
-    width: 100%;
-    height: 100%;
-}
-.bannerimg{
-    width: 100%;
-    height: 45%;
-}
-.carousel-inner{
-    width: 100%;
-}
-.card-img-top{
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
+    background-image: linear-gradient(rgba(84, 109, 100, 0.571), rgba(255, 255, 255, 0.516)), url(Assets/RealEstateInterior1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 50px .5fr 1fr .5fr 1fr 50px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
-.bannertxt{
-    width: 70%;
-    display: flex;
+.bannertext {
+    grid-area: 2 / 2 / 4 / 4;
     justify-content: center;
-    text-align: center;
+    margin: auto;
 }
-.explore{
-    border-radius: 10px;
-    margin: 1rem;
-}
-
-.text{
-    background-color: rgba(161, 135, 135, 0.4);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(1px);
-    padding: 2rem;
+.bannertext h2{
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.bannertext h1 {
-    color:rgb(255, 255, 255);
-    font-size: 50px;
-    text-transform: capitalize;   
+.bannertext button {
+    width: 20%;
+    outline: none;
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 20px;
 }
+.fa-arrow-down{
+    margin-left: 10px;
+
+}
+
 
 
 /*------------ About Section ------------------*/
@@ -315,7 +305,8 @@ select.form-control {
 .author-name {
     color: #333; /* Change this to the desired color for author names */
     font-weight: bold;
-  }
+}
+
 
 
 footer{
@@ -480,34 +471,14 @@ footer .bottom-details .bottom_text {
 }
 
 @media only screen and (max-width: 768px) {
-    .conta
     .bannerimg {
             width:100%
         }
-    .contact {  
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-row-gap: 1rem;
-        grid-template-areas:
-            'house house' 
-            'form form'
-            'computation computation'
-            'feedback feedback';
-        height: fit-content;
-    }
     .bannertext h1 {
         color: rgb(255, 255, 255);
         text-wrap: wrap;
         font-size: 20px;
         text-transform: capitalize;
     }
-    .house {
-        width: 90%;
-
-    }
-    .forms{
-        width: 90%;
-    }
-    
 }
 

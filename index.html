@@ -45,11 +45,15 @@
  <div class="container">
 
     <nav class="navbar navbar-expand-sm sticky-top">
-      <a class="navbar-brand" href="index.html"><img src="Assets/logo.png" width="50px" /></a>
+      <div>
+        <a class="navbar-brand" href="index.html"><img src="Assets/logo.png" width="50px" /></a> 
+      </div>
+      
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="btn nav-item btn-sm btn-outline-secondary m-1">
@@ -63,55 +67,14 @@
     </nav>
     <!---------------BANNER SECTIION----------------------------->
     
-      <div class="banner">
-
-        <div class="bannerimg">
-
-          <div id="banner" class="carousel slide" data-bs-ride="carousel" style="margin: auto">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active"></button>
-              <button type="button" data-bs-target="#banner" data-bs-slide-to="1"></button>
-              <button type="button" data-bs-target="#banner" data-bs-slide-to="2"></button>
-            </div>
-
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div>
-                  <img class="card-img-top" src="Assets/RealEstateFamily1.jpg" alt="Card image" style="width: 100%" />
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div >
-                  <img class="card-img-top" src="Assets/RealEstateHouses5.jpg" alt="Card image" style="width: 100%" />
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div>
-                  <img class="card-img-top" src="Assets/RealEstateInterior1.jpg" alt="Card image" style="width: 100%" />
-                </div>
-              </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </button>
-          </div>
-        </div>
-
-        <div class="bannertxt">
-          <div class="text">
-            <h1>
-              Welcome to a bright <br />
-              and wonderful future
-            </h1>
-            <button class="btn btn-sm btn-success explore">Explore Now</button>
-          </div>
-          
-        </div>
-
+    <div class="banner-box">
+      <div class="bannertext">
+        <h2>
+          Welcome to a bright
+          and wonderful future
+        </h2>
+        <button>Explore<i class="fa-solid fa-arrow-down"></i></button>
+      </div>
     </div>
     
     <hr>
@@ -193,29 +156,6 @@
         </div>
       </div>
 
-    <!------------CONTACT SECTION----------------------------->
-
-      <div class="contact">
-        <div class="forms">
-          <p>Contact us by feeling up this form</p>
-          <div class="contactfrm">
-            <form action="/action_page.php">
-              <div class="mb-1 mt-1">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="username" required />
-              </div>
-              <div class="mb-1 mt-1">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" autocomplete="user-email" required />
-              </div>
-              <div class="mb-1 mt-1">
-                <label for="comment">Comments:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-              </div>
-              <button type="submit" class="btn btn-outline-success">Submit</button>
-            </form>
-          </div>
-        </div>
 
         <!-------------JED for edit feedback----------------------->
       <div class="feedback">
