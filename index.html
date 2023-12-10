@@ -10,14 +10,14 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!-------------------------------BOOTSTRSP CDN--------------------------------------------------------------------->
 
     <!-------------------------------Font Awesome--------------------------------------------------------------------->
@@ -37,7 +37,6 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="weather.css" />
-
   </head>
   <body>
 
@@ -45,15 +44,11 @@
  <div class="container">
 
     <nav class="navbar navbar-expand-sm sticky-top">
-      <div>
-        <a class="navbar-brand" href="index.html"><img src="Assets/logo.png" width="50px" /></a> 
-      </div>
-      
+      <a class="navbar-brand" href="index.html"><img src="Assets/logo.png" width="50px" /></a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="btn nav-item btn-sm btn-outline-secondary m-1">
@@ -67,74 +62,104 @@
     </nav>
     <!---------------BANNER SECTIION----------------------------->
     
-    <div class="banner-box">
-      <div class="bannertext">
-        <h2>
-          Welcome to a bright
-          and wonderful future
-        </h2>
-        <button>Explore<i class="fa-solid fa-arrow-down"></i></button>
-      </div>
+      <div class="banner">
+
+        <div class="bannerimg">
+
+          <div id="banner" class="carousel slide" data-bs-ride="carousel" style="margin: auto">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#banner" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#banner" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#banner" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div>
+                  <img class="card-img-top" src="Assets/RealEstateFamily1.jpg" alt="Card image" style="width: 100%" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div >
+                  <img class="card-img-top" src="Assets/RealEstateHouses5.jpg" alt="Card image" style="width: 100%" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div>
+                  <img class="card-img-top" src="Assets/RealEstateInterior1.jpg" alt="Card image" style="width: 100%" />
+                </div>
+              </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="bannertxt">
+          <div class="text">
+            <h1>
+              Welcome to a bright <br />
+              and wonderful future
+            </h1>
+            <button class="btn btn-sm btn-success explore">Explore Now</button>
+          </div>
+          
+        </div>
+
     </div>
     
     <hr>
 
-    <!-----------ABOUT SECTION---------------------->
+      <!-----------ABOUT SECTION---------------------->
       <div class="about-container" id="accordion">
         <div class="box-mission card">
           <div class="card-box">
-              <div class="mission-title">
-                <span>
-                  <a class="icons" data-bs-toggle="collapse" data-bs-target="#missions"><i class="fa-solid fa-flag"></i></a>
-                </span>
-                <a class="abt" data-bs-toggle="collapse" data-bs-target="#missions">
-                  <h1>Mission</h1>
-                </a>
+            <div class="mission-title">
+              <span>
+                <a class="icons" data-bs-toggle="collapse" data-bs-target="#missions"><i class="fa-solid fa-flag"></i></a>
+              </span>
+              <a class="abt" data-bs-toggle="collapse" data-bs-target="#missions">
+                <h1>Mission</h1>
+              </a>
             </div>
-            <div  id="missions" class="mission-text collapse" data-bs-parent="#accordion">
-                <p>
-                  "At Budget Bliss Residences, 
-                  our mission is to redefine the journey to homeownership
-                  by seamlessly blending affordability with the joy of
-                  finding your ideal home. We are committed to providing a platform where individuals
-                  can explore housing options tailored to their budgets without compromising.
-                  on quality or comfort.
-                </p>
-            </div>
-          </div>
-          
-        </div>
-        
-        <div class="box-vision card">
-          <div class="card-box">
-              <div>
-                <span>
-                  <a class="icons" data-bs-toggle="collapse" data-bs-target="#visions"><i class="fa-solid fa-eye"></i></a>
-                </span>
-                <a class="abt" data-bs-toggle="collapse" data-bs-target="#visions"><h1>Vision</h1></a>
-          </div>
-          <div id="visions" class="visions-text collapse" data-bs-parent="#accordion">
+            <div id="missions" class="mission-text collapse" data-bs-parent="#accordion">
               <p>
-                "Envisioning a future where every individual
-                finds their perfect sanctuary effortlessly,
-                Budget Bliss Residences aims to be the catalyst
-                for a housing revolution. We aspire to create a 
-                world where budget-friendly living meets exceptional 
-                quality, and the pursuit of a dream home is a joyful 
-                and stress-free experience. Our vision is to set new 
-                standards in affordability, sustainability, and comfort, 
-                making homeownership an attainable reality for all. 
-                Join us as we pave the way for a community where every 
-                residence is a haven of budget-friendly bliss.
+                "At Budget Bliss Residences, our mission is to redefine the journey to homeownership by seamlessly blending affordability with the joy
+                of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to their
+                budgets without compromising. on quality or comfort.
               </p>
             </div>
           </div>
-        
+        </div>
+
+        <div class="box-vision card">
+          <div class="card-box">
+            <div>
+              <span>
+                <a class="icons" data-bs-toggle="collapse" data-bs-target="#visions"><i class="fa-solid fa-eye"></i></a>
+              </span>
+              <a class="abt" data-bs-toggle="collapse" data-bs-target="#visions"><h1>Vision</h1></a>
+            </div>
+            <div id="visions" class="visions-text collapse" data-bs-parent="#accordion">
+              <p>
+                "Envisioning a future where every individual finds their perfect sanctuary effortlessly, Budget Bliss Residences aims to be the
+                catalyst for a housing revolution. We aspire to create a world where budget-friendly living meets exceptional quality, and the pursuit
+                of a dream home is a joyful and stress-free experience. Our vision is to set new standards in affordability, sustainability, and
+                comfort, making homeownership an attainable reality for all. Join us as we pave the way for a community where every residence is a
+                haven of budget-friendly bliss.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="box-objective card">
           <div class="card-box">
-              <div>
+            <div>
               <span>
                 <a class="icons" data-bs-toggle="collapse" data-bs-target="#objectives"><i class="fa-solid fa-bullseye"></i></a>
               </span>
@@ -142,42 +167,61 @@
             </div>
             <div id="objectives" class="objective-text collapse" data-bs-parent="#accordion">
               <p>
-                "Budget Bliss Residences is on a mission to democratize homeownership.
-                Our objectives are clear: empower you with easy access to homes that 
-                align with your budget, pioneer affordability without compromise, 
-                and redefine the housing landscape with sustainability and resilience 
-                at its core. Join us in the pursuit of homes that bring joy, comfort, 
-                and financial ease, ensuring your journey to homeownership 
-                is as exciting as the destination itself."
+                "Budget Bliss Residences is on a mission to democratize homeownership. Our objectives are clear: empower you with easy access to homes
+                that align with your budget, pioneer affordability without compromise, and redefine the housing landscape with sustainability and
+                resilience at its core. Join us in the pursuit of homes that bring joy, comfort, and financial ease, ensuring your journey to
+                homeownership is as exciting as the destination itself."
               </p>
             </div>
           </div>
-          
         </div>
       </div>
 
+    <!------------CONTACT SECTION----------------------------->
+
+      <div class="contact">
+        <div class="forms">
+          <p>Contact us by feeling up this form</p>
+          <div class="contactfrm">
+            <form action="/action_page.php">
+              <div class="mb-1 mt-1">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="username" required />
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" autocomplete="user-email" required />
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+          </div>
+        </div>
 
         <!-------------JED for edit feedback----------------------->
-      <div class="feedback">
-        <h4>Leave a Comment:</h4>
-    <br />
-        
-            <form role="form" id="commentForm">
-              <div class="form-group">
-                <textarea class="form-control" rows="3" id="commentText" required></textarea>
+        <div class="feedback">
+          <h4>Leave a Comment:</h4>
+          <br />
+
+          <form role="form" id="commentForm">
+            <div class="form-group">
+              <textarea class="form-control" rows="3" id="commentText" required></textarea>
             </div>
-              <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
+            <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
           </form>
-    <br /> 
+          <br />
 
           <p><span class="badge" id="commentCount">2</span> Comments:</p>
-    <br />
+          <br />
 
-      <!-- Existing comments section -->
+          <!-- Existing comments section -->
           <div id="commentsSection" class="row">
-      <!-- Comments will be dynamically added here -->
-      </div>
-    </div>
+            <!-- Comments will be dynamically added here -->
+          </div>
+        </div>
         <!-------------JED for edit feedback----------------------->
 
         <div class="house">
@@ -288,132 +332,97 @@
           </ol>
         </div>
       </div>
-    
 
-    <!---weather---->
-    <div class="weatherCard">
-      <div class="search">
-        <input type="text" placeholder="enter city name" spellcheck="false" />
-        <button><img src="Images/search.png" alt="Search" /></button>
-      </div>
-      <div class="error">
-        <p>Invalid city name</p>
-      </div>
-      <div class="weather">
-        <img src="Images/rain.png" class="weather-icon" />
-        <h1 class="temp">0°c</h1>
-        <h2 class="city">Search City</h2>
-        <div class="details">
-          <div class="col">
-            <img src="Images/humidity.png" alt="Humidity icon" />
-            <div>
-              <p class="humidity">50%</p>
-              <p>Humidity</p>
+      <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              <img src="Assets/logo.png" />
             </div>
           </div>
-          <div class="col">
-            <img src="Images/wind.png" alt="Wind icon" />
-            <div>
-              <p class="wind">15 km/h</p>
-              <p>Wind Speed</p>
-            </div>
+          <div class="link-boxes">
+            <ul class="box socials">
+              <li class="link_name">Socials</li>
+              <l1
+                ><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a
+              ></l1>
+              <l1
+                ><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a
+              ></l1>
+              <l1
+                ><a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a
+              ></l1>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Our partners</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#">Sample Computation</a></li>
+              <li><a href="#">Housing Loan</a></li>
+              <li><a href="#">Rentals</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Prefrences</a></li>
+              <li><a href="#">Purchase</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Subscribe to newsletter</li>
+              <li><input type="text" placeholder="Enter your email" /></li>
+              <li><input type="button" value="Subscribe" /></li>
+            </ul>
           </div>
         </div>
-      </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 <a href="#">Budget Bliss Residences</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
     </div>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-    <footer>
-      <div class="content">
-        <div class="top">
-          <div class="logo-details">
-            <img src="Assets/logo.png" />
-          </div>
-        </div>
-        <div class="link-boxes">
-          <ul class="box socials">
-            <li class="link_name">Socials</li>
-            <l1
-              ><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a
-            ></l1>
-            <l1
-              ><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a
-            ></l1>
-            <l1
-              ><a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a
-            ></l1>
-          </ul>
-          <ul class="box">
-            <li class="link_name">Company</li>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="#">Our partners</a></li>
-          </ul>
-          <ul class="box">
-            <li class="link_name">Services</li>
-            <li><a href="#">Sample Computation</a></li>
-            <li><a href="#">Housing Loan</a></li>
-            <li><a href="#">Rentals</a></li>
-            <li><a href="#"></a></li>
-          </ul>
-          <ul class="box">
-            <li class="link_name">Account</li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">My account</a></li>
-            <li><a href="#">Prefrences</a></li>
-            <li><a href="#">Purchase</a></li>
-          </ul>
-          <ul class="box input-box">
-            <li class="link_name">Subscribe to newsletter</li>
-            <li><input type="text" placeholder="Enter your email" /></li>
-            <li><input type="button" value="Subscribe" /></li>
-          </ul>
-        </div>
-      </div>
-      <div class="bottom-details">
-        <div class="bottom_text">
-          <span class="copyright_text">Copyright © 2023 <a href="#">Budget Bliss Residences</a>All rights reserved</span>
-          <span class="policy_terms">
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms & condition</a>
-          </span>
-        </div>
-      </div>
-    </footer>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "112221078448122");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
 
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
 
- </div>
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
-
-<!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat">
-</div>
-
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "112221078448122");
-  chatbox.setAttribute("attribution", "biz_inbox");
-</script>
-
-<!-- Your SDK code -->
-<script>
-  window.fbAsyncInit = function () {
-    FB.init({
-      xfbml: true,
-      version: 'v18.0'
-    });
-  };
-
-  (function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 
     <script src="index.js"></script>
     <script src="weather.js"></script>
