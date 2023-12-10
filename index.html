@@ -193,32 +193,53 @@
         </div>
       </div>
 
-<hr>
+    <!------------CONTACT SECTION----------------------------->
 
+      <div class="contact">
+        <div class="forms">
+          <p>Contact us by feeling up this form</p>
+          <div class="contactfrm">
+            <form action="/action_page.php">
+              <div class="mb-1 mt-1">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="username" required />
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" autocomplete="user-email" required />
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="comment">Comments:</label>
+                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+              </div>
+              <button type="submit" class="btn btn-outline-success">Submit</button>
+            </form>
+          </div>
+        </div>
 
-        <!-------------JED feedback----------------------->
+        <!-------------JED for edit feedback----------------------->
         <div class="feedback">
                   
         <h4>Leave a Comment:</h4>
-        <br />
+    <br />
         
-          <form role="form" id="commentForm">
-            <div class="form-group">
-              <textarea class="form-control" rows="3" id="commentText" required></textarea>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
-          </form>
-          <br /> 
+<form role="form" id="commentForm">
+  <div class="form-group">
+    <textarea class="form-control" rows="3" id="commentText" required></textarea>
+  </div>
+  <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
+</form>
+<br /> 
 
-          <p><span class="badge" id="commentCount">2</span> Comments:</p>
-          <br />
+<p><span class="badge" id="commentCount">2</span> Comments:</p>
+<br />
 
-          <!-- Existing comments section -->
-          <div id="commentsSection" class="row">
-            <!-- Comments will be dynamically added here -->
-          </div>
-        </div>
-        <!-------------JED feedback----------------------->
+<!-- Existing comments section -->
+<div id="commentsSection" class="row">
+  <!-- Comments will be dynamically added here -->
+</div>
+</div>
+        <!-------------JED for edit feedback----------------------->
 
         <div class="house">
           <div class="computationfrm">
