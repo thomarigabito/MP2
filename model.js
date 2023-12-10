@@ -4,7 +4,7 @@
                 image: 'Assets/compilehousemodels1/pexels-binyamin-mellish-106399.jpg',
                 title: 'Harmony Haven',
                 price: 1200000,
-                details: 'index.html'
+                details: 'loginpage.html'
             },
             {
                 id: 1,
@@ -44,13 +44,8 @@
             
 
             
-        ]
-
-
-
-
-
-
+]
+        
 const categories = [...new Set(product.map((item) => {
         return item}))]
 

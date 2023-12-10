@@ -192,58 +192,21 @@ select.form-control {
 
 /*-------------- Contact Section --------------*/
 .contact{
-    display: grid;
-    grid-template-columns: 450px 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 0px;
-    grid-template-areas: 
-    'form feedback '
-    'house feedback';
-    grid-row-gap: 1rem;
-    min-height:fit-content ;  
-    margin: 2rem;
-     
-}
-
-.forms{
-    grid-area: form;
-    background-color: rgb(255, 255, 255);
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(1px);
-    border-radius: 8px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    width: 100% ;
-}
-.house{
-    grid-area: house;
-    background-color: rgb(255, 255, 255);
-    -webkit-backdrop-filter: blur(7px);
-    backdrop-filter: blur(1px);
-    border-radius: 10px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
+    display: flex;
     width: 100%;
-    outline: none;
-    box-shadow: 0 0 15px lightgray;
-
+    justify-content: space-between;    
 }
 
-.computationfrm {
-    width: 100%;
-    height: fit-content;
+.computaion-box{
+    width: 50%;
+    padding: 1rem;
 }
-.computationfrm h3{
-    font-size: 1.25rem;
-} 
-.computationfrm .btn{
-    width: 100%;
-    padding: 5px;
-    border-radius: 10px;
-    align-items: center;
-}
+.computaion-box .form{
+    width: 80%;
+    justify-content: center;
+    margin: auto;
 
+}
 /*------------- Computation Output ----------------*/
 .computation{
     display: flex;
@@ -256,7 +219,7 @@ select.form-control {
     box-shadow: 0 0 10px black;
     margin-bottom:1.75rem ;
     justify-content: space-around;
-    width: 50%;
+    height: 50%;
 }
 
 .otherInfo{
@@ -273,6 +236,7 @@ select.form-control {
 
 /*--------------- Feedback Section ---------------*/
 .feedback {
+    width: 50%;
     display: auto;
     padding: 10px 5px 5px 15px;
     grid-area: feedback;
