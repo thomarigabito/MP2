@@ -76,17 +76,17 @@
 
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="card" style="width: 400px">
+                <div>
                   <img class="card-img-top" src="Assets/RealEstateFamily1.jpg" alt="Card image" style="width: 100%" />
                 </div>
               </div>
-              <div class="card carousel-item">
-                <div class="card" style="width: 400px">
+              <div class="carousel-item">
+                <div >
                   <img class="card-img-top" src="Assets/RealEstateHouses5.jpg" alt="Card image" style="width: 100%" />
                 </div>
               </div>
-              <div class="card carousel-item">
-                <div class="card" style="width: 400px">
+              <div class="carousel-item">
+                <div>
                   <img class="card-img-top" src="Assets/RealEstateInterior1.jpg" alt="Card image" style="width: 100%" />
                 </div>
               </div>
@@ -193,53 +193,32 @@
         </div>
       </div>
 
-    <!------------CONTACT SECTION----------------------------->
+<hr>
 
-      <div class="contact">
-        <div class="forms">
-          <p>Contact us by feeling up this form</p>
-          <div class="contactfrm">
-            <form action="/action_page.php">
-              <div class="mb-1 mt-1">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" autocomplete="username" required />
-              </div>
-              <div class="mb-1 mt-1">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" autocomplete="user-email" required />
-              </div>
-              <div class="mb-1 mt-1">
-                <label for="comment">Comments:</label>
-                <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
-              </div>
-              <button type="submit" class="btn btn-outline-success">Submit</button>
-            </form>
-          </div>
-        </div>
 
-        <!-------------JED for edit feedback----------------------->
+        <!-------------JED feedback----------------------->
         <div class="feedback">
                   
         <h4>Leave a Comment:</h4>
         <br />
         
-<form role="form" id="commentForm">
-  <div class="form-group">
-    <textarea class="form-control" rows="3" id="commentText" required></textarea>
-  </div>
-  <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
-</form>
-<br /> 
+          <form role="form" id="commentForm">
+            <div class="form-group">
+              <textarea class="form-control" rows="3" id="commentText" required></textarea>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
+          </form>
+          <br /> 
 
-<p><span class="badge" id="commentCount">2</span> Comments:</p>
-<br />
+          <p><span class="badge" id="commentCount">2</span> Comments:</p>
+          <br />
 
-<!-- Existing comments section -->
-<div id="commentsSection" class="row">
-  <!-- Comments will be dynamically added here -->
-</div>
-</div>
-        <!-------------JED for edit feedback----------------------->
+          <!-- Existing comments section -->
+          <div id="commentsSection" class="row">
+            <!-- Comments will be dynamically added here -->
+          </div>
+        </div>
+        <!-------------JED feedback----------------------->
 
         <div class="house">
           <div class="computationfrm">
