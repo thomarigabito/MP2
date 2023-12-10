@@ -282,18 +282,40 @@ select.form-control {
 }
 
 /*--------------- Feedback Section ---------------*/
-.feedback{
-    display: flex;
+.feedback {
+    display: auto;
+    padding: 10px 5px 5px 15px;
     grid-area: feedback;
     justify-content: center;
     align-items: center;
-    /* background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px); */
-    border: #000 1px solid;
+    backdrop-filter: blur(1px);
+    border: blanchedalmond 1px solid;
 }
 
+  /* Added styles for scrolling */
+#postsSection {
+    max-height: 350px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
 
+.like-icon {
+    color: rgb(29, 194, 29);
+}
+
+.love-icon {
+    color: red;
+}
+
+.unlike-icon {
+    color: orange;
+}
+
+.author-name {
+    color: #333; /* Change this to the desired color for author names */
+    font-weight: bold;
+  }
 
 
 footer{
