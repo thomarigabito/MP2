@@ -21,10 +21,15 @@ function myComputation() {
     let interest = amount * payment * percent;
     interest = Number(interest);
     document.getElementById("Amount").innerHTML = interest;
-}   
+}
 
 
 
+
+
+
+
+//Feedback
 
 // Initialize postsData array
 let postsData = [];
