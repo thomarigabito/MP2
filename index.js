@@ -16,7 +16,9 @@ function myComputation() {
     percent = Number(percent);
     amount = document.getElementById("loanAmount").value;
     payment = document.getElementById("loanPayment").value;
-    percent = document.getElementById("paymentPeriod").value;
+  percent = document.getElementById("paymentPeriod").value;
+  
+  
     
     let interest = amount * payment * percent;
     interest = Number(interest);

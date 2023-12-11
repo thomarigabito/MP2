@@ -215,15 +215,14 @@ hr{
 /*------------- Computation Output ----------------*/
 .computation{
     display: flex;
+    flex-direction: row;
     height: fit-content;
     margin: auto;
     background: #fff;
-    padding: 1rem;
-    border-radius: 15px;
     box-shadow: 0 0 10px black;
-    margin-bottom:1.75rem ;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 50%;
+    width: 50%;
 }
 .otherInfo{
     border-right: solid 1px;

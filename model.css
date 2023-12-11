@@ -50,7 +50,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    width: 90%;
     height: 100vh;
+    margin: 0 auto;
 }
 
 .sidebar {
@@ -230,12 +232,20 @@ button {
     outline: none;
     border: 1px solid #333;
     background: lightsalmon;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #444;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 button a {
     text-decoration: none;
     color: #444;
-    font-weight: 700;
-    text-transform: uppercase;
-
+}
+.btn-box{
+    display: flex;
+    margin: 10px 0;
+    gap: 1rem;
+    
 }

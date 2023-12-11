@@ -71,9 +71,13 @@ const categories = [...new Set(product.map((item) => {
                     <div class='bottom'>
                         <p>${title}</p>
                         <h2>PHP ${price}.00</h2>
-                    <button><a href=${details}> Details </a> </button>
+                    </div>
+                    <div class='btn-box'>
+                        <button><a href=${details}> Details </a> </button>
+                        <button> Book </button>
                     </div>
                 </div>`
+                   
             )
         }).join('')
     };
