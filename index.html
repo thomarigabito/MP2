@@ -139,24 +139,23 @@
       
         <!-------------JED for edit feedback----------------------->
         <div class="feedback">
-          <h4>Leave a Comment:</h4>
-          <br />
+          <h3>Comment Section:</h3>
 
-          <form role="form" id="commentForm">
-            <div class="form-group">
-              <textarea class="form-control" rows="3" id="commentText" required></textarea>
+            <label for="authorName">Your Name:</label> <br />
+              <input type="text" style="width: 170px;" id="authorName" name="authorName">
+          <br />
+            <label for="postText">Leave a Comment:</label> <br />
+             <textarea id="postText" style="width: 300px;" name="postText" rows="3"></textarea>
+          <div>
+              <button type="button" class="btn btn-success" onclick="publishPost()">Submit</button>
             </div>
-            <button type="button" class="btn btn-primary" onclick="postComment()">Submit</button>
-          </form>
           <br />
+          <p><span class="badge" id="postCount">0</span> Posts:</p><br>
 
-          <p><span class="badge" id="commentCount">2</span> Comments:</p>
-          <br />
-
-          <!-- Existing comments section -->
-          <div id="commentsSection" class="row">
-            <!-- Comments will be dynamically added here -->
-          </div>
+  <!-- Wrapped posts section in a scrolling div -->
+  <div id="postsSection" class="row">
+    <!-- Posts will be dynamically added here -->
+  </div>
           <div id="postsSection" class="row">
             <!-- Posts will be dynamically added here -->
           </div>
