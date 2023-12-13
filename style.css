@@ -213,12 +213,13 @@ hr{
 
 }
 /*------------- Computation Output ----------------*/
-.computation{
-    display: flex;
+.main_computaion .computation{
     flex-direction: row;
     height: fit-content;
     margin: auto;
-    background: #fff;
+    backdrop-filter: brightness(0.8) blur(10px);
+    border-radius: 10px;
+    text-transform: uppercase;
     box-shadow: 0 0 10px black;
     justify-content: space-between;
     height: 50%;

@@ -16,14 +16,18 @@ function myComputation() {
     percent = Number(percent);
     amount = document.getElementById("loanAmount").value;
     payment = document.getElementById("loanPayment").value;
-  percent = document.getElementById("paymentPeriod").value;
-  
+    percent = document.getElementById("paymentPeriod").value;
+    comp = document.getElementsById("comp")
   
     
     let interest = amount * payment * percent;
     interest = Number(interest);
     document.getElementById("Amount").innerHTML = interest;
+
+    comp.style.display ="flex";
+
 }
+
 
 
 
