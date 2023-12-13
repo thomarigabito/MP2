@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>Document</title>
     <link rel="stylesheet" href="model.css" />
-    <link rel="stylesheet" href="weather.css" />
   </head>
 
   <body>
@@ -20,10 +22,7 @@
         </div>
         <hr style="margin: 15px; border: 1px solid #eee" />
         <div class="sidebody" style="height: 69vh">
-          <div class="searchbar">
-            <input placeholder="Search for house model" id="searchBar" name="searchBar" type="text" />
-            <i class="fa-solid fa-magnifying-glass glass"></i>
-          </div>
+          
 
           <!---weather-->
           <div class="weatherCard">
@@ -39,14 +38,14 @@
               <h1 class="temp">0°c</h1>
               <h2 class="city">Search City</h2>
               <div class="details">
-                <div class="col">
+                <div>
                   <img src="Images/humidity.png" alt="Humidity icon" />
                   <div>
                     <p class="humidity">50%</p>
                     <p>Humidity</p>
                   </div>
                 </div>
-                <div class="col">
+                <div>
                   <img src="Images/wind.png" alt="Wind icon" />
                   <div>
                     <p class="wind">15 km/h</p>
@@ -67,19 +66,47 @@
           </div>
         </div>
       </div>
+
+
+      
       <div class="data">
-        <div class="top">
-          <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
-        </div>
+
+        <!-- <div class="swiper">
+          <div class="swiper-wraper">
+            <div class="swiper-slide">
+              <img src="Assets/RealEstateHouses5.jpg">
+            </div>
+            <div class="swiper-slide" >
+              <img src="Assets/RealEstateFamily1.jpg">
+            </div>
+            <div class="swiper-slide">
+              <img src="Assets/RealEstateHouses5.jpg">
+            </div>
+          </div>
+        </div> -->
+
+        
         <div class="header">
           <p>House Model</p>
         </div>
+        
+        <div class="top">
+          <div class="searchbar">
+            <input placeholder="Search for house model" id="searchBar" name="searchBar" type="text" />
+            <i class="fa-solid fa-magnifying-glass glass"></i>
+          </div>
+          <a href="index.html" id="user"></a>
+        </div>
+       
         <div class="body">
           <div id="root"></div>
         </div>
       </div>
     </div>
+    </div>
     <script src="model.js"></script>
     <script src="weather.js"></script>
+    <script src="swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>
