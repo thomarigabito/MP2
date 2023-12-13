@@ -1,0 +1,22 @@
+.computation {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 10px black;
+  justify-content: space-between;
+  height: 50%;
+  width: 50%;
+}
+.otherInfo {
+  border-right: solid 1px;
+  padding: 0.5rem;
+}
+.reminder {
+  padding: 0.5rem;
+}
+.reminder h4 {
+  font-weight: bolder;
+  font-size: 18px;
+}
