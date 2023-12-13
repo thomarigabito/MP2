@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-------------------------------BOOTSTRSP CDN--------------------------------------------------------------------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-------------------------------BOOTSTRSP CDN--------------------------------------------------------------------->
+
+    <!-------------------------------Font Awesome--------------------------------------------------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-------------------------------Font Awesome--------------------------------------------------------------------->
+
+    <!-------------------------------Swiper.JS--------------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-------------------------------Swiper.JS--------------------------------------------------------------------->
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-sm sticky-top">
+        <a class="navbar-brand" href="index.html"><img src="Assets/logo.png" width="50px" /></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="btn nav-item btn-sm btn-outline-secondary m-1">
+              <a class="nav-link" href="model.html">Models</a>
+            </li>
+            <li class="btn nav-item btn-sm btn-outline-secondary m-1">
+              <a class="nav-link" href="loginpage.html">Sign Up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!---------------BANNER SECTIION----------------------------->
+
+      <div class="banner-box">
+        <div class="bannertext">
+          <h2>Welcome to a bright and wonderful future</h2>
+          <button>Explore <i class="fa-solid fa-arrow-down"></i></button>
+        </div>
+      </div>
+
+      <hr />
+
+      <!-----------ABOUT SECTION---------------------->
+      <div class="about-container" id="accordion">
+        <div class="box-mission card">
+          <div class="card-box">
+            <div class="mission-title">
+              <span>
+                <a class="icons" data-bs-toggle="collapse" data-bs-target="#missions"><i class="fa-solid fa-flag"></i></a>
+              </span>
+              <a class="abt" data-bs-toggle="collapse" data-bs-target="#missions">
+                <h1>Mission</h1>
+              </a>
+            </div>
+            <div id="missions" class="mission-text collapse" data-bs-parent="#accordion">
+              <p>
+                "At Budget Bliss Residences, our mission is to redefine the journey to homeownership by seamlessly blending affordability with the joy
+                of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to their
+                budgets without compromising. on quality or comfort.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box-vision card">
+          <div class="card-box">
+            <div>
+              <span>
+                <a class="icons" data-bs-toggle="collapse" data-bs-target="#visions"><i class="fa-solid fa-eye"></i></a>
+              </span>
+              <a class="abt" data-bs-toggle="collapse" data-bs-target="#visions"><h1>Vision</h1></a>
+            </div>
+            <div id="visions" class="visions-text collapse" data-bs-parent="#accordion">
+              <p>
+                "Envisioning a future where every individual finds their perfect sanctuary effortlessly, Budget Bliss Residences aims to be the
+                catalyst for a housing revolution. We aspire to create a world where budget-friendly living meets exceptional quality, and the pursuit
+                of a dream home is a joyful and stress-free experience. Our vision is to set new standards in affordability, sustainability, and
+                comfort, making homeownership an attainable reality for all. Join us as we pave the way for a community where every residence is a
+                haven of budget-friendly bliss.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="box-objective card">
+          <div class="card-box">
+            <div>
+              <span>
+                <a class="icons" data-bs-toggle="collapse" data-bs-target="#objectives"><i class="fa-solid fa-bullseye"></i></a>
+              </span>
+              <a class="abt" data-bs-toggle="collapse" data-bs-target="#objectives"><h1>Objectives</h1></a>
+            </div>
+            <div id="objectives" class="objective-text collapse" data-bs-parent="#accordion">
+              <p>
+                "Budget Bliss Residences is on a mission to democratize homeownership. Our objectives are clear: empower you with easy access to homes
+                that align with your budget, pioneer affordability without compromise, and redefine the housing landscape with sustainability and
+                resilience at its core. Join us in the pursuit of homes that bring joy, comfort, and financial ease, ensuring your journey to
+                homeownership is as exciting as the destination itself."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!------------CONTACT SECTION----------------------------->
+      <div class="contact">
+        <!-------------JED for edit feedback----------------------->
+        <div class="feedback">
+          <h3>Comment Section:</h3>
+
+          <label for="authorName">Your Name:</label> <br />
+          <input type="text" style="width: 170px" id="authorName" name="authorName" />
+          <br />
+          <label for="postText">Leave a Comment:</label> <br />
+          <textarea id="postText" style="width: 300px" name="postText" rows="3"></textarea>
+          <div>
+            <button type="button" class="btn btn-success" onclick="publishPost()">Submit</button>
+          </div>
+          <br />
+          <p><span class="badge" id="postCount">0</span> Posts:</p>
+          <br />
+
+          <!-- Wrapped posts section in a scrolling div -->
+          <div id="postsSection" class="row">
+            <!-- Posts will be dynamically added here -->
+          </div>
+          <div id="postsSection" class="row">
+            <!-- Posts will be dynamically added here -->
+          </div>
+        </div>
+
+        <!-------------JED for edit feedback----------------------->
+
+        <div class="computaion-box">
+          <div class="computationfrm">
+            <h3>Sample Housing Computation</h3>
+            <form class="form">
+              <div class="mb-1 mt-1">
+                <label for="loanCompute">What do you want to Compute?</label>
+                <select class="form-control" id="loanCompute" name="paymentPeriod" required>
+                  <option value=""></option>
+                  <option value="a">How much you can borrow based on your income?</option>
+                  <option value="b">How much you can borrow based on the value of the property</option>
+                </select>
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="loanAmount">Desire Loan Amount?</label>
+                <input type="number" class="form-control" id="loanAmount" name="loan-amount" />
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="loanPayment" class="form-label">Preferred Payment Period.</label>
+                <select class="form-control" id="loanPayment" name="loanPayment" required>
+                  <option value=""></option>
+                  <option value="1">1 year</option>
+                  <option value="2">2 year</option>
+                  <option value="3">3 year</option>
+                  <option value="4">4 year</option>
+                  <option value="5">5 year</option>
+                  <option value="6">6 year</option>
+                  <option value="7">7 year</option>
+                  <option value="8">8 year</option>
+                  <option value="9">9 year</option>
+                  <option value="10">10 year</option>
+                  <option value="11">11 year</option>
+                  <option value="12">12 year</option>
+                  <option value="13">13 year</option>
+                  <option value="14">14 year</option>
+                  <option value="15">15 years</option>
+                  <option value="16">16 year</option>
+                  <option value="17">17 year</option>
+                  <option value="18">18 year</option>
+                  <option value="19">19 year</option>
+                  <option value="20">20 years</option>
+                  <option value="21">21 years</option>
+                  <option value="22">22 years</option>
+                  <option value="23">23 years</option>
+                  <option value="24">24 years</option>
+                  <option value="25">25 years</option>
+                  <option value="26">26 years</option>
+                  <option value="27">27 years</option>
+                  <option value="28">28 years</option>
+                  <option value="29">29 years</option>
+                  <option value="30">30 years</option>
+                </select>
+              </div>
+              <div class="mb-1 mt-1">
+                <label for="paymentPeriod" class="form-label">Preferred Fixed Pricing Period:</label>
+                <select class="form-control" id="paymentPeriod" name="paymentPeriod" required>
+                  <option value=""></option>
+                  <option value="0.0575">1 Year; 5.75%</option>
+                  <option value="0.0625">3 Years; 6.25%</option>
+
+                  <option value="0.065">5 Years; 6.5%</option>
+
+                  <option value="0.07125">10 Years; 7.125%</option>
+                  <option value="0.0775">15 years; 7.75%</option>
+
+                  <option value="0.085">20 years; 8.5%</option>
+
+                  <option value="0.09125">25 years; 9.125%</option>
+
+                  <option value="0.0975">30 years; 9.75%</option>
+                </select>
+              </div>
+              <div>
+                <button type="button" class="btn btn-success" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
+                  Compute
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="computation collapse" id="computation">
+        <div class="otherInfo">
+          <h4>This is a Sample Computation</h4>
+          <span>Principal/Interest</span>
+          <p id="Amount"></p>
+          <span></span>
+        </div>
+
+        <div class="reminder">
+          <h4>Please be reminded that:</h4>
+          <ol>
+            <li>
+              Rates are effective as of July 1, 2023 and may <br />
+              change without prior notice
+            </li>
+            <li>
+              Result appeared on this calculator is for reference <br />
+              only and NOT official.
+            </li>
+            <li>
+              Actual loanable amount may vary depending on <br />
+              Pag-IBIG Fund’s validation and evaluation.
+            </li>
+            <li>
+              Fixed pricing period is how long you want to<br />
+              lock-in your chosen rate.
+            </li>
+            <li>Terms and conditions apply.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-------------------FOOTER------------------------------>
+      <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              <img src="Assets/logo.png" />
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box socials">
+              <li class="link_name">Socials</li>
+              <l1
+                ><a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a
+              ></l1>
+              <l1
+                ><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a
+              ></l1>
+              <l1
+                ><a href="https://www.instagram.com/accounts/login/"><i class="fa-brands fa-instagram"></i></a
+              ></l1>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Company</li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Our partners</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Services</li>
+              <li><a href="#">Sample Computation</a></li>
+              <li><a href="#">Housing Loan</a></li>
+              <li><a href="#">Rentals</a></li>
+              <li><a href="#"></a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Account</li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">My account</a></li>
+              <li><a href="#">Prefrences</a></li>
+              <li><a href="#">Purchase</a></li>
+            </ul>
+            <ul class="box input-box">
+              <li class="link_name">Subscribe to newsletter</li>
+              <li><input type="text" placeholder="Enter your email" /></li>
+              <li><input type="button" value="Subscribe" /></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 <a href="#">Budget Bliss Residences</a>All rights reserved</span>
+            <span class="policy_terms">
+              <a href="#">Privacy policy</a>
+              <a href="#">Terms & condition</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+
+      <!----------------MESSENGER API---------------------------->
+    </div>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "112221078448122");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v18.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+    <script src="index.js"></script>
+    <script src="weather.js"></script>
+  </body>
+</html>
