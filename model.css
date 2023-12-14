@@ -10,6 +10,10 @@ img {
     aspect-ratio: 1/1;
     object-fit: cover;
 }
+body {
+    position: relative;
+    height: 100%;
+}
 
 
 body {
@@ -346,9 +350,21 @@ button a {
 
 
 
-.swiper .swiper-slide{
+/*--------swiper---------- */
+swiper-container {
+    width: 100%;
+    padding-top: 10px;
+    
+}
+
+swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
+}
+
+swiper-slide img {
+    display: block;
+    width: 100%;
 }
