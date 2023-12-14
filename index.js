@@ -1,15 +1,9 @@
 
-
 let amount;
 let payment;
 let percent;
 let interest;
 
-
-
-
-
-    
 function myComputation() {
     amount = Number(amount);
     payment = Number(payment);
@@ -17,15 +11,15 @@ function myComputation() {
     amount = document.getElementById("loanAmount").value;
     payment = document.getElementById("loanPayment").value;
     percent = document.getElementById("paymentPeriod").value;
-    comp = document.getElementsById("comp")
+    dpr = .10;
   
-    
     let interest = amount * payment * percent;
+    let downpayment = amount * dpr;
+    downpayment = Number(downpayment);
     interest = Number(interest);
+  
     document.getElementById("Amount").innerHTML = interest;
-
-    comp.style.display ="flex";
-
+    document.getElementById("Dp").innerHTML = downpayment; 
 }
 
 

@@ -33,26 +33,30 @@
       }
 
       /*------------- Computation Output ----------------*/
-      .main_computaion .computation {
-        display: flex;
-        flex-direction: row;
-        height: fit-content;
-        backdrop-filter: brightness(0.8) blur(10px);
-        border-radius: 10px;
-        text-transform: uppercase;
-        box-shadow: 0 0 10px black;
-        justify-content: space-between;
-        height: 50%;
-        width: 50%;
+
+      .main_computation .computation{
+          display: flex;
+          flex-basis: 90%;
+          flex-direction: row;
+          height: fit-content;
+          backdrop-filter: brightness(0.8) blur(10px);
+          border-radius: 10px;
+          text-transform: uppercase;
+          box-shadow: 0 0 10px black;
+          justify-content: space-between;
+          height: 50%;
+          width: 50%;
       }
-      .otherInfo {
-        border-right: solid 1px;
-        padding: 0.5rem;
-        color: #fff;
+      .otherInfo{
+          flex-basis: 50%;
+          border-right: solid 1px;
+          padding: .50rem;
+          color: #fff;
       }
-      .reminder {
-        padding: 0.5rem;
-        color: #fff;
+      .reminder{
+        flex-wrap: wrap;
+          padding: .50rem;
+          color: #fff;
       }
       .reminder h4 {
         font-weight: bolder;
@@ -176,7 +180,7 @@
     </header>
 
     <div class="container-fluid col-sm-12 col-md-10 col-lg-10 d-flex justify-content-center h-75 mt-2">
-      <div class="row col-12 flex-lg-row-reverse main_computaion">
+      <div class="row col-12 flex-lg-row-reverse main_computation">
         <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
           <img class="col-10" src="./Assets/finalLogo.png" alt="" />
         </div>
@@ -263,36 +267,33 @@
         </div>
 
         <div class="collapse" id="computation">
-          <div class="computation">
-            <div class="otherInfo">
-              <h4>This is a Sample Computation</h4>
-              <span>Principal/Interest</span>
-              <p id="Amount"></p>
-              <span></span>
-            </div>
 
-            <div class="reminder">
-              <h4>Please be reminded that:</h4>
-              <ol>
-                <li>
-                  Rates are effective as of July 1, 2023 and may <br />
-                  change without prior notice
-                </li>
-                <li>
-                  Result appeared on this calculator is for reference <br />
-                  only and NOT official.
-                </li>
-                <li>
-                  Actual loanable amount may vary depending on <br />
-                  Pag-IBIG Fund’s validation and evaluation.
-                </li>
-                <li>
-                  Fixed pricing period is how long you want to<br />
-                  lock-in your chosen rate.
-                </li>
-                <li>Terms and conditions apply.</li>
-              </ol>
-            </div>
+            <div class="computation" >
+                <div class="otherInfo">
+                    <h4>This is a Sample Computation</h4>
+                    <span>Simple Interest</span>
+                    <p id="Amount"></p>
+                    <span>Down Payment</span><p id="Dp"></p>
+                </div>
+                
+                <div class="reminder">
+                    <h4>Please be reminded that:</h4>
+                        <ol>
+                          <li>
+                            Result appeared on this calculator is for reference
+                            only and NOT official.
+                          </li>
+                          <li>
+                            Actual loanable amount may vary depending on
+                            Pag-IBIG Fund’s validation and evaluation.
+                          </li>
+                          <li>
+                            Fixed pricing period is how long you want to
+                            lock-in your chosen rate.
+                          </li>
+                          <li>Terms and conditions apply.</li>
+                        </ol>
+                </div>
           </div>
         </div>
       </div>
