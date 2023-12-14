@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Whisper&display=swap" rel="stylesheet" />
 
-    
     <title>BBR</title>
     <style>
       body {
@@ -34,43 +33,125 @@
       }
 
       /*------------- Computation Output ----------------*/
-      .main_computaion .computation{
-          display: flex;
-          flex-direction: row;
-          height: fit-content;
-          backdrop-filter: brightness(0.8) blur(10px);
-          border-radius: 10px;
-          text-transform: uppercase;
-          box-shadow: 0 0 10px black;
-          justify-content: space-between;
-          height: 50%;
-          width: 50%;
+      .main_computaion .computation {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        backdrop-filter: brightness(0.8) blur(10px);
+        border-radius: 10px;
+        text-transform: uppercase;
+        box-shadow: 0 0 10px black;
+        justify-content: space-between;
+        height: 50%;
+        width: 50%;
       }
-      .otherInfo{
-          border-right: solid 1px;
-          padding: .50rem;
-          color: #fff;
+      .otherInfo {
+        border-right: solid 1px;
+        padding: 0.5rem;
+        color: #fff;
       }
-      .reminder{
-          padding: .50rem;
-          color: #fff;
+      .reminder {
+        padding: 0.5rem;
+        color: #fff;
       }
-      .reminder h4{
-          font-weight: bolder;
-          font-size: 18px;
-          color: #fff;
+      .reminder h4 {
+        font-weight: bolder;
+        font-size: 18px;
+        color: #fff;
       }
-      .reminder li{
-          font-weight: bolder;
-          font-size: 16px;
-          color: #fff;
+      .reminder li {
+        font-weight: bolder;
+        font-size: 16px;
+        color: #fff;
       }
-      .collapse{
+      .collapse {
         display: flex;
         justify-content: center;
-        margin-top: .53rem;
+        margin-top: 0.53rem;
         margin-bottom: 1rem;
         height: fit-content;
+      }
+      /*--------------Button Design-----------------*/
+      .bn13 {
+        display: inline-block;
+        padding: 0.65em 1.6em;
+        border: 3px solid #ffffff;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 10px;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center;
+        transition: all 0.2s;
+        animation: bn13bouncy 2s infinite linear;
+        position: relative;
+        background-color: #000000;
+      }
+
+      .bn13:hover {
+        background-color: rgb(0, 0, 0);
+        color: #000000;
+      }
+
+      @keyframes bn13bouncy {
+        0% {
+          top: 0em;
+        }
+        40% {
+          top: 0em;
+        }
+        43% {
+          top: -0.9em;
+        }
+        46% {
+          top: 0em;
+        }
+        48% {
+          top: -0.4em;
+        }
+        50% {
+          top: 0em;
+        }
+        100% {
+          top: 0em;
+        }
+      }
+      /*----------calButton-------------*/
+      .bn632-hover {
+        width: 160px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 20px;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .bn632-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .bn632-hover:focus {
+        outline: none;
+      }
+
+      .bn632-hover.bn25 {
+        background-image: linear-gradient(to right, #29323c, #485563, #2b5876, #4e4376);
+        box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
       }
     </style>
   </head>
@@ -88,7 +169,7 @@
             <li><a href="#" class="nav-link px-2 text-white">About</a></li>
           </ul>
           <div class="text-end">
-            <button type="button" class="btn btn-warning">Sign-up</button>
+            <button type="button" class="bn13">Sign-up</button>
           </div>
         </div>
       </div>
@@ -172,7 +253,7 @@
                   </select>
                 </div>
                 <div>
-                  <button type="button" class="btn btn-success" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
+                  <button type="button" class="bn632-hover bn25" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
                     Compute
                   </button>
                 </div>
@@ -181,38 +262,37 @@
           </div>
         </div>
 
-
         <div class="collapse" id="computation">
-        <div class="computation" >
-          <div class="otherInfo">
-            <h4>This is a Sample Computation</h4>
-            <span>Principal/Interest</span>
-            <p id="Amount"></p>
-            <span></span>
-          </div>
+          <div class="computation">
+            <div class="otherInfo">
+              <h4>This is a Sample Computation</h4>
+              <span>Principal/Interest</span>
+              <p id="Amount"></p>
+              <span></span>
+            </div>
 
-          <div class="reminder">
-            <h4>Please be reminded that:</h4>
-            <ol>
-              <li>
-                Rates are effective as of July 1, 2023 and may <br />
-                change without prior notice
-              </li>
-              <li>
-                Result appeared on this calculator is for reference <br />
-                only and NOT official.
-              </li>
-              <li>
-                Actual loanable amount may vary depending on <br />
-                Pag-IBIG Fund’s validation and evaluation.
-              </li>
-              <li>
-                Fixed pricing period is how long you want to<br />
-                lock-in your chosen rate.
-              </li>
-              <li>Terms and conditions apply.</li>
-            </ol>
-           </div>
+            <div class="reminder">
+              <h4>Please be reminded that:</h4>
+              <ol>
+                <li>
+                  Rates are effective as of July 1, 2023 and may <br />
+                  change without prior notice
+                </li>
+                <li>
+                  Result appeared on this calculator is for reference <br />
+                  only and NOT official.
+                </li>
+                <li>
+                  Actual loanable amount may vary depending on <br />
+                  Pag-IBIG Fund’s validation and evaluation.
+                </li>
+                <li>
+                  Fixed pricing period is how long you want to<br />
+                  lock-in your chosen rate.
+                </li>
+                <li>Terms and conditions apply.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
