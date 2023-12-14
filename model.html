@@ -11,9 +11,12 @@
   </head>
 
   <body>
-      <swiper-container class="mySwiper" pagination="true" effect="coverflow" grab-cursor="true" centered-slides="true"
-        slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
-        coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+      <swiper-container class="mySwiper" 
+      pagination="true" effect="coverflow" 
+      grab-cursor="true" centered-slides="true"
+      slides-per-view="auto" coverflow-effect-rotate="50" 
+      coverflow-effect-stretch="0" coverflow-effect-depth="100"
+      coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
         <swiper-slide>
           <img src="Assets/SitePictures/site5.jpg" />
         </swiper-slide>
@@ -130,6 +133,65 @@
       </div>
     </div>
     </div>
+
+    <!--------------------------ABOUT SLIDER SWIPER------------------->
+
+    <swiper-container class="mySwiper swiper_about_container" 
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"  
+    speed="600"parallax="true" 
+    pagination="true" pagination-clickable="true" 
+    navigation="true" grab-cursor="true">
+      <div slot="container-start" class="parallax-bg"
+           style="background-image: url(/Assets/SitePictures/site13.jpg);" 
+           data-swiper-parallax="-23%">
+      </div>
+    
+      <swiper-slide class="swiper-aboutslide">
+        <div class="title" data-swiper-parallax="-300">About</div>
+        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+        <div class="text" data-swiper-parallax="-100">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide  class="swiper-aboutslide">
+        <div class="title" data-swiper-parallax="-300">Vision</div>
+        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+        <div class="text" data-swiper-parallax="-100">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide  class="swiper-aboutslide">
+        <div class="title" data-swiper-parallax="-300">Objective</div>
+        <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+        <div class="text" data-swiper-parallax="-100">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+          </p>
+        </div>
+      </swiper-slide>
+    </swiper-container>
 
 
     <script src="model.js"></script>
