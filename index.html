@@ -36,6 +36,7 @@
       /*------------- Computation Output ----------------*/
       .main_computaion .computation{
           display: flex;
+          flex-basis: 90%;
           flex-direction: row;
           height: fit-content;
           backdrop-filter: brightness(0.8) blur(10px);
@@ -47,6 +48,7 @@
           width: 50%;
       }
       .otherInfo{
+          flex-basis: 50%;
           border-right: solid 1px;
           padding: .50rem;
           color: #fff;
@@ -183,36 +185,32 @@
 
 
         <div class="collapse" id="computation">
-        <div class="computation" >
-          <div class="otherInfo">
-            <h4>This is a Sample Computation</h4>
-            <span>Principal/Interest</span>
-            <p id="Amount"></p>
-            <span></span>
-          </div>
-
-          <div class="reminder">
-            <h4>Please be reminded that:</h4>
-            <ol>
-              <li>
-                Rates are effective as of July 1, 2023 and may <br />
-                change without prior notice
-              </li>
-              <li>
-                Result appeared on this calculator is for reference <br />
-                only and NOT official.
-              </li>
-              <li>
-                Actual loanable amount may vary depending on <br />
-                Pag-IBIG Fund’s validation and evaluation.
-              </li>
-              <li>
-                Fixed pricing period is how long you want to<br />
-                lock-in your chosen rate.
-              </li>
-              <li>Terms and conditions apply.</li>
-            </ol>
-           </div>
+            <div class="computation" >
+                <div class="otherInfo">
+                    <h4>This is a Sample Computation</h4>
+                    <span>Principal/Interest</span>
+                    <p id="Amount"></p>
+                    <span></span>
+                </div>
+                
+                <div class="reminder">
+                    <h4>Please be reminded that:</h4>
+                        <ol>
+                          <li>
+                            Result appeared on this calculator is for reference
+                            only and NOT official.
+                          </li>
+                          <li>
+                            Actual loanable amount may vary depending on
+                            Pag-IBIG Fund’s validation and evaluation.
+                          </li>
+                          <li>
+                            Fixed pricing period is how long you want to
+                            lock-in your chosen rate.
+                          </li>
+                          <li>Terms and conditions apply.</li>
+                        </ol>
+                </div>
           </div>
         </div>
       </div>
