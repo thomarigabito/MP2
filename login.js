@@ -6,6 +6,18 @@ var signinForm = document.getElementById("signin-form");
 var signupLink = document.getElementById("signup-link");
 var signinLink = document.getElementById("signin-link");
 
+//Add on 12-15-23 (Add event listener to the close icon to redirect to the home page)
+var closeIcon = document.getElementById("close-icon");
+closeIcon.addEventListener("click", function () {
+  window.location.href = "index.html";
+});
+
+//Add on 12-15-23 (Add event listener to the close icon on the sign-in page to redirect to the home page)
+var closeIconSignin = document.getElementById("close-icon-signin");
+closeIconSignin.addEventListener("click", function () {
+  window.location.href = "index.html";
+});
+
 // Add event listeners to the links to toggle the forms
 signupLink.addEventListener("click", function () {
   signupForm.style.display = "block";
