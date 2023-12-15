@@ -14,7 +14,7 @@ function myComputation() {
      percent = document.getElementById("paymentPeriod").value; // Preferred Fixed Pricing Period
   
     const dpr = .5;
-    const ltv = .2
+    const ltv = .95
   
     const select = document.getElementById('loanCompute');
     const value = select.value; 
@@ -38,25 +38,24 @@ function myComputation() {
         case 'option1':
           document.getElementById("info1").style.display = "block";
           document.getElementById("myAmount").innerHTML = "₱" + Math.round(maxLoan);
-          document.getElementById("myInterest").innerHTML = "₱" + Math.round(Ainterest);
-          document.getElementById("myDownpayment").innerHTML = "₱" + Math.round(downpayment);
-          document.getElementById("myMortage").innerHTML ="₱" + Math.round(monthyInterest);
+          document.getElementById("myInterest").innerHTML = "₱ " + Math.round(Ainterest);
+          document.getElementById("myDownpayment").innerHTML = "₱ " + Math.round(downpayment);
+          document.getElementById("myMortage").innerHTML = "₱ " + Math.round(monthyInterest);
+          document.getElementById("info2").style.display = "none";
           console.log(value)
         break;
-      case 'option2':
+        case 'option2':
+          document.getElementById("info1").style.display = "none";
           document.getElementById("info2").style.display = "block";
-          document.getElementById("myAmount").innerHTML = Ainterest;
-          document.getElementById("myInterest").innerHTML = interest;
-          document.getElementById("myDownpaymen").innerHTML = downpayment;
+          document.getElementById("myAmount2").innerHTML = "₱ "+ Math.round(maxLoan);
+          document.getElementById("myInterest2").innerHTML = "₱ " + Math.round(Ainterest);
+          document.getElementById("myMortage2").innerHTML ="₱ " + Math.round(monthyInterest);
           console.log(value)
         break;
-      default:
+        default:
+          window.alert("What do you want to compute?")
         break;
-    }
-    
-  
-    
-  
+    } 
 }
 
 

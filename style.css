@@ -40,7 +40,7 @@ body {
     width: 50%;
 }
 
-.option1, .option2 {
+.otherInfo {
     flex-basis: 50%;
     border-right: solid 1px;
     padding: .50rem;
@@ -130,8 +130,9 @@ body {
         flex-direction: column;
         padding:1rem;
     }
-    .info1, .info2 {
-        padding: 1rem;
+    .otherInfo{
+        border-right: none;
+        border-bottom:  solid 1px #fff;
     }
 
 }
