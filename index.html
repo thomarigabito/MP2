@@ -34,47 +34,21 @@
 
       /*------------- Computation Output ----------------*/
 
-      .main_computation .computation{
-          display: flex;
-          flex-basis: 90%;
-          flex-direction: row;
-          height: fit-content;
-          backdrop-filter: brightness(0.8) blur(10px);
-          border-radius: 10px;
-          text-transform: uppercase;
-          box-shadow: 0 0 10px black;
-          justify-content: space-between;
-          height: 50%;
-          width: 50%;
+      .calBox {
+        backdrop-filter: brightness(0.8) blur(10px);
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
       }
-      .otherInfo{
-          flex-basis: 50%;
-          border-right: solid 1px;
-          padding: .50rem;
-          color: #fff;
+      #computation {
+        backdrop-filter: brightness(0.8) blur(10px);
+        border-radius: 5px;
       }
-      .reminder{
-        flex-wrap: wrap;
-          padding: .50rem;
-          color: #fff;
+      .reminder {
+        border: solid rgb(125, 110, 110);
       }
-      .reminder h4 {
-        font-weight: bolder;
-        font-size: 18px;
-        color: #fff;
-      }
-      .reminder li {
-        font-weight: bolder;
-        font-size: 16px;
-        color: #fff;
-      }
-      .collapse {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.53rem;
-        margin-bottom: 1rem;
-        height: fit-content;
-      }
+
       /*--------------Button Design-----------------*/
       .bn13 {
         display: inline-block;
@@ -173,9 +147,7 @@
             <li><a href="#" class="nav-link px-2 text-white">About</a></li>
           </ul>
           <div class="text-end">
-
-            <a href="loginpage.html"><button" class="btn btn-warning">Sign-up</button></a>
-
+            <a href="loginpage.html"><button class="btn btn-warning">Sign-up</button></a>
           </div>
         </div>
       </div>
@@ -268,34 +240,26 @@
           </div>
         </div>
 
-        <div class="collapse" id="computation">
+        <div class="collapse col-sm-11 d-flex justify-content-center" id="computation">
+          <div class="computation row col-lg-12 d-flex justify-content-center align-items-center">
+            <div class="otherInfo calBox col-sm-12 col-md-12 col-lg-6">
+              <h4>This is a Sample Computation</h4>
+              <span>Simple Interest</span>
+              <p id="Amount"></p>
+              <span>Down Payment</span>
+              <br />
+              <p id="Dp"></p>
+            </div>
 
-            <div class="computation" >
-                <div class="otherInfo">
-                    <h4>This is a Sample Computation</h4>
-                    <span>Simple Interest</span>
-                    <p id="Amount"></p>
-                    <span>Down Payment</span><p id="Dp"></p>
-                </div>
-                
-                <div class="reminder">
-                    <h4>Please be reminded that:</h4>
-                        <ol>
-                          <li>
-                            Result appeared on this calculator is for reference
-                            only and NOT official.
-                          </li>
-                          <li>
-                            Actual loanable amount may vary depending on
-                            Pag-IBIG Fund’s validation and evaluation.
-                          </li>
-                          <li>
-                            Fixed pricing period is how long you want to
-                            lock-in your chosen rate.
-                          </li>
-                          <li>Terms and conditions apply.</li>
-                        </ol>
-                </div>
+            <div class="reminder calBox col-sm-12 col-md-12 col-lg-6">
+              <h4>Please be reminded that:</h4>
+              <ol>
+                <li>Result appeared on this calculator is for reference only and NOT official.</li>
+                <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.</li>
+                <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
+                <li>Terms and conditions apply.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
