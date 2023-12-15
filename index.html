@@ -16,66 +16,9 @@
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Whisper&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css">
-    <title>BBR</title>
-    <style>
-      body {
-        background-image: url("./Assets/RealEstateInterior1.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-attachment: fixed;
-        height: 100vh;
-        width: 100vw;
-      }
-      .computaion-box {
-        backdrop-filter: brightness(0.8) blur(10px);
-        border-radius: 10px;
-        text-transform: uppercase;
-      }
 
-      /*------------- Computation Output ----------------*/
-      .main_computation .computation{
-          display: flex;
-          flex-basis: 90%;
-          flex-direction: row;
-          height: fit-content;
-          backdrop-filter: brightness(0.8) blur(10px);
-          border-radius: 10px;
-          text-transform: uppercase;
-          box-shadow: 0 0 10px black;
-          justify-content: space-between;
-          height: 50%;
-          width: 50%;
-      }
-      .otherInfo{
-          flex-basis: 50%;
-          border-right: solid 1px;
-          padding: .50rem;
-          color: #fff;
-      }
-      .reminder{
-        flex-wrap: wrap;
-          padding: .50rem;
-          color: #fff;
-      }
-      .reminder h4{
-          font-weight: bolder;
-          font-size: 18px;
-          color: #fff;
-      }
-      .reminder li{
-          font-weight: bolder;
-          font-size: 16px;
-          color: #fff;
-      }
-      .collapse{
-        display: flex;
-        justify-content: center;
-        margin-top: .53rem;
-        margin-bottom: 1rem;
-        height: fit-content;
-      }
-    </style>
+    <title>BBR</title>
+
   </head>
   <body>
     <header class="p-3 ps-5 pe-5 text-bg-dark">
@@ -111,8 +54,8 @@
                   <label for="loanCompute">What do you want to Compute?</label>
                   <select class="form-control" id="loanCompute" name="paymentPeriod" required>
                     <option value=""></option>
-                    <option value="a">How much you can borrow based on your income?</option>
-                    <option value="b">How much you can borrow based on the value of the property</option>
+                    <option value="option1">How much you can borrow based on your income?</option>
+                    <option value="option2">How much you can borrow based on the value of the property</option>
                   </select>
                 </div>
                 <div class="mb-1 mt-1">
@@ -161,17 +104,12 @@
                     <option value=""></option>
                     <option value="0.0575">1 Year; 5.75%</option>
                     <option value="0.0625">3 Years; 6.25%</option>
-
                       <option value="0.065">5 Years; 6.5%</option>
-
                       <option value="0.07125">10 Years; 7.125%</option>
                       <option value="0.0775">15 years; 7.75%</option>
-
                       <option value="0.085">20 years; 8.5%</option>
-
                       <option value="0.09125">25 years; 9.125%</option>
-
-                    <option value="0.0975">30 years; 9.75%</option>
+                      <option value="0.0975">30 years; 9.75%</option>
                   </select>
                 </div>
                 <div>
@@ -187,11 +125,22 @@
 
         <div class="collapse" id="computation">
             <div class="computation" >
-                <div class="otherInfo">
-                    <h4>This is a Sample Computation</h4>
-                    <span>Simple Interest</span>
-                    <p id="Amount"></p>
-                    <span>Down Payment</span><p id="Dp"></p>
+                <div class="otherInfo" id="info1">
+                  <div>
+                    <p>You can approximately loan <span id="myAmount"></span> based on your Gross Monthly Income.</p>
+                  </div>
+                  <div>
+                    <h4>Other indicative figures:</h4>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <p>Prinsipal & Interest</p><span id="myInterest"></span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <p>Downpayment</p><span id="myDownpayment"></span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <p>Monthly Interest</p><span id="myMortage"></span>
+                  </div>   
                 </div>
                 
                 <div class="reminder">
