@@ -34,47 +34,21 @@
 
       /*------------- Computation Output ----------------*/
 
-      .main_computation .computation{
-          display: flex;
-          flex-basis: 90%;
-          flex-direction: row;
-          height: fit-content;
-          backdrop-filter: brightness(0.8) blur(10px);
-          border-radius: 10px;
-          text-transform: uppercase;
-          box-shadow: 0 0 10px black;
-          justify-content: space-between;
-          height: 50%;
-          width: 50%;
+      .calBox {
+        backdrop-filter: brightness(0.8) blur(10px);
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 1rem;
       }
-      .otherInfo{
-          flex-basis: 50%;
-          border-right: solid 1px;
-          padding: .50rem;
-          color: #fff;
+      #computation {
+        backdrop-filter: brightness(0.8) blur(10px);
+        border-radius: 5px;
       }
-      .reminder{
-        flex-wrap: wrap;
-          padding: .50rem;
-          color: #fff;
+      .reminder {
+        border: solid rgb(125, 110, 110);
       }
-      .reminder h4 {
-        font-weight: bolder;
-        font-size: 18px;
-        color: #fff;
-      }
-      .reminder li {
-        font-weight: bolder;
-        font-size: 16px;
-        color: #fff;
-      }
-      .collapse {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.53rem;
-        margin-bottom: 1rem;
-        height: fit-content;
-      }
+
       /*--------------Button Design-----------------*/
       .bn13 {
         display: inline-block;
@@ -173,129 +147,121 @@
             <li><a href="#" class="nav-link px-2 text-white">About</a></li>
           </ul>
           <div class="text-end">
-
-            <a href="loginpage.html"><button" class="btn btn-warning">Sign-up</button></a>
-
+            <a href="loginpage.html"><button class="btn btn-warning">Sign-up</button></a>
           </div>
         </div>
       </div>
     </header>
+    <div class="container-fluid col-12 d-flex row justify-content-center">
+      <div class="container-fluid col-sm-12 col-md-10 col-lg-10 d-flex justify-content-center h-50 mt-5 pt-5">
+        <div class="row col-12 flex-lg-row-reverse main_computation">
+          <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
+            <img class="col-10" src="./Assets/finalLogo.png" alt="" />
+          </div>
+          <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
+            <div class="computaion-box" id="computaion-box">
+              <div class="computationfrm text-white p-3">
+                <h3 class="fw-bold text-center">Sample Housing Computation</h3>
+                <form class="form">
+                  <div class="mb-1 mt-1">
+                    <label for="loanCompute">What do you want to Compute?</label>
+                    <select class="form-control" id="loanCompute" name="paymentPeriod" required>
+                      <option value=""></option>
+                      <option value="a">How much you can borrow based on your income?</option>
+                      <option value="b">How much you can borrow based on the value of the property</option>
+                    </select>
+                  </div>
+                  <div class="mb-1 mt-1">
+                    <label for="loanAmount">Desire Loan Amount?</label>
+                    <input type="number" class="form-control" id="loanAmount" name="loan-amount" />
+                  </div>
+                  <div class="mb-1 mt-1">
+                    <label for="loanPayment" class="form-label">Preferred Payment Period.</label>
+                    <select class="form-control" id="loanPayment" name="loanPayment" required>
+                      <option value=""></option>
+                      <option value="1">1 year</option>
+                      <option value="2">2 year</option>
+                      <option value="3">3 year</option>
+                      <option value="4">4 year</option>
+                      <option value="5">5 year</option>
+                      <option value="6">6 year</option>
+                      <option value="7">7 year</option>
+                      <option value="8">8 year</option>
+                      <option value="9">9 year</option>
+                      <option value="10">10 year</option>
+                      <option value="11">11 year</option>
+                      <option value="12">12 year</option>
+                      <option value="13">13 year</option>
+                      <option value="14">14 year</option>
+                      <option value="15">15 years</option>
+                      <option value="16">16 year</option>
+                      <option value="17">17 year</option>
+                      <option value="18">18 year</option>
+                      <option value="19">19 year</option>
+                      <option value="20">20 years</option>
+                      <option value="21">21 years</option>
+                      <option value="22">22 years</option>
+                      <option value="23">23 years</option>
+                      <option value="24">24 years</option>
+                      <option value="25">25 years</option>
+                      <option value="26">26 years</option>
+                      <option value="27">27 years</option>
+                      <option value="28">28 years</option>
+                      <option value="29">29 years</option>
+                      <option value="30">30 years</option>
+                    </select>
+                  </div>
+                  <div class="mb-1 mt-1">
+                    <label for="paymentPeriod" class="form-label">Preferred Fixed Pricing Period:</label>
+                    <select class="form-control" id="paymentPeriod" name="paymentPeriod" required>
+                      <option value=""></option>
+                      <option value="0.0575">1 Year; 5.75%</option>
+                      <option value="0.0625">3 Years; 6.25%</option>
 
-    <div class="container-fluid col-sm-12 col-md-10 col-lg-10 d-flex justify-content-center h-75 mt-2">
-      <div class="row col-12 flex-lg-row-reverse main_computation">
-        <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
-          <img class="col-10" src="./Assets/finalLogo.png" alt="" />
-        </div>
-        <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
-          <div class="computaion-box" id="computaion-box">
-            <div class="computationfrm text-white p-3">
-              <h3 class="fw-bold text-center">Sample Housing Computation</h3>
-              <form class="form">
-                <div class="mb-1 mt-1">
-                  <label for="loanCompute">What do you want to Compute?</label>
-                  <select class="form-control" id="loanCompute" name="paymentPeriod" required>
-                    <option value=""></option>
-                    <option value="a">How much you can borrow based on your income?</option>
-                    <option value="b">How much you can borrow based on the value of the property</option>
-                  </select>
-                </div>
-                <div class="mb-1 mt-1">
-                  <label for="loanAmount">Desire Loan Amount?</label>
-                  <input type="number" class="form-control" id="loanAmount" name="loan-amount" />
-                </div>
-                <div class="mb-1 mt-1">
-                  <label for="loanPayment" class="form-label">Preferred Payment Period.</label>
-                  <select class="form-control" id="loanPayment" name="loanPayment" required>
-                    <option value=""></option>
-                    <option value="1">1 year</option>
-                    <option value="2">2 year</option>
-                    <option value="3">3 year</option>
-                    <option value="4">4 year</option>
-                    <option value="5">5 year</option>
-                    <option value="6">6 year</option>
-                    <option value="7">7 year</option>
-                    <option value="8">8 year</option>
-                    <option value="9">9 year</option>
-                    <option value="10">10 year</option>
-                    <option value="11">11 year</option>
-                    <option value="12">12 year</option>
-                    <option value="13">13 year</option>
-                    <option value="14">14 year</option>
-                    <option value="15">15 years</option>
-                    <option value="16">16 year</option>
-                    <option value="17">17 year</option>
-                    <option value="18">18 year</option>
-                    <option value="19">19 year</option>
-                    <option value="20">20 years</option>
-                    <option value="21">21 years</option>
-                    <option value="22">22 years</option>
-                    <option value="23">23 years</option>
-                    <option value="24">24 years</option>
-                    <option value="25">25 years</option>
-                    <option value="26">26 years</option>
-                    <option value="27">27 years</option>
-                    <option value="28">28 years</option>
-                    <option value="29">29 years</option>
-                    <option value="30">30 years</option>
-                  </select>
-                </div>
-                <div class="mb-1 mt-1">
-                  <label for="paymentPeriod" class="form-label">Preferred Fixed Pricing Period:</label>
-                  <select class="form-control" id="paymentPeriod" name="paymentPeriod" required>
-                    <option value=""></option>
-                    <option value="0.0575">1 Year; 5.75%</option>
-                    <option value="0.0625">3 Years; 6.25%</option>
+                      <option value="0.065">5 Years; 6.5%</option>
 
-                    <option value="0.065">5 Years; 6.5%</option>
+                      <option value="0.07125">10 Years; 7.125%</option>
+                      <option value="0.0775">15 years; 7.75%</option>
 
-                    <option value="0.07125">10 Years; 7.125%</option>
-                    <option value="0.0775">15 years; 7.75%</option>
+                      <option value="0.085">20 years; 8.5%</option>
 
-                    <option value="0.085">20 years; 8.5%</option>
+                      <option value="0.09125">25 years; 9.125%</option>
 
-                    <option value="0.09125">25 years; 9.125%</option>
-
-                    <option value="0.0975">30 years; 9.75%</option>
-                  </select>
-                </div>
-                <div>
-                  <button type="button" class="bn632-hover bn25" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
-                    Compute
-                  </button>
-                </div>
-              </form>
+                      <option value="0.0975">30 years; 9.75%</option>
+                    </select>
+                  </div>
+                  <div>
+                    <button type="button" class="bn632-hover bn25" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
+                      Compute
+                    </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="col-12 d-flex justify-content-center mt-2 pt-2">
+        <div class="collapse col-sm-8 col-lg-8" id="computation">
+          <div class="computation row col-lg-12 d-flex justify-content-center align-items-center p-3">
+            <div class="otherInfo calBox col-sm-12 col-md-12 col-lg-6">
+              <h4>This is a Sample Computation</h4>
+              <span>Simple Interest</span>
+              <p id="Amount"></p>
+              <span>Down Payment</span>
+              <br />
+              <p id="Dp"></p>
+            </div>
 
-        <div class="collapse" id="computation">
-
-            <div class="computation" >
-                <div class="otherInfo">
-                    <h4>This is a Sample Computation</h4>
-                    <span>Simple Interest</span>
-                    <p id="Amount"></p>
-                    <span>Down Payment</span><p id="Dp"></p>
-                </div>
-                
-                <div class="reminder">
-                    <h4>Please be reminded that:</h4>
-                        <ol>
-                          <li>
-                            Result appeared on this calculator is for reference
-                            only and NOT official.
-                          </li>
-                          <li>
-                            Actual loanable amount may vary depending on
-                            Pag-IBIG Fund’s validation and evaluation.
-                          </li>
-                          <li>
-                            Fixed pricing period is how long you want to
-                            lock-in your chosen rate.
-                          </li>
-                          <li>Terms and conditions apply.</li>
-                        </ol>
-                </div>
+            <div class="reminder calBox col-sm-12 col-md-12 col-lg-6">
+              <h4>Please be reminded that:</h4>
+              <ol>
+                <li>Result appeared on this calculator is for reference only and NOT official.</li>
+                <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.</li>
+                <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
+                <li>Terms and conditions apply.</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
