@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    
+  <!-- Internal CSS -->
+  <style>
+    /* Body styling */
+    body {
+      background-color: #f8f9fa;
+    }
+    /* Admin container and layout */
+    .admin-container {
+      display: flex;
+      height: 100vh;
+    }
+    /* Admin sidebar styling */
+    .admin-sidebar {
+      width: 250px;
+      background-color: royalblue;
+      color: #fff;
+      padding: 30px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .admin-sidebar h2 {
+      margin-bottom: 20px;
+    }
+    .admin-sidebar ul {
+      list-style: none;
+      padding: 0px 15px 0px 0px;
+    }
+    .admin-sidebar li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .admin-sidebar a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .admin-sidebar a:hover {
+      text-decoration: underline;
+    }
+    /* Admin content styling */
+    .admin-content {
+      flex: 1;
+      padding: 20px;
+    }
+    .admin-content h1 {
+      margin-bottom: 20px;
+    }
+
+    #user-management {
+        padding: 10px 10px 10px 10px;
+        scrollbar-gutter: 10px;
+    }
+
+    </style>
+  <title>Admin Page- Budget Bliss Residences</title>
+</head>
+<body>
+  <!-- Admin Page Body Content -->
+  <div class="admin-container">
+    <div class="admin-sidebar">
+      <h2>Admin Dashboard</h2>
+      <ul>
+        <li><a href="#">User Management</a></li>
+        <li><a href="#">Content Management</a></li>
+      </ul>
+    </div>
+    <div class="admin-content">
+      <section id="user-management">
+        <h3>User Management</h3>
+        <!-- User Management Form -->
+        <form id="userForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" style= "width: 200px;" class="form-control" id="username" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" style= "width: 200px;" class="form-control" id="email" required>
+          </div>
+          <button type="submit" class="btn btn-success">Add User</button>
+        </form>
+
+        <br />
+        <hr>
+        <br />
+
+        <!-- User List -->
+        <div id="userList"></div>
+      </section>
+      <section id="content-management">
+        <h3>Content Management</h3>
+        <!-- Content Management Form -->
+        <form id="contentForm">
+          <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea style= "width: 700px; height: 150px;" class="form-control" id="content" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-success">Add Content</button>
+        </form>
+        <!-- Content List -->
+        <div id="contentList"></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  
+  <script>
+    // Execute when the document is fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      // User Management
+      const userForm = document.getElementById("userForm");
+      const userList = document.getElementById("userList");
+
+      // Handle form submission for adding users
+      userForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+
+        const user = { username, email };
+        addUserToList(user);
+        saveUser(user);
+        userForm.reset();
+      });
+
+      // Function to add user to the list
+      function addUserToList(user) {
+        const listItem = document.createElement("div");
+        listItem.innerHTML = `<strong>${user.username}</strong> - ${user.email}`;
+        userList.appendChild(listItem);
+      }
+
+      // Function to save user to localStorage
+      function saveUser(user) {
+        let users = JSON.parse(localStorage.getItem("users")) || [];
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
+      }
+
+      // Content Management
+      const contentForm = document.getElementById("contentForm");
+      const contentList = document.getElementById("contentList");
+
+      // Handle form submission for adding content
+      contentForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const content = document.getElementById("content").value;
+
+        const contentItem = document.createElement("div");
+        contentItem.innerHTML = content;
+        contentList.appendChild(contentItem);
+
+        saveContent(content);
+        contentForm.reset();
+      });
+
+      // Function to save content to localStorage
+      function saveContent(content) {
+        let contents = JSON.parse(localStorage.getItem("contents")) || [];
+        contents.push(content);
+        localStorage.setItem("contents", JSON.stringify(contents));
+      }
+
+      // Load existing users and contents on page load
+      function loadExistingData() {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        users.forEach(addUserToList);
+
+        const contents = JSON.parse(localStorage.getItem("contents")) || [];
+        contents.forEach(content => {
+          const contentItem = document.createElement("div");
+          contentItem.innerHTML = content;
+          contentList.appendChild(contentItem);
+        });
+      }
+
+      // Call the function to load existing data
+      loadExistingData();
+    });
+  </script>
+</body>
+</html>
