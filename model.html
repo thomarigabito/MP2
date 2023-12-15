@@ -55,66 +55,8 @@
 
 
 
-    <div class="container">
-      <div class="sidebar">
-        <div class="sidehead">
-          <i class="fa-solid fa-circle circle"></i>
-          <i class="fa-solid fa-circle" style="color: rgb(22, 139, 133)"></i>
-          <i class="fa-solid fa-circle circle"></i>
-          <h3>Search Items</h3>
-        </div>
-        <hr style="margin: 15px; border: 1px solid #eee" />
-        <div class="sidebody" style="height: 69vh">
-          
-
-          <!---weather-->
-          <div class="weatherCard">
-            <div class="search">
-              <input type="text" placeholder="enter city name" spellcheck="false" />
-              <button><img src="Images/search.png" alt="Search" /></button>
-            </div>
-            <div class="error">
-              <p>Invalid city name</p>
-            </div>
-            <div class="weather">
-              <img src="Images/rain.png" class="weather-icon" />
-              <h1 class="temp">0°c</h1>
-              <h2 class="city">Search City</h2>
-              <div class="details">
-                <div>
-                  <img src="Images/humidity.png" alt="Humidity icon" />
-                  <div>
-                    <p class="humidity">50%</p>
-                    <p>Humidity</p>
-                  </div>
-                </div>
-                <div>
-                  <img src="Images/wind.png" alt="Wind icon" />
-                  <div>
-                    <p class="wind">15 km/h</p>
-                    <p>Wind Speed</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidefoot">
-          <hr style="margin: 15px 0; border: 1px solid #eee" />
-          <div class="social-icons">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-        </div>
-      </div>
-
-
-      
-      <div class="data">
-
-        
+    <div class="container">  
+      <div class="data"> 
         <div class="header">
           <p>House Model</p>
         </div>
@@ -131,7 +73,6 @@
           <div id="root"></div>
         </div>
       </div>
-    </div>
     </div>
 
     <!--------------------------ABOUT SLIDER SWIPER------------------->
@@ -193,6 +134,36 @@
       </swiper-slide>
     </swiper-container>
 
+      <div class="weatherCard">
+        <div class="search">
+          <input type="text" placeholder="enter city name" spellcheck="false" />
+          <button><img src="Images/search.png" alt="Search" /></button>
+        </div>
+        <div class="error">
+          <p>Invalid city name</p>
+        </div>
+        <div class="weather">
+          <img src="Images/rain.png" class="weather-icon" />
+          <h1 class="temp">0°c</h1>
+          <h2 class="city">Search City</h2>
+          <div class="details">
+            <div>
+              <img src="Images/humidity.png" alt="Humidity icon" />
+              <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+            <div>
+              <img src="Images/wind.png" alt="Wind icon" />
+              <div>
+                <p class="wind">15 km/h</p>
+                <p>Wind Speed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <script src="model.js"></script>
     <script src="weather.js"></script>
