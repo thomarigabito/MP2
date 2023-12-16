@@ -135,8 +135,8 @@
                   <label for="loanCompute">What do you want to Compute?</label>
                   <select class="form-control" id="loanCompute" name="paymentPeriod" required>
                     <option value=""></option>
-                    <option value="a">How much you can borrow based on your income?</option>
-                    <option value="b">How much you can borrow based on the value of the property</option>
+                    <option value="option1">How much you can borrow based on your income?</option>
+                    <option value="option2">How much you can borrow based on the value of the property</option>
                   </select>
                 </div>
                 <div class="mb-1 mt-1">
@@ -209,16 +209,11 @@
         </div>
 
         <div class="collapse" id="computation">
-          <div class="computation">
-            <div class="otherInfo">
-              <h4>This is a Sample Computation</h4>
-              <span>Simple Interest</span>
-              <p id="Amount"></p>
-              <span>Down Payment</span>
-              <p id="Dp"></p>
-            </div>
-
-
+          <div class="computation" id="computationBox">
+                <div id="error" style="display: none;">
+                    <h1>What do you want to compute?</h1>
+                </div>
+            
                 <div class="otherInfo" id="info1" style="display: none;">
                   <div>
                     <p>You can approximately loan <span id="myAmount"></span> based on your Gross Monthly Income.</p>
@@ -252,7 +247,7 @@
                   </div>
                 </div>
                 
-                <div class="reminder">
+                <div class="reminder" id="reminder">
                     <h4>Please be reminded that:</h4>
                         <ol>
                           <li>
@@ -271,15 +266,7 @@
                         </ol>
                 </div>
 
-            <div class="reminder">
-              <h4>Please be reminded that:</h4>
-              <ol>
-                <li>Result appeared on this calculator is for reference only and NOT official.</li>
-                <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.</li>
-                <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
-                <li>Terms and conditions apply.</li>
-              </ol>
-            </div>
+            
 
           </div>
         </div>

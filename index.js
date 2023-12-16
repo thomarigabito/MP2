@@ -42,10 +42,12 @@ function myComputation() {
           document.getElementById("myDownpayment").innerHTML = "₱ " + Math.round(downpayment);
           document.getElementById("myMortage").innerHTML = "₱ " + Math.round(monthyInterest);
           document.getElementById("info2").style.display = "none";
+           document.getElementById("error").style.display = "none"
           console.log(value)
         break;
         case 'option2':
           document.getElementById("info1").style.display = "none";
+          document.getElementById("error").style.display = "none"
           document.getElementById("info2").style.display = "block";
           document.getElementById("myAmount2").innerHTML = "₱ "+ Math.round(maxLoan);
           document.getElementById("myInterest2").innerHTML = "₱ " + Math.round(Ainterest);
@@ -53,9 +55,11 @@ function myComputation() {
           console.log(value)
         break;
         default:
-          window.alert("What do you want to compute?")
-        break;
-    } 
+          window.alert("What do you want to compute?");
+          document.getElementById("error").style.display = "block"
+          document.getElementById("error").style.margin = "auto 0"
+          document.getElementById("error").style.padding = "1rem"
+        } 
 }
 
 
