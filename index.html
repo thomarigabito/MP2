@@ -15,10 +15,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Whisper&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
     <title>BBR</title>
+    <style>
+      /*----------Buttons------------*/
+      .bn13 {
+        display: inline-block;
+        padding: 0.65em 1.6em;
+        border: 3px solid #ffffff;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center;
+        transition: all 0.2s;
+        animation: bn13bouncy 3s infinite linear;
+        position: relative;
+        background-color: #000000;
+      }
 
+      .bn13:hover {
+        background-color: white;
+        color: #000000;
+      }
+
+      @keyframes bn13bouncy {
+        0% {
+          top: 0em;
+        }
+        40% {
+          top: 0em;
+        }
+        43% {
+          top: -0.9em;
+        }
+        46% {
+          top: 0em;
+        }
+        48% {
+          top: -0.4em;
+        }
+        50% {
+          top: 0em;
+        }
+        100% {
+          top: 0em;
+        }
+      }
+      .bn632-hover {
+        width: 160px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 20px;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .bn632-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .bn632-hover:focus {
+        outline: none;
+      }
+
+      .bn632-hover.bn25 {
+        background-image: linear-gradient(to right, #29323c, #485563, #51575c, #cccccc);
+        box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+      }
+    </style>
   </head>
   <body>
     <header class="p-3 ps-5 pe-5 text-bg-dark">
@@ -34,7 +115,7 @@
             <li><a href="#" class="nav-link px-2 text-white">About</a></li>
           </ul>
           <div class="text-end">
-            <a href="loginpage.html"><button class="btn btn-warning">Sign-up</button></a>
+            <a href="loginpage.html"><button class="bn13">Sign-up</button></a>
           </div>
         </div>
       </div>
@@ -54,8 +135,8 @@
                   <label for="loanCompute">What do you want to Compute?</label>
                   <select class="form-control" id="loanCompute" name="paymentPeriod" required>
                     <option value=""></option>
-                    <option value="option1">How much you can borrow based on your income?</option>
-                    <option value="option2">How much you can borrow based on the value of the property</option>
+                    <option value="a">How much you can borrow based on your income?</option>
+                    <option value="b">How much you can borrow based on the value of the property</option>
                   </select>
                 </div>
                 <div class="mb-1 mt-1">
@@ -104,16 +185,21 @@
                     <option value=""></option>
                     <option value="0.0575">1 Year; 5.75%</option>
                     <option value="0.0625">3 Years; 6.25%</option>
-                      <option value="0.065">5 Years; 6.5%</option>
-                      <option value="0.07125">10 Years; 7.125%</option>
-                      <option value="0.0775">15 years; 7.75%</option>
-                      <option value="0.085">20 years; 8.5%</option>
-                      <option value="0.09125">25 years; 9.125%</option>
-                      <option value="0.0975">30 years; 9.75%</option>
+
+                    <option value="0.065">5 Years; 6.5%</option>
+
+                    <option value="0.07125">10 Years; 7.125%</option>
+                    <option value="0.0775">15 years; 7.75%</option>
+
+                    <option value="0.085">20 years; 8.5%</option>
+
+                    <option value="0.09125">25 years; 9.125%</option>
+
+                    <option value="0.0975">30 years; 9.75%</option>
                   </select>
                 </div>
                 <div>
-                  <button type="button" class="btn btn-success" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
+                  <button type="button" class="bn632-hover bn25" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
                     Compute
                   </button>
                 </div>
@@ -122,9 +208,16 @@
           </div>
         </div>
 
-
         <div class="collapse" id="computation">
-            <div class="computation" >
+          <div class="computation">
+            <div class="otherInfo">
+              <h4>This is a Sample Computation</h4>
+              <span>Simple Interest</span>
+              <p id="Amount"></p>
+              <span>Down Payment</span>
+              <p id="Dp"></p>
+            </div>
+
 
                 <div class="otherInfo" id="info1" style="display: none;">
                   <div>
@@ -177,6 +270,17 @@
                           <li>Terms and conditions apply.</li>
                         </ol>
                 </div>
+
+            <div class="reminder">
+              <h4>Please be reminded that:</h4>
+              <ol>
+                <li>Result appeared on this calculator is for reference only and NOT official.</li>
+                <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.</li>
+                <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
+                <li>Terms and conditions apply.</li>
+              </ol>
+            </div>
+
           </div>
         </div>
       </div>
