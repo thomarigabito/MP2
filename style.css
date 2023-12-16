@@ -6,6 +6,7 @@ body {
     background-attachment: fixed;
     height: 100vh;
     width: 100vw;
+    color: #fff;
 }
 
 .computaion-box {
@@ -39,7 +40,7 @@ body {
     width: 50%;
 }
 
-.option1, .option2 {
+.otherInfo {
     flex-basis: 50%;
     border-right: solid 1px;
     padding: .50rem;
@@ -127,13 +128,11 @@ body {
 
     .main_computation .computation {
         flex-direction: column;
+        padding:1rem;
     }
-    .option1 {
-        flex-basis: 50%;
+    .otherInfo{
         border-right: none;
-        border-bottom: solid 1px;
-        padding: .50rem;
-        color: #fff;
+        border-bottom:  solid 1px #fff;
     }
 
 }

@@ -7,51 +7,55 @@ let interest;
 function myComputation() {
      amount = Number(amount);
      payment = Number(payment);
-    percent = Number(percent);
+     percent = Number(percent);
   
-     amount = document.getElementById("loanAmount").value;
-     payment = document.getElementById("loanPayment").value;
-     percent = document.getElementById("paymentPeriod").value;
+     amount = document.getElementById("loanAmount").value; //Desire Loan Amount
+     payment = document.getElementById("loanPayment").value; // Preferred Payment Period.
+     percent = document.getElementById("paymentPeriod").value; // Preferred Fixed Pricing Period
   
     const dpr = .5;
-    const ltv = .2
+    const ltv = .95
   
     const select = document.getElementById('loanCompute');
     const value = select.value; 
+  
+
     console.log(value)
-    let interest = amount * payment * percent;
+    let Ainterest = amount * payment * percent;
+    let downpayment = amount * dpr;
+    let monthyInterest = Ainterest / 12;
     let maxLoan = amount * ltv;
    
       
-    let downpayment = amount * dpr;
+    
      
         downpayment = Number(downpayment);
-        interest = Number(interest);
+        Ainterest = Number(Ainterest);
+        monthyInterest = Number(monthyInterest);
         
 
       switch (value) {
         case 'option1':
           document.getElementById("info1").style.display = "block";
-          document.getElementById("myAmount").innerHTML = "₱" + maxLoan;
-          document.getElementById("myInterset").innerHTML = "₱" + Math.round(interest);
-          document.getElementById("myDownpayment").innerHTML ="₱" + downpayment;
+          document.getElementById("myAmount").innerHTML = "₱" + Math.round(maxLoan);
+          document.getElementById("myInterest").innerHTML = "₱ " + Math.round(Ainterest);
+          document.getElementById("myDownpayment").innerHTML = "₱ " + Math.round(downpayment);
+          document.getElementById("myMortage").innerHTML = "₱ " + Math.round(monthyInterest);
+          document.getElementById("info2").style.display = "none";
           console.log(value)
         break;
-      case 'option2':
+        case 'option2':
+          document.getElementById("info1").style.display = "none";
           document.getElementById("info2").style.display = "block";
-          document.getElementById("myAmount").innerHTML = interest;
-          document.getElementById("myInterset").innerHTML = interest;
-          document.getElementById("myDownpayment").innerHTML = downpayment;
+          document.getElementById("myAmount2").innerHTML = "₱ "+ Math.round(maxLoan);
+          document.getElementById("myInterest2").innerHTML = "₱ " + Math.round(Ainterest);
+          document.getElementById("myMortage2").innerHTML ="₱ " + Math.round(monthyInterest);
           console.log(value)
         break;
-      default:
-         document.getElementById("Dp").innerHTML = "please select option";
+        default:
+          window.alert("What do you want to compute?")
         break;
-    }
-    
-  
-    
-  
+    } 
 }
 
 
