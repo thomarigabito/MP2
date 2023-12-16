@@ -75,6 +75,48 @@
         margin-bottom: 1rem;
         height: fit-content;
       }
+      /*------------- Computation Output ----------------*/
+      .main_computation .computation {
+        display: flex;
+        flex-basis: 90%;
+        flex-direction: row;
+        height: fit-content;
+        backdrop-filter: brightness(0.8) blur(10px);
+        border-radius: 10px;
+        text-transform: uppercase;
+        box-shadow: 0 0 10px black;
+        justify-content: space-between;
+        height: 50%;
+        width: 50%;
+      }
+      .otherInfo {
+        flex-basis: 50%;
+        border-right: solid 1px;
+        padding: 0.5rem;
+        color: #fff;
+      }
+      .reminder {
+        flex-wrap: wrap;
+        padding: 0.5rem;
+        color: #fff;
+      }
+      .reminder h4 {
+        font-weight: bolder;
+        font-size: 18px;
+        color: #fff;
+      }
+      .reminder li {
+        font-weight: bolder;
+        font-size: 16px;
+        color: #fff;
+      }
+      .collapse {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.53rem;
+        margin-bottom: 1rem;
+        height: fit-content;
+      }
     </style>
   </head>
   <body>
@@ -88,6 +130,7 @@
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
             <li><a href="model.html" class="nav-link px-2 text-white">Features</a></li>
+            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
           </ul>
           <div class="text-end">
             <a href="loginpage.html"><button class="bn13">Sign-up</button></a>
@@ -110,8 +153,8 @@
                   <label for="loanCompute">What do you want to Compute?</label>
                   <select class="form-control" id="loanCompute" name="paymentPeriod" required>
                     <option value=""></option>
-                    <option value="option1">How much you can borrow based on your income?</option>
-                    <option value="option2">How much you can borrow based on the value of the property</option>
+                    <option value="a">How much you can borrow based on your income?</option>
+                    <option value="b">How much you can borrow based on the value of the property</option>
                   </select>
                 </div>
                 <div class="mb-1 mt-1">
