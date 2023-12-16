@@ -75,47 +75,86 @@
         margin-bottom: 1rem;
         height: fit-content;
       }
-      /*------------- Computation Output ----------------*/
-      .main_computation .computation {
-        display: flex;
-        flex-basis: 90%;
-        flex-direction: row;
-        height: fit-content;
-        backdrop-filter: brightness(0.8) blur(10px);
-        border-radius: 10px;
-        text-transform: uppercase;
-        box-shadow: 0 0 10px black;
-        justify-content: space-between;
-        height: 50%;
-        width: 50%;
+      /*----------Buttons------------*/
+      .bn13 {
+        display: inline-block;
+        padding: 0.65em 1.6em;
+        border: 3px solid #ffffff;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center;
+        transition: all 0.2s;
+        animation: bn13bouncy 3s infinite linear;
+        position: relative;
+        background-color: #000000;
       }
-      .otherInfo {
-        flex-basis: 50%;
-        border-right: solid 1px;
-        padding: 0.5rem;
-        color: #fff;
+
+      .bn13:hover {
+        background-color: white;
+        color: #000000;
       }
-      .reminder {
-        flex-wrap: wrap;
-        padding: 0.5rem;
-        color: #fff;
+
+      @keyframes bn13bouncy {
+        0% {
+          top: 0em;
+        }
+        40% {
+          top: 0em;
+        }
+        43% {
+          top: -0.9em;
+        }
+        46% {
+          top: 0em;
+        }
+        48% {
+          top: -0.4em;
+        }
+        50% {
+          top: 0em;
+        }
+        100% {
+          top: 0em;
+        }
       }
-      .reminder h4 {
-        font-weight: bolder;
-        font-size: 18px;
-        color: #fff;
-      }
-      .reminder li {
-        font-weight: bolder;
+      .bn632-hover {
+        width: 160px;
         font-size: 16px;
+        font-weight: 600;
         color: #fff;
+        cursor: pointer;
+        margin: 20px;
+        height: 55px;
+        text-align: center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
       }
-      .collapse {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.53rem;
-        margin-bottom: 1rem;
-        height: fit-content;
+
+      .bn632-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+
+      .bn632-hover:focus {
+        outline: none;
+      }
+
+      .bn632-hover.bn25 {
+        background-image: linear-gradient(to right, #29323c, #485563, #51575c, #cccccc);
+        box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
       }
     </style>
   </head>
