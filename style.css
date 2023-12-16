@@ -4,7 +4,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    height: 100vh;
+    height:fit-content;
     width: 100vw;
     color: #fff;
 }
@@ -21,7 +21,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: .53rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     height: fit-content;
 }
