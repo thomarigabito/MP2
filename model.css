@@ -126,34 +126,42 @@ body {
 /*----------model box-----------*/
 
 #root {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
 .box {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'imgbox detailsbox';
   justify-content: space-between;
   background-color: #ffffff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 700px;
+  width: 400px;
   height: 200px;
   margin: 10px;
 }
 
 .img-box {
+  display: flex;
+  grid-area: imgbox;
   width: 100%;
   height: 200px;
   overflow: hidden;
 }
 
 .images {
+  margin: .35rem;
+  border-radius: 15px;
   width: 100%;
   height: auto;
 }
 
 .detailsbox {
+  grid-area: detailsbox;
 }
 
 .bottom {
@@ -164,7 +172,7 @@ body {
 
 .btn-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
@@ -182,28 +190,51 @@ body {
   background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
-  .box {
-    margin: 10px 0;
+@media only screen and (max-width:1024px) {
+  #root {
+    grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 1024px) {
+@media only screen and (max-width:768px) {
+  #root {
+    grid-template-columns: 1fr;
+    grid-gap: .85rem;
+    margin-top: .85rem;
+  }
   .box {
-    width: 370px;
-    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'imgbox'
+                          'detailsbox';
+    width: 635px;
+    height: 350px;
+    margin: 0 auto;
+    
+  }
+  .searchbar{
+    width: 100%;
   }
 }
+@media only screen and (max-width:426px){
+  .box {
+      width: 350px;
+      height: 350px;
+      margin: 0 auto;
+    }
+    .bottom {
+      display: flex;
+      align-items: center;
+    }
+    .btn-box {
+      margin: 0;
+    }
+}
+
 
 /* .detailsbox{
 
 } */
-
-.img-box {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  margin-right: 2px;
-}
 
 .img-box .images {
   width: 100%;
@@ -255,11 +286,6 @@ body {
 button a {
   text-decoration: none;
   color: #444;
-}
-.btn-box {
-  display: flex;
-  margin: 10px 0;
-  gap: 1rem;
 }
 
 .weatherCard {

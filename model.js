@@ -207,7 +207,6 @@ const displayItem = (items) => {
                         </div>
                         <div class='btn-box'>
                             <button class="cardbtn"><a href=${details}> Details </a> </button>
-                            <button class="cardbtn"> Book </button>
                         </div>
                     </div>
                 </div>`;

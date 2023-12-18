@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.box-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding: 8px;
+}
+.housebox{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+    margin: 16px auto;
+    place-items: center;
+    
+}
+.image-box{
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-areas: 'img details';
+    grid-column-gap: 1rem;
+    align-items: center;
+    /* border: 2px solid rgb(54, 78, 60); */
+    outline: none;
+    padding: .85rem;
+    box-shadow: 0 0 15px #9f9f9f;
+    background: #eff2ef;
+} 
+            
+.img{   
+    grid-area: img;
+}
+.houseimg{
+    width: 775px;
+    box-shadow: 0 0 10px black;
+    border-radius: 25px;
+}
+.details{
+    grid-area: details;
+}
+.title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+    margin-bottom: .85rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.floordetails p,span{
+    line-height: 20px;
+    font-size: 18;
+    font-weight: 800;
+}
+.details .detailsbtn{
+    margin:  40px auto 0 50px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to right, #1f5a07, #11750f, #378530, #7faf57);
+    border-radius: 40px;
+    width: 125px;
+    font-size: 16px;
+    color: white;
+
+}
+
+@media only screen and (max-width:1024px){
+    .image-box {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+                        'img'
+                        'details';
+    }
+    .houseimg {
+        width: 725px;
+        box-shadow: 0 0 10px black;
+        border-radius: 25px;
+    }
+    .details{
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width:769px) {
+    .houseimg {
+        width: 680px;
+        box-shadow: 0 0 10px black;
+        border-radius: 25px;
+    }
+}
+@media only screen and (max-width:426px) {
+    .image-box{
+        grid-template-rows: 250px 1fr;
+        padding:10px;
+        grid-gap: .50rem;
+    }
+    .img{
+        text-align: center;
+    }
+    .houseimg {
+        width: 400px;
+        box-shadow: 0 0 10px black;
+        border-radius: 15px;
+        padding: 0;
+    }
+    .details img {
+       width: 300px;
+       margin: 0 auto;
+    }
+}
