@@ -18,8 +18,8 @@
     <!---------------LOG-IN PAGE SECTIION----------------------------->
     <div class="box">
       <div class="form-box">
-    <!--------Add on 12-15-23 (Added a "Close icon button" that redirects to the home page)-------->
-          <div class="close-button">
+    <!--------(Add by Jed on Dec. 15- "Close icon" on Sign-up that redirects to the home page)-------->
+        <div class="close-button">
           <i class="fas fa-times" id="close-icon"></i>
         </div>
         <form id="signup-form">
@@ -55,11 +55,17 @@
           <div class="container-sign signin">
             <p>Already have an account? <a href="#" id="signin-link">Sign in</a></p>
           </div>
+          <br />
+    <!--(Add by Jed on Dec. 18- To go in the Admin *(Admin Username and Password Login))-->
+         <div class="container-admin admin">
+          <p>For Admin only <a href="#" id="admin-page-link">Go to Admin Page</a></p>
+            </div>
         </form>
       </div>
     </div>
+
     <form id="signin-form" style="display: none">
-  <!--------Add on 12-15-23 (Added also a "Close icon button" that redirects to the home page)-------->
+  <!--------(Add by Jed on Dec. 15- "Close icon" on Sign-in that redirects to the home page)-------->
       <div class="close-button">
         <i class="fas fa-times" id="close-icon-signin"></i>
       </div>
@@ -86,6 +92,32 @@
         <p>Don't have an account? <a href="#" id="signup-link">Sign up</a></p>
       </div>
     </form>
+
+    <!--*Add by Jed on Dec. 18- Admin Form HTML File- ADMIN PAGE SECTION (initially hidden)*-->
+  <form id="admin-form" style="display: none;">
+    <!----(Also attached "Close icon" on Admin that redirects to the home page)---->
+    <div class="close-button">
+      <i class="fas fa-times" id="close-icon-admin"></i>
+  </div>   
+  <div class="container-admin">
+    <h1>Admin Page</h1>
+    <p>Please enter your username and password.</p>
+    <hr />
+    <div class="input-field">
+      <label for="username"><i class="fa-solid fa-user"></i></label>
+      <input type="text" placeholder="Enter Username" name="username" id="username" required />
+    </div>
+    <div class="input-field">
+      <label for="psw"><i class="fa-solid fa-lock"></i></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw2" required />
+      <img src="eye-close.png" id="eyeicon2" />
+    </div>
+    <hr />
+    <div class="btn-field">
+      <button type="submit" class="loginbtn">Log In</button>
+    </div>
+  </div>
+</form>   
 
     <!---------------FOOTER SECTIION----------------------------->
 
