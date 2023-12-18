@@ -1,32 +1,49 @@
-// Get the signup and signin forms
+//(Edited on Dec. 18- Added admin form by Jed)- Get the signup, signin form & admin form
 var signupForm = document.getElementById("signup-form");
 var signinForm = document.getElementById("signin-form");
+var adminForm = document.getElementById("admin-form");
 
-// Get the signup and signin links
+//(Edited on Dec. 18- Added admin form by Jed)- Get the signup and signin link and admin links
 var signupLink = document.getElementById("signup-link");
 var signinLink = document.getElementById("signin-link");
+var adminLink = document.getElementById("admin-page-link");
 
-//Add on 12-15-23 (Add event listener to the close icon to redirect to the home page)
+//(Add by Jed on Dec. 15- Added event listener to the close icon to redirect to the Home page)
 var closeIcon = document.getElementById("close-icon");
 closeIcon.addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-//Add on 12-15-23 (Add event listener to the close icon on the sign-in page to redirect to the home page)
+//(Add by Jed on Dec. 15- Added event listener to the close icon on the Sign-in page to redirect to the Home page)
 var closeIconSignin = document.getElementById("close-icon-signin");
 closeIconSignin.addEventListener("click", function () {
   window.location.href = "index.html";
 });
 
-// Add event listeners to the links to toggle the forms
+//(Add by Jed on Dec. 18- Added event listener to the close icon on the Admin page to redirect to the Home page)
+var closeIconAdmin = document.getElementById("close-icon-admin");
+closeIconAdmin.addEventListener("click", function () {
+  window.location.href = "index.html";
+});
+
+//(Edited on Dec. 18- Added admin form) Add event listeners to the links to toggle the forms
 signupLink.addEventListener("click", function () {
   signupForm.style.display = "block";
   signinForm.style.display = "none";
+  adminForm.style.display = "none";
 });
 
 signinLink.addEventListener("click", function () {
   signupForm.style.display = "none";
   signinForm.style.display = "block";
+  adminForm.style.display = "none";
+});
+
+//(Add by Jed on Dec. 18- Admin form toggle display)
+adminLink.addEventListener("click", function () {
+  signupForm.style.display = "none";
+  signinForm.style.display = "none";
+  adminForm.style.display = "block";
 });
 
 // Add event listener to the signup form to save the user data in localStorage
@@ -62,10 +79,16 @@ signupForm.addEventListener("submit", function (event) {
   // Show a success message
   alert("You have successfully signed up. Please sign in to continue.");
 
-  // Switch to the signin form
+  //(Edited on Dec. 18- Only added Admin Form display)- Switching to the Signin form
   signupForm.style.display = "none";
   signinForm.style.display = "block";
-});
+  adminForm.style.display = "none";
+
+  //(Add by Jed on Dec. 18- Added Admin Form display for Switching to the Admin Form)
+  signupForm.style.display = "none";
+  signinForm.style.display = "none";
+  adminForm.style.display = "block";
+  });
 
 // Add event listener to the signin form to check the user data in localStorage
 signinForm.addEventListener("submit", function (event) {
@@ -92,6 +115,27 @@ signinForm.addEventListener("submit", function (event) {
   }
 });
 
+    //(Add by Jed on Dec. 18- "Admin Form" Event listener to the admin form to check the user data in localStorage)
+  adminForm.addEventListener("submit", function (event) {
+    // Prevent the default form submission
+    event.preventDefault();
+    // Get the user input values
+    var username = adminForm.username.value;
+    var password = adminForm.psw2.value;
+    // Get the user object from localStorage
+    var user = JSON.parse(localStorage.getItem("user"));
+    // Check if the user exists and the credentials match
+    if (user && user.username === username && user.password === password) {
+      // Clear the form fields
+      adminForm.reset();
+      // Redirect to the admin page
+      window.location.href = "adminpage.html";
+    } else {
+      // Show an error message
+      alert("Invalid username or password");
+    }
+  });
+
 //Hide and see for password
 function togglePasswordVisibility(eyeicon, input) {
   if (input.type === "password") {
@@ -102,6 +146,10 @@ function togglePasswordVisibility(eyeicon, input) {
     eyeicon.src = "eye-close.png";
   }
 }
+
+    //(Add by Jed on Dec. 18- "Admin Form" for Switching to the signup form)
+      signupForm.style.display = "block";
+      adminForm.style.display = "none";
 
 const eyeicon = document.getElementById("eyeicon");
 const psw = document.getElementById("psw");
