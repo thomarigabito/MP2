@@ -115,6 +115,18 @@ signinForm.addEventListener("submit", function (event) {
   }
 });
 
+// Create a Admin object editted Thomari
+  var admin = {
+    username: "admin",
+    email: email,
+    password: "password",
+  };
+
+  // Save the user object in localStorage
+  localStorage.setItem("admin", JSON.stringify(admin));
+
+
+
     //(Add by Jed on Dec. 18- "Admin Form" Event listener to the admin form to check the user data in localStorage)
   adminForm.addEventListener("submit", function (event) {
     // Prevent the default form submission
@@ -123,9 +135,9 @@ signinForm.addEventListener("submit", function (event) {
     var username = adminForm.username.value;
     var password = adminForm.psw2.value;
     // Get the user object from localStorage
-    var user = JSON.parse(localStorage.getItem("user"));
+    var admin = JSON.parse(localStorage.getItem("admin"));
     // Check if the user exists and the credentials match
-    if (user && user.username === username && user.password === password) {
+    if (admin && admin.username === username && admin.password === password) {
       // Clear the form fields
       adminForm.reset();
       // Redirect to the admin page

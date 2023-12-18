@@ -12,7 +12,7 @@ function myComputation() {
      amount = document.getElementById("loanAmount").value; //Desire Loan Amount
      payment = document.getElementById("loanPayment").value; // Preferred Payment Period.
      percent = document.getElementById("paymentPeriod").value; // Preferred Fixed Pricing Period
-  
+    var formCompution = document.getElementById("formCompution")
     const dpr = .5;
     const ltv = .95
   
@@ -42,8 +42,9 @@ function myComputation() {
           document.getElementById("myDownpayment").innerHTML = "₱ " + Math.round(downpayment);
           document.getElementById("myMortage").innerHTML = "₱ " + Math.round(monthyInterest);
           document.getElementById("info2").style.display = "none";
-           document.getElementById("error").style.display = "none"
+          document.getElementById("error").style.display = "none"
           console.log(value)
+
         break;
         case 'option2':
           document.getElementById("info1").style.display = "none";
@@ -60,8 +61,8 @@ function myComputation() {
           document.getElementById("error").style.margin = "auto 0"
           document.getElementById("error").style.padding = "1rem"
         } 
-}
-
+} 
+formCompution.reset();
 
 //Feedback
 
