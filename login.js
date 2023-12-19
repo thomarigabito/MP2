@@ -86,8 +86,8 @@ signupForm.addEventListener("submit", function (event) {
 
   //(Add by Jed on Dec. 18- Added Admin Form display for Switching to the Admin Form)
   signupForm.style.display = "none";
-  signinForm.style.display = "none";
-  adminForm.style.display = "block";
+  signinForm.style.display = "block";
+  adminForm.style.display = "none";
   });
 
 // Add event listener to the signin form to check the user data in localStorage
@@ -108,7 +108,7 @@ signinForm.addEventListener("submit", function (event) {
     signinForm.reset();
 
     // Redirect to the hero page
-    window.location.href = "index.html";
+    window.location.href = "housingpage.html";
   } else {
     // Show an error message
     alert("Invalid username or password");
