@@ -230,6 +230,22 @@ body {
     margin: 0;
   }
 }
+@media only screen and (max-width: 376px) {
+  .box {
+    width: 300px;
+    height: 350px;
+    margin: 0 auto;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+  }
+
+  .btn-box {
+    margin: 0;
+  }
+}
 
 /* .detailsbox{
 
@@ -413,6 +429,7 @@ button a {
     margin: 0 auto;
   }
 }
+
 
 /*--------swiper-header---------- */
 swiper-container {
