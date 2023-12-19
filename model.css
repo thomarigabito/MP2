@@ -368,6 +368,52 @@ button a {
   display: none;
 }
 
+/*Comment Section- Added styles for scrolling */
+#postsSection {
+  max-height: 350px; /* Adjust the height as needed */
+  overflow-y: auto;
+}
+
+.like-icon {
+  color: rgb(29, 194, 29);
+}
+
+.love-icon {
+  color: red;
+}
+
+.unlike-icon {
+  color: orange;
+}
+
+.author-name {
+  color: #333; /* Change this to the desired color for author names */
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  #postsSection {
+    grid-template-columns: 1fr 1fr;
+  }
+  .author-name {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #postsSection {
+    grid-template-columns: 1fr;
+    grid-gap: 0.85rem;
+    margin-top: 0.85rem;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .postsSection {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+  }
+}
+
 /*--------swiper-header---------- */
 swiper-container {
   width: 100%;
