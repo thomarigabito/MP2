@@ -107,14 +107,26 @@
           </div>
           <button type="submit" class="btn btn-success">Add User</button>
         </form>
-
         <br />
-        <hr>
-        <br />
-
         <!-- User List -->
         <div id="userList"></div>
-      </section>
+        </section>
+        <br />
+        <hr>
+        
+        <div id="inquiriesContainer">
+          <h5> Customer Inquiries</h5>
+          <form id="inquiriesForm">
+            <div class="form-group">
+              <label for="inquiries">Inquiries:</label>
+              <textarea style= "width: 700px; height: 150px;" class="form-control" id="content" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+       
+        <br />
+        <hr>
+        
       <section id="content-management">
         <h3>Content Management</h3>
         <!-- Content Management Form -->
@@ -209,6 +221,40 @@
       // Call the function to load existing data
       loadExistingData();
     });
+
+      // Add from line 225 to 256 on Dec. 20 for "inquiriesContainer" to display inquiries on admin page
+    document.addEventListener('DOMContentLoaded', function () {
+    var inquiriesContainer = document.getElementById('inquiriesContainer');
+
+    // Retrieve inquiry data from local storage
+    var inquiryData = JSON.parse(localStorage.getItem('inquiryData')) || [];
+
+    // Display existing inquiry data on the admin page
+    displayInquiries();
+
+    // Function to display inquiries on the admin page
+    function displayInquiries() {
+        inquiriesContainer.innerHTML = '';
+
+        if (inquiryData.length > 0) {
+            inquiryData.forEach(function (inquiry) {
+                var inquiryElement = document.createElement('div');
+                inquiryElement.innerHTML = `
+                    <p><strong>Name:</strong> ${inquiry.name}</p>
+                    <p><strong>Email:</strong> ${inquiry.email}</p>
+                    <p><strong>Contact:</strong> ${inquiry.contact}</p>
+                    <p><strong>House Model:</strong> ${inquiry.houseModel}</p>
+                    <p><strong>Date:</strong> ${inquiry.date}</p>
+                    <hr>
+                `;
+                inquiriesContainer.appendChild(inquiryElement);
+            });
+        } else {
+            inquiriesContainer.innerHTML = '<p>No inquiries yet.</p>';
+        }
+    }
+});
   </script>
+  
 </body>
 </html>
