@@ -1,27 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: 'Anton';
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+  background-size: 10px 10px;
+}
+
 img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-body {
-  position: relative;
-  height: 100%;
+hr{
+  border: 1px solid black;
 }
+
 swiper-container {
   height: 75vh;
 }
 swiper-slide img {
   height: 75vh;
 }
-body {
-  background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #ffffff 32px), repeating-linear-gradient(#dddde2, #dddde2);
-  background-color: #ffffff;
-}
+
 .container {
   display: flex;
   justify-content: center;
@@ -42,7 +52,8 @@ body {
 }
 
 .data {
-  width: 83%;
+  width: 90%;
+  margin: 0 auto;
   height: fit-content;
   border-radius: 3px;
 }
@@ -65,24 +76,6 @@ input {
 .glass:hover {
   cursor: pointer;
   color: blue;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.fa-brands {
-  font-size: 25px;
-  margin: 0 10px;
-  color: #333;
-}
-.fa-circle {
-  font-size: 20px;
-}
-.circle {
-  color: rgb(69, 194, 112);
 }
 
 .top {
@@ -111,199 +104,104 @@ input {
   font-size: 40px;
   color: rgb(30, 30, 30);
   text-align: center;
-  font-family: "DM Serif Display", serif;
-  font-family: "GFS Didot", serif;
 }
 
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 /*----------model box-----------*/
 
 #root {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-}
-
-.box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "imgbox detailsbox";
   justify-content: space-between;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  width: 400px;
-  height: 200px;
-  margin: 10px;
+  width: 100%;
+}
+.box{
+  display: flex;
+  width:45%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  /* padding-bottom: 1.75rem; */
+  border-bottom: 1px solid grey;
+  background-color: green;
 }
 
 .img-box {
   display: flex;
-  grid-area: imgbox;
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
-
-.images {
-  margin: 0.35rem;
-  border-radius: 15px;
-  width: 100%;
+  width: 50%;
+  height: 350px;
   height: auto;
+  overflow: hidden;
+ 
 }
-
-.detailsbox {
-  grid-area: detailsbox;
-}
-
-.bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn-box {
-  display: flex;
-  justify-content: center;
+.img-box .images{
+  object-fit: fill;
   width: 100%;
+  height: 350px;
+}
+.detailsbox{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  
+}
+.bottom h1{
+  font-size: 42px;
+  text-align: center;
 }
 
-.cardbtn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.cardbtn:hover {
-  background-color: #0056b3;
-}
 
-@media only screen and (max-width: 1024px) {
-  #root {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 @media only screen and (max-width: 768px) {
-  #root {
-    grid-template-columns: 1fr;
-    grid-gap: 0.85rem;
-    margin-top: 0.85rem;
-  }
-  .box {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      "imgbox"
-      "detailsbox";
-    width: 635px;
-    height: 350px;
-    margin: 0 auto;
-  }
-  .searchbar {
+.box {
+    display: flex;
     width: 100%;
+    height: 350px;
+
   }
 }
 @media only screen and (max-width: 426px) {
   .box {
-    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 500px;
+    margin: 5px 0;
+  } 
+  .img-box{
+    width: 100%;
+    height: 100%;
+  }
+  .img-box .images {
+    object-fit: fill;
+    top:0;
+    width: 100%;
     height: 350px;
-    margin: 0 auto;
-  }
-  .bottom {
-    display: flex;
-    align-items: center;
-  }
-  .btn-box {
-    margin: 0;
   }
 }
 @media only screen and (max-width: 376px) {
   .box {
-    width: 300px;
-    height: 350px;
-    margin: 0 auto;
-  }
-
-  .bottom {
-    display: flex;
-    align-items: center;
-  }
-
-  .btn-box {
-    margin: 0;
-  }
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      height: 500px;
+      margin: 5px 0;
+    }
+  
+    .img-box {
+      width: 100%;
+      height: auto;
+    }
+  
+    .img-box .images {
+      object-fit: contain;
+      width: 100%;
+    }
 }
 
-/* .detailsbox{
 
-} */
 
-.img-box .images {
-  width: 100%;
-  object-fit: fill;
-  aspect-ratio: 1/1;
-  outline: 0;
-  position: relative;
-  box-shadow: 4px -9px 108px 6px rgba(0, 0, 0, 1) inset;
-  -webkit-box-shadow: 4px -9px 108px 6px rgba(0, 0, 0, 1) inset;
-  -moz-box-shadow: 4px -9px 108px 6px rgba(0, 0, 0, 1) inset;
-}
-
-.bottom {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 110px;
-}
-
-.bottom h2 {
-  font-size: 15px;
-  border: none;
-  border-radius: 16px;
-  color: black;
-}
-
-.bottom p {
-  font-size: 16px;
-  font-weight: 900;
-}
-
-.cardbtn {
-  padding: 8px;
-  border-radius: 20px;
-  outline: none;
-  border: none;
-  background: transparent;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #444;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-button a {
-  text-decoration: none;
-  color: #444;
-}
 /*------- weather style--------*/
-.card {
+.card-weather {
   background: rgb(63, 94, 251);
   background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 252, 201, 1) 100%);
   color: #fff;
@@ -432,6 +330,12 @@ button a {
 
 
 /*--------swiper-header---------- */
+.swiperbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 swiper-container {
   width: 100%;
   padding-top: 10px;

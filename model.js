@@ -3,29 +3,37 @@ const product = [
     id: 0,
     image: "Assets/house_specs/CamellaArielle.jpg",
     title: "Harmony Haven",
-    price: 1200000,
+    price: "1200000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 1,
     image: "Assets/house_specs/CamellaCriselle.jpg",
     title: "Serenity Suite",
-    price: 1500000,
+    price: "1500000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 2,
     image: "Assets/house_specs/CamellaDana.jpg",
-    title: "Crestview Cottage",
-    price: 2300000,
+    title: "Crestview",
+    price: "2300000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 3,
     image: "Assets/house_specs/CamellaElla.jpg",
     title: "Radiant Retreat",
-    price: 3500000,
+    price: "3500000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 4,
@@ -33,6 +41,8 @@ const product = [
     title: "Tranquil Terrace",
     price: "2300000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 5,
@@ -40,6 +50,8 @@ const product = [
     title: "Majestic Manor",
     price: "4500000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 6,
@@ -47,6 +59,8 @@ const product = [
     title: "Majestic Manor",
     price: "4500000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
     id: 7,
@@ -54,118 +68,35 @@ const product = [
     title: "Majestic Manor",
     price: "4500000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
-    id: 4,
+    id: 8,
     image: "Assets/house_specs/CamellaEzabelle.jpg",
     title: "Tranquil Terrace",
     price: "2300000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
-    id: 5,
-    image: "Assets/house_specs/CamellaFreya.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 6,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 7,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 4,
+    id: 9,
     image: "Assets/house_specs/CamellaEzabelle.jpg",
     title: "Tranquil Terrace",
     price: "2300000",
     details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
   {
-    id: 5,
-    image: "Assets/house_specs/CamellaFreya.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 6,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 7,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 4,
+    id: 10,
     image: "Assets/house_specs/CamellaEzabelle.jpg",
     title: "Tranquil Terrace",
     price: "2300000",
     details: "loginpage.html",
-  },
-  {
-    id: 5,
-    image: "Assets/house_specs/CamellaFreya.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 6,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 7,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 4,
-    image: "Assets/house_specs/CamellaEzabelle.jpg",
-    title: "Tranquil Terrace",
-    price: "2300000",
-    details: "loginpage.html",
-  },
-  {
-    id: 5,
-    image: "Assets/house_specs/CamellaFreya.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 6,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
-  },
-  {
-    id: 7,
-    image: "Assets/house_specs/CamellaGreta.jpg",
-    title: "Majestic Manor",
-    price: "4500000",
-    details: "loginpage.html",
+    floor: "98sqm",
+    bathroom: "2",
   },
 ];
 
@@ -195,20 +126,20 @@ document.getElementById("searchBar").addEventListener("keyup", (e) => {
 const displayItem = (items) => {
   document.getElementById("root").innerHTML = items
     .map((item) => {
-      var { image, title, price, details } = item;
+      var { image, title, price, details, floor, bathroom,  } = item;
       return `<div class='box'>
                     <div class='img-box'>
                         <img class='images' src=${image}></img>
                     </div> 
                     <div class='detailsbox'>
                         <div class='bottom'>
-                            <p>${title}</p>
+                            <h1>${title}</h1>
                             <h2>PHP ${price}.00</h2>
-                        </div>
-                        <div class='btn-box'>
+                            <p> <i class="fa-solid fa-house"></i> Floor Area: ${floor} </p>
+                            <p> <i class="fa-solid fa-toilet"></i> Bathroom: ${bathroom} </p>
                             <button class="cardbtn"><a href=${details}> Details </a> </button>
                         </div>
-                    </div>
+                    </div>  
                 </div>`;
     })
     .join("");
