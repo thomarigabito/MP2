@@ -174,3 +174,8 @@ eyeicon1.addEventListener("click", () => togglePasswordVisibility(eyeicon1, pswR
 const eyeicon2 = document.getElementById("eyeicon2");
 const psw2 = document.getElementById("psw2");
 eyeicon2.addEventListener("click", () => togglePasswordVisibility(eyeicon2, psw2));
+
+//Add on Jan. 3, 2024- Apply the event listeners for the admin form
+const eyeicon3 = document.getElementById("eyeicon3");
+const psw3 = document.getElementById("psw3");
+eyeicon3.addEventListener("click", () => togglePasswordVisibility(eyeicon3, psw3));
