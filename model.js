@@ -115,7 +115,7 @@ document.getElementById("searchBar").addEventListener("keyup", (e) => {
   });
   displayItem(filteredData);
 });
-document.getElementById("searchBar").addEventListener("keyup", (e) => {
+document.getElementById("priceBar").addEventListener("keyup", (e) => {
   const searchData = e.target.value.toLowerCase();
   const filteredData = categories.filter((item) => {
     return item.price.toLowerCase().includes(searchData);
