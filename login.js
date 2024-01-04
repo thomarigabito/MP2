@@ -133,7 +133,7 @@ signinForm.addEventListener("submit", function (event) {
     event.preventDefault();
     // Get the user input values
     var username = adminForm.username.value;
-    var password = adminForm.psw2.value;
+    var password = adminForm.psw3.value;
     // Get the user object from localStorage
     var admin = JSON.parse(localStorage.getItem("admin"));
     // Check if the user exists and the credentials match

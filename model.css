@@ -443,7 +443,7 @@ swiper-slide img {
 
 swiper-container {
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 swiper-slide {
@@ -456,6 +456,14 @@ swiper-slide {
 swiper-slide img {
   display: block;
   width: 100%;
+  overflow-x: visible;
+}
+
+@media only screen and (max-width: 428px){
+  swiper-slide img {
+    width: 100%;
+    overflow-x: visible;
+  }
 }
 
 
