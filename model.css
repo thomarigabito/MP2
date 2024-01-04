@@ -11,9 +11,6 @@ body {
   margin: 0;
   font-family: 'Anton';
   background-color: #deecf5;
-  /* opacity: 0.8; */
-  background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-  background-size: 10px 10px;
 }
 
 img {
@@ -134,12 +131,6 @@ swiper-slide img {
       color: #000000;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -294,6 +285,14 @@ swiper-slide img {
 
 
 /*------- weather style--------*/
+.weathercontainer{
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  gap:.75rem;
+}
+
+
 .card-weather {
   background: rgb(63, 94, 251);
   background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(70, 252, 201, 1) 100%);
@@ -376,6 +375,18 @@ swiper-slide img {
   margin-top: 10px;
   display: none;
 }
+
+@media only screen and (max-width: 426px) {
+  .weathercontainer {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: .75rem;
+    }
+}
+
+
 
 /*Comment Section- Added styles for scrolling */
 .feedback{
@@ -468,10 +479,16 @@ swiper-slide img {
 
 
 /*---------swiper-about-------------- */
+.swipercontainer{
+  width: 90%;
+  margin: 0 auto;
+  
+}
 .swiper_about_container {
   width: 100%;
   height: 100%;
   background: transparent;
+  
 }
 .swiper-aboutslide {
   font-size: 24px;
@@ -482,6 +499,7 @@ swiper-slide img {
 }
 
 .parallax-bg {
+  background-image:linear-gradient(rgba(222, 236, 245, 0.5), rgba(84, 78, 111, 0.3)), url(Assets/SitePictures/site13.jpg);
   position: absolute;
   left: 0;
   top: 0;
@@ -507,6 +525,32 @@ swiper-slide img {
   font-weight: bolder;
   font-size: 22px;
 }
+
+@media only screen and (max-width: 426px) {
+  .swipercontainer {
+      width: 95%;
+    }
+  .swiper-aboutslide .text {
+      margin-inline: 10px;
+      margin-top: 1rem;
+      width: 170px;
+      text-align: justify;
+    }
+  .text-swiper {
+      color: #000000;
+      line-height: 2.50rem;
+      font-weight: 300;
+      font-size: 16px;
+    }
+      .parallax-bg {
+        background-image: linear-gradient(rgba(222, 236, 245, 0.5), rgba(84, 78, 111, 0.5)), url(Assets/SitePictures/site13.jpg);
+        
+      }
+}
+
+
+
+
 
 /*--------button----------*/
 
@@ -559,7 +603,7 @@ swiper-slide img {
 
 
 .footer{
-  width: 90%;
+  width: 95%;
   border: none;
   outline: none;
   background: rgb(222, 236, 245);
