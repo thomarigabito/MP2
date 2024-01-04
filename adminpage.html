@@ -13,12 +13,12 @@
     /* Admin container and layout */
     .admin-container {
       display: flex;
-      height: 100vh;
+      min-height: 100vh;
     }
     /* Admin sidebar styling */
     .admin-sidebar {
-      width: 250px;
-      background-color: royalblue;
+      width: 200px;
+      background-color: #0082fe;
       color: #fff;
       padding: 30px;
       box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -43,8 +43,7 @@
     }
     /* Admin content styling */
     .admin-content {
-      flex: 1;
-      padding: 20px;
+      padding: 15px;
     }
     .admin-content h1 {
       margin-bottom: 20px;
@@ -55,38 +54,56 @@
         scrollbar-gutter: 10px;
     }
 
-@media only screen and (max-width: 320px) {
-  .admin-content {
+    @media only screen and (max-width: 320px) {
+  .admin-sidebar, .admin-content {
     padding: 5px;
+    width: 20px;
   }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 376px) {
-  .admin-content {
+@media only screen and (max-width: 376px) {
+  .admin-sidebar, .admin-content {
     padding: 10px;
+    width: 35px;
   }
 }
 
-@media only screen and (min-width: 377px) and (max-width: 426px) {
-  .admin-content {
+@media only screen and (max-width: 426px) {
+  .admin-sidebar, .admin-content {
     padding: 15px;
+    width: 50px;
   }
 }
 
-@media only screen and (min-width: 427px) and (max-width: 768px) {
-  .admin-content {
-    padding: 20px;
+@media only screen and (max-width: 576px) {
+  .admin-sidebar, .admin-content {
+    padding: 5px;
+    width: 100px;
   }
 }
 
-    </style>
+@media only screen and (max-width: 576px) {
+  #user-management input,
+  #content-management textarea {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .admin-sidebar, .admin-content {
+    padding: 10px;
+    width: 125px;
+  }
+}
+    </style>    
   <title>Admin Page- Budget Bliss Residences</title>
 </head>
+
 <body>
   <!-- Admin Page Body Content -->
   <div class="admin-container">
     <div class="admin-sidebar">
-      <h2>Admin Dashboard</h2>
+      <h2>Admin</h2>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="#"></a></li>
@@ -105,7 +122,7 @@
             <label for="email">Email:</label>
             <input type="email" style= "width: 200px;" class="form-control" id="email" required>
           </div>
-          <button type="submit" class="btn btn-success">Add User</button>
+          <button type="submit" class="btn btn-primary">Add User</button>
         </form>
         <br />
         <!-- User List -->
@@ -113,13 +130,15 @@
         </section>
         <br />
         <hr>
-        
+        <h4> Customer Inquiries</h4>
+        <br /> <br /> 
         <div id="inquiriesContainer">
-          <h5> Customer Inquiries</h5>
+          <hr>
+          <br />
           <form id="inquiriesForm">
             <div class="form-group">
               <label for="inquiries">Inquiries:</label>
-              <textarea style= "width: 700px; height: 150px;" class="form-control" id="content" rows="3"></textarea>
+              <textarea style= "width: 200px;" class="form-control" id="content" rows="3"></textarea>
             </div>
           </form>
         </div>
@@ -133,9 +152,9 @@
         <form id="contentForm">
           <div class="form-group">
             <label for="content">Content:</label>
-            <textarea style= "width: 700px; height: 150px;" class="form-control" id="content" rows="3" required></textarea>
+            <textarea style= "width: 250px; height: 150px;" class="form-control" id="content" rows="3" required></textarea>
           </div>
-          <button type="submit" class="btn btn-success">Add Content</button>
+          <button type="submit" class="btn btn-primary">Add Content</button>
         </form>
         <!-- Content List -->
         <div id="contentList"></div>
