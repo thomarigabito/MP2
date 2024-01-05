@@ -40,6 +40,10 @@ swiper-slide img {
   margin: auto 0;
 }
 
+.nav .nav-link:hover{
+  color:black;
+}
+
 
 .data {
   width: 90%;
@@ -213,7 +217,6 @@ swiper-slide img {
 .cardbtn a{
   color: #000000;
   text-decoration: none;
-
 }
 
 
@@ -375,21 +378,9 @@ swiper-slide img {
   margin-top: 10px;
   display: none;
 }
-
-@media only screen and (max-width: 426px) {
-  .weathercontainer {
-      width: 95%;
-      display: flex;
-      flex-direction: column;
-      margin: 0 auto;
-      gap: .75rem;
-    }
-}
-
-
-
-/*Comment Section- Added styles for scrolling */
-.feedback{
+.feedback {
+  width: 75%;
+  padding: 10px;
   border: none;
   outline: none;
   box-shadow: 0 0 10px #33333372;
@@ -400,9 +391,69 @@ swiper-slide img {
   margin-top: 10px;
 }
 
+@media only screen and (max-width: 769px) {
+  .weathercontainer {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    gap: .75rem;
+  }
+  .card-weather{
+    width: 35%;
+  }
+  .details{
+    flex-direction: column;
+    gap: 10px
+  }
+  .details img{
+    width: 25px;
+  }
+  .humidity{
+    font-size: 18px;
+  }
+  .wind{
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .weathercontainer {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      gap: .75rem;
+    }
+    .card-weather {
+      width: 100%;
+    }
+    .feedback {
+      width: 100%;
+      margin: 0 auto;
+    }
+}
+
+
+
+/*Comment Section- Added styles for scrolling */
+
+
 #postsSection {
   max-height: 350px; /* Adjust the height as needed */
   overflow-y: auto;
+}
+.glyphicon{
+  font-size: 18px;
+}
+
+.glyphicon-thumbs-up{
+  color:rgb(29, 194, 29)
+}
+.glyphicon-heart{
+  color:red
+}
+.glyphicon-thumbs-down{
+  color: orange
 }
 
 .like-icon {
@@ -417,9 +468,24 @@ swiper-slide img {
   color: orange;
 }
 
+.like-icon, .love-icon, .unlike-icon{
+  margin-right: 5px;
+}
+
 .author-name {
   color: #333; /* Change this to the desired color for author names */
   font-weight: bold;
+}
+
+#postsSection{
+  padding-left:10px ;
+  width: 102.5%;
+}
+textarea{
+  margin-top: 10px;
+}
+.replybtn{
+  margin-top: -25px;
 }
 
 @media only screen and (max-width: 1024px) {
