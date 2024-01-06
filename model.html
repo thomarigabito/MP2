@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./Assets/finalLogo.png">
+    <link rel="icon" type="image/x-icon" href="./Assets/finalLogo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-      
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,11 @@
 
     <title>Document</title>
     <link rel="stylesheet" href="model.css" />
+    <link rel="stylesheet" href="buttons.css" />
   </head>
 
   <body>
-    <header class="p-3 ps-5 pe-5 text-bg-dark">
+    <header class="p-3 ps-5 pe-5">
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -31,7 +32,6 @@
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.html" class="nav-link px-2 text-secondary">Home</a></li>
             <li><a href="model.html" class="nav-link px-2 text-white">Features</a></li>
-            <li><a href="#aboutsec" class="nav-link px-2 text-white">About</a></li>
           </ul>
           <div class="text-end">
             <a href="loginpage.html"><button class="bn13">Sign-up</button></a>
@@ -41,48 +41,48 @@
     </header>
 
     <div class="swiperbox">
-    <swiper-container
-      class="mySwiper slider"
-      pagination="true"
-      effect="coverflow"
-      grab-cursor="true"
-      slides-per-view= "3"
-      coverflow-effect-rotate="35"
-      coverflow-effect-stretch="0"
-      coverflow-effect-depth="100"
-      coverflow-effect-modifier="1"
-      coverflow-effect-slide-shadows="true">
-      <swiper-slide>
-        <img src="Assets/SitePictures/site11.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site5.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site12.jpeg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site14.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site15.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site1.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site2.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site10.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site6.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="Assets/SitePictures/site7.jpg" />
-      </swiper-slide>
-    </swiper-container>
+      <swiper-container
+        class="mySwiper slider"
+        pagination="true"
+        effect="coverflow"
+        grab-cursor="true"
+        slides-per-view="3"
+        coverflow-effect-rotate="35"
+        coverflow-effect-stretch="0"
+        coverflow-effect-depth="100"
+        coverflow-effect-modifier="1"
+        coverflow-effect-slide-shadows="true">
+        <swiper-slide>
+          <img src="Assets/SitePictures/site11.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site5.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site12.jpeg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site14.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site15.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site10.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site6.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="Assets/SitePictures/site7.jpg" />
+        </swiper-slide>
+      </swiper-container>
     </div>
 
     <div class="data">
@@ -108,62 +108,53 @@
     </div>
 
     <!--------------------------ABOUT SLIDER SWIPER------------------->
-        <div class="swipercontainer">
-          <swiper-container
-            class="mySwiper swiper_about_container"
-            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-            speed="600"
-            parallax="true"
-            pagination="true"
-            pagination-clickable="true"
-            navigation="true"
-            grab-cursor="true">
-            <div
-              slot="container-start"
-              class="parallax-bg"
-              
-              data-swiper-parallax="-23%"></div>
+    <div class="swipercontainer">
+      <swiper-container
+        class="mySwiper swiper_about_container"
+        style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+        speed="600"
+        parallax="true"
+        pagination="true"
+        pagination-clickable="true"
+        navigation="true"
+        grab-cursor="true">
+        <div slot="container-start" class="parallax-bg" data-swiper-parallax="-23%"></div>
 
-            <swiper-slide class="swiper-aboutslide">
-              <div class="title" data-swiper-parallax="-300">About</div>
-              <div class="text" data-swiper-parallax="-100">
-                <p class="text-swiper">
-                  "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by seamlessly blending affordability with the
-                  joy of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to
-                  their budgets without compromising on quality or comfort.
-                </p>
-              </div>
-            </swiper-slide>
-            <swiper-slide class="swiper-aboutslide">
-              <div class="title" data-swiper-parallax="-300">Vision</div>
-              <div class="text" data-swiper-parallax="-100">
-                <p class="text-swiper">
-                  "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by seamlessly blending affordability with the
-                  joy of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to
-                  their budgets without compromising on quality or comfort.
-                </p>
-              </div>
-            </swiper-slide>
-            <swiper-slide class="swiper-aboutslide">
-              <div class="title" data-swiper-parallax="-300">Objective</div>
-              <div class="text" data-swiper-parallax="-300">
-                <p class="text-swiper">
-                  "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by seamlessly blending affordability with the
-                  joy of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to
-                  their budgets without compromising on quality or comfort.
-                </p>
-              </div>
-            </swiper-slide>
-          </swiper-container>
-        </div>
-      </div>
+        <swiper-slide class="swiper-aboutslide">
+          <div class="title" data-swiper-parallax="-300">About</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p class="text-swiper">
+              "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by seamlessly blending affordability with the joy
+              of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to their
+              budgets without compromising on quality or comfort.
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-aboutslide">
+          <div class="title" data-swiper-parallax="-300">Vision</div>
+          <div class="text" data-swiper-parallax="-100">
+            <p class="text-swiper">
+              "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by seamlessly blending affordability with the joy
+              of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to their
+              budgets without compromising on quality or comfort.
+            </p>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="swiper-aboutslide">
+          <div class="title" data-swiper-parallax="-300">Objective</div>
+          <div class="text" data-swiper-parallax="-300">
+            <p class="text-swiper">
+              "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by seamlessly blending affordability with the joy
+              of finding your ideal home. We are committed to providing a platform where individuals can explore housing options tailored to their
+              budgets without compromising on quality or comfort.
+            </p>
+          </div>
+        </swiper-slide>
+      </swiper-container>
     </div>
-
-
 
     <div class="col-12 d-flex justify-content-center align-items-center">
       <div class="row col-xs-12 col-md-11 d-flex">
-
         <div class="col-xs-12 col-md-5 col-lg-3 d-flex justify-content-center">
           <div class="card card-weather">
             <div class="search">
@@ -196,8 +187,6 @@
             </div>
           </div>
         </div>
-
-
 
         <div class="feedback">
           <h3>Comment Section:</h3>
