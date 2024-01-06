@@ -181,23 +181,23 @@ function showPosts() {
 
   storedPosts.forEach(function (post, index) {
     let postHtml = `
-      <div class="col-sm-12">
+      <div class="commentoutput">
         <p class="author-name">${post.author}: ${post.text}</p>
-        <button type="button" class="btn btn-primary" onclick="toggleLike(${index})">
-          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+        <button type="button" class="btn" onclick="toggleLike(${index})">
+          <span class="glyphicon glyphicon-thumbs-up"></span>
         </button>
         <span id="likesCount${index}" class="like-icon">${post.likes || 0}</span>
-        <button type="button" class="btn btn-danger" onclick="toggleLove(${index})">
-          <span class="glyphicon glyphicon-heart"></span> Love
+        <button type="button" class="btn" onclick="toggleLove(${index})">
+          <span class="glyphicon glyphicon-heart"></span>
         </button>
         <span id="lovesCount${index}" class="love-icon">${post.loves || 0}</span>
-        <button type="button" class="btn btn-warning" onclick="toggleUnlike(${index})">
-          <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+        <button type="button" class="btn" onclick="toggleUnlike(${index})">
+          <span class="glyphicon glyphicon-thumbs-down"></span>
         </button>
         <span id="unlikesCount${index}" class="unlike-icon">${post.unlikes || 0}</span>
         <br>
         <textarea id="replyText${index}" rows="2" placeholder="Write a reply"></textarea>
-        <button type="button" class="btn btn-info" onclick="replyToPost(${index})">Reply</button>
+        <button type="button" class="btn btn-info replybtn" onclick="replyToPost(${index})">Reply</button>
         <br>
         <div id="repliesSection${index}">
           <!-- Replies will be dynamically added here -->

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+
 body {
     background-image: url("./Assets/RealEstateInterior1.jpg");
     background-size: cover;
@@ -7,7 +10,10 @@ body {
     height:fit-content;
     width: 100vw;
     color: #fff;
+    font-family: 'Arvo';
+    font-weight: bolder;
 }
+
 
 .computaion-box {
     backdrop-filter: brightness(0.8) blur(10px);
@@ -44,13 +50,18 @@ body {
     flex-basis: 50%;
     border-right: solid 1px;
     padding: .50rem;
-    color: #fff;
+    color: #ffffff;
 }
 #myAmount{
     font-weight: bold;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: underline;
 }
+
+h3, h4{
+    font-weight: bolder;
+}
+
 
 .reminder {
     flex-basis: 50%;
@@ -65,11 +76,26 @@ body {
 }
 
 .reminder li {
-    font-weight: bolder;
+    font-weight: 200;
+    line-height: 23px;
     font-size: 16px;
-    color: #fff;
+    color: #ffffff;
 }
 
+.bn25{
+    font-weight: 200;
+    font-size: 18px;
+    
+}
+label{
+    font-size: 14px;
+    font-weight: bold;
+}
+input{
+    line-height: 16px;
+    font-weight: bold;
+    color:#333 ;
+}
 @media only screen and (max-width: 320px) {
     .container-fluid{
         margin: 0;
