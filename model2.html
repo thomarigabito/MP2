@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./Assets/finalLogo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=GFS+Didot&family=Whisper&display=swap"
+        rel="stylesheet" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="model.css" />
+    <link rel="stylesheet" href="buttons.css" />
+</head>
+
+<body>
+    <header class="p-3 ps-5 pe-5">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="./Assets/finalLogo.png" alt="" width="50" height="42" />
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="home.html" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="model2.html" class="nav-link px-2 text-white">Features</a></li>
+                </ul>
+                <div class="text-end">
+                    <!-- <a href="loginpage.html"><button class="bn13">Sign-up</button></a> -->
+                    <i id="user" class="fa-solid fa-user" style=" border-radius: 50%; border: solid 1px #fff; padding: 8px; color: white;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="swiperbox">
+        <swiper-container class="mySwiper slider" pagination="true" effect="coverflow" grab-cursor="true"
+            slides-per-view="3" coverflow-effect-rotate="35" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+            <swiper-slide>
+                <img src="Assets/SitePictures/site11.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site5.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site12.jpeg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site14.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site15.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site1.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site2.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site10.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site6.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <img src="Assets/SitePictures/site7.jpg" />
+            </swiper-slide>
+        </swiper-container>
+    </div>
+
+    <div class="data">
+        <div class="header">
+            <p>HOUSE MODEL</p>
+        </div>
+
+        <div class="top col-12">
+            <div class="searchbar btn">
+                <input class="housemodel" placeholder="Search for house model" id="searchBar" name="searchBar"
+                    type="text" />
+                <i class="fa-solid fa-magnifying-glass glass"></i>
+            </div>
+
+            <div class="searchbar btn col-sm-12 col-md-12 col-lg-5">
+                <input class="housemodel" placeholder="Price" id="priceBar" name="searchBar" type="text" />
+                <i class="fa-solid fa-magnifying-glass glass"></i>
+            </div>
+        </div>
+
+        <div class="body">
+            <div id="root"></div>
+        </div>
+    </div>
+
+    <!--------------------------ABOUT SLIDER SWIPER------------------->
+    <div class="swipercontainer">
+        <swiper-container class="mySwiper swiper_about_container"
+            style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" speed="600" parallax="true"
+            pagination="true" pagination-clickable="true" navigation="true" grab-cursor="true">
+            <div slot="container-start" class="parallax-bg" data-swiper-parallax="-23%"></div>
+
+            <swiper-slide class="swiper-aboutslide">
+                <div class="title" data-swiper-parallax="-300">About</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p class="text-swiper">
+                        "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by
+                        seamlessly blending affordability with the joy
+                        of finding your ideal home. We are committed to providing a platform where individuals can
+                        explore housing options tailored to their
+                        budgets without compromising on quality or comfort.
+                    </p>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="swiper-aboutslide">
+                <div class="title" data-swiper-parallax="-300">Vision</div>
+                <div class="text" data-swiper-parallax="-100">
+                    <p class="text-swiper">
+                        "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by
+                        seamlessly blending affordability with the joy
+                        of finding your ideal home. We are committed to providing a platform where individuals can
+                        explore housing options tailored to their
+                        budgets without compromising on quality or comfort.
+                    </p>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="swiper-aboutslide">
+                <div class="title" data-swiper-parallax="-300">Objective</div>
+                <div class="text" data-swiper-parallax="-300">
+                    <p class="text-swiper">
+                        "At Budget Bliss Residences, our mission is to redefine the journey to home ownership by
+                        seamlessly blending affordability with the joy
+                        of finding your ideal home. We are committed to providing a platform where individuals can
+                        explore housing options tailored to their
+                        budgets without compromising on quality or comfort.
+                    </p>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </div>
+
+
+    <div class="weathercontainer">
+        <div class="card card-weather">
+            <div class="search">
+                <input class="col-xs-5" type="text" placeholder="enter city name" spellcheck="false" />
+                <button><img src="images/search.png" alt="Search" /></button>
+            </div>
+            <div class="error">
+                <p>Invalid city name</p>
+            </div>
+            <div class="weather">
+                <img src="images/rain.png" class="weather-icon" />
+                <h1 class="temp">0°c</h1>
+                <h2 class="city">Search City</h2>
+                <div class="details">
+                    <div class="col">
+                        <img src="images/humidity.png" alt="Humidity icon" />
+                        <div>
+                            <p class="humidity">50%</p>
+                            <p class="humidity">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="images/wind.png" alt="Wind icon" />
+                        <div>
+                            <p class="wind">15 km/h</p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="feedback">
+            <h3>Comment Section:</h3>
+            <div class="input-group">
+                <label class="authorname" for="authorName">Your Name:</label> <br />
+                <input class="form-control" type="text" id="authorName" name="authorName" />
+                <br />
+                <br />
+                <label for="postText">Leave a Comment:</label> <br />
+                <textarea class="form-control" id="postText" name="postText" rows="3"></textarea>
+            </div>
+            <div>
+                <button type="button" class="btn btn-success mt-3" onclick="publishPost()">Submit</button>
+            </div>
+            <br />
+            <p><span class="badge" id="postCount">0</span> Posts:</p>
+            <br />
+
+            <!-- Wrapped posts section in a scrolling div -->
+            <div id="postsSection" class="row">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-------------footer------------->
+    <div class="col-12 d-flex justify-content-center">
+        <div class="footer col-11 d-flex justify-content-center">
+            <footer class="col-10 d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-body-secondary">© Group9 2023</p>
+
+                <a href="/"
+                    class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32">
+                        <use xlink:href="#bootstrap"></use>
+                    </svg>
+                </a>
+
+                <ul class="nav col-md-4 justify-content-end">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="model.html" class="nav-link px-2 text-body-secondary">Features</a>
+                    </li>
+                    <li class="nav-item"><a href="housingpage.html "
+                            class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item"><a href="model.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="model2.js"></script>
+    <script src="weather.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

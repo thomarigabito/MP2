@@ -1,72 +1,152 @@
+const product = [
+  {
+    id: 0,
+    image: "Assets/house_specs/CamellaArielle.jpg",
+    title: "Harmony Haven",
+    price: "1200000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 1,
+    image: "Assets/house_specs/CamellaCriselle.jpg",
+    title: "Serenity Suite",
+    price: "1500000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 2,
+    image: "Assets/house_specs/CamellaDana.jpg",
+    title: "Crestview",
+    price: "2300000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 3,
+    image: "Assets/house_specs/CamellaElla.jpg",
+    title: "Radiant Retreat",
+    price: "3500000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 4,
+    image: "Assets/house_specs/CamellaEzabelle.jpg",
+    title: "Tranquil Terrace",
+    price: "2300000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 5,
+    image: "Assets/house_specs/CamellaFreya.jpg",
+    title: "Majestic Manor",
+    price: "4500000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 6,
+    image: "Assets/house_specs/CamellaGreta.jpg",
+    title: "Majestic Manor",
+    price: "4500000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 7,
+    image: "Assets/house_specs/CamellaGreta.jpg",
+    title: "Majestic Manor",
+    price: "4500000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 8,
+    image: "Assets/house_specs/CamellaEzabelle.jpg",
+    title: "Tranquil Terrace",
+    price: "2300000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 9,
+    image: "Assets/house_specs/CamellaEzabelle.jpg",
+    title: "Tranquil Terrace",
+    price: "2300000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+  {
+    id: 10,
+    image: "Assets/house_specs/CamellaEzabelle.jpg",
+    title: "Tranquil Terrace",
+    price: "2300000",
+    details: "housingpage.html",
+    floor: "98sqm",
+    bathroom: "2",
+  },
+];
 
-let amount;
-let payment;
-let percent;
-let interest;
+const categories = [
+  ...new Set(
+    product.map((item) => {
+      return item;
+    })
+  ),
+];
 
-function myComputation() {
-     amount = Number(amount);
-     payment = Number(payment);
-     percent = Number(percent);
-  
-     amount = document.getElementById("loanAmount").value; //Desire Loan Amount
-     payment = document.getElementById("loanPayment").value; // Preferred Payment Period.
-     percent = document.getElementById("paymentPeriod").value; // Preferred Fixed Pricing Period
-    var formCompution = document.getElementById("formCompution")
-    const dpr = .5;
-    const ltv = .95
-  
-    const select = document.getElementById('loanCompute');
-    const value = select.value; 
-  
+document.getElementById("searchBar").addEventListener("keyup", (e) => {
+  const searchData = e.target.value.toLowerCase();
+  const filteredData = categories.filter((item) => {
+    return item.title.toLowerCase().includes(searchData);
+  });
+  displayItem(filteredData);
+});
+document.getElementById("priceBar").addEventListener("keyup", (e) => {
+  const searchData = e.target.value.toLowerCase();
+  const filteredData = categories.filter((item) => {
+    return item.price.toLowerCase().includes(searchData);
+  });
+  displayItem(filteredData);
+});
 
-    console.log(value)
-    let Ainterest = amount * payment * percent;
-    let downpayment = amount * dpr;
-    let monthyInterest = Ainterest / 12;
-    let maxLoan = amount * ltv;
-   
-      
-    
-     
-        downpayment = Number(downpayment);
-        Ainterest = Number(Ainterest);
-        monthyInterest = Number(monthyInterest);
-        
+const displayItem = (items) => {
+  document.getElementById("root").innerHTML = items
+    .map((item) => {
+      var { image, title, price, details, floor, bathroom,  } = item;
+      return `<div class='box'>
+                    <div class='img-box'>
+                        <img class='images' src=${image}></img>
+                    </div> 
+                    <div class='detailsbox'>
+                        <div class='bottom'>
+                            <h1>${title}</h1>
+                            <h2>PHP ${price}.00</h2>
+                            <p> <i class="fa-solid fa-house"></i> Floor Area: ${floor} </p>
+                            <p> <i class="fa-solid fa-toilet"></i> Bathroom: ${bathroom} </p>
+                            <button class="cardbtn"><a href=${details}> Details </a> </button>
+                        </div>
+                    </div>  
+                </div>`;
+    })
+    .join("");
+};
+displayItem(categories);
 
-      switch (value) {
-        case 'option1':
-          document.getElementById("desired").innerHTML = "Monthly Income?"
-          document.getElementById("info1").style.display = "block";
-          document.getElementById("myAmount").innerHTML = "₱" + Math.round(maxLoan);
-          document.getElementById("myInterest").innerHTML = "₱ " + Math.round(Ainterest);
-          document.getElementById("myDownpayment").innerHTML = "₱ " + Math.round(downpayment);
-          document.getElementById("myMortage").innerHTML = "₱ " + Math.round(monthyInterest);
-          document.getElementById("info2").style.display = "none";
-          document.getElementById("error").style.display = "none"
-          console.log(value)
-
-        break;
-        case 'option2':
-          document.getElementById("desired").innerHTML = "Desired Loan Amount?"
-          document.getElementById("info1").style.display = "none";
-          document.getElementById("error").style.display = "none"
-          document.getElementById("info2").style.display = "block";
-          document.getElementById("myAmount2").innerHTML = "₱ "+ Math.round(maxLoan);
-          document.getElementById("myInterest2").innerHTML = "₱ " + Math.round(Ainterest);
-          document.getElementById("myMortage2").innerHTML ="₱ " + Math.round(monthyInterest);
-          console.log(value)
-        break;
-        default:
-          window.alert("What do you want to compute?");
-          document.getElementById("error").style.display = "block"
-          document.getElementById("error").style.margin = "auto 0"
-          document.getElementById("error").style.padding = "1rem"
-        } 
-} 
-formCompution.reset();
-
-//Feedback
+//Feedback/Comment Section
 
 // Initialize postsData array
 let postsData = [];
@@ -101,23 +181,23 @@ function showPosts() {
 
   storedPosts.forEach(function (post, index) {
     let postHtml = `
-      <div class="col-sm-12">
+      <div class="commentoutput">
         <p class="author-name">${post.author}: ${post.text}</p>
-        <button type="button" class="btn btn-primary" onclick="toggleLike(${index})">
-          <span class="glyphicon glyphicon-thumbs-up"></span> Like
+        <button type="button" class="btn" onclick="toggleLike(${index})">
+          <span class="glyphicon glyphicon-thumbs-up"></span>
         </button>
         <span id="likesCount${index}" class="like-icon">${post.likes || 0}</span>
-        <button type="button" class="btn btn-danger" onclick="toggleLove(${index})">
-          <span class="glyphicon glyphicon-heart"></span> Love
+        <button type="button" class="btn" onclick="toggleLove(${index})">
+          <span class="glyphicon glyphicon-heart"></span>
         </button>
         <span id="lovesCount${index}" class="love-icon">${post.loves || 0}</span>
-        <button type="button" class="btn btn-warning" onclick="toggleUnlike(${index})">
-          <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
+        <button type="button" class="btn" onclick="toggleUnlike(${index})">
+          <span class="glyphicon glyphicon-thumbs-down"></span>
         </button>
         <span id="unlikesCount${index}" class="unlike-icon">${post.unlikes || 0}</span>
         <br>
         <textarea id="replyText${index}" rows="2" placeholder="Write a reply"></textarea>
-        <button type="button" class="btn btn-info" onclick="replyToPost(${index})">Reply</button>
+        <button type="button" class="btn btn-info replybtn" onclick="replyToPost(${index})">Reply</button>
         <br>
         <div id="repliesSection${index}">
           <!-- Replies will be dynamically added here -->

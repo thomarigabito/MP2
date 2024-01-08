@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="./Assets/finalLogo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Whisper&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="buttons.css" />
+    <title>BBR</title>
+</head>
+
+<body>
+    <header class="p-3 ps-5 pe-5">
+        <div class="container-fluid">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <a href="home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="./Assets/finalLogo.png" alt="" width="50" height="42" />
+                </a>
+
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="home.html" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="model2.html" class="nav-link px-2 text-white">Features</a></li>
+                </ul>
+                <div class="text-end">
+                    <!-- <a href="loginpage.html"><button class="bn13">Sign-up</button></a> -->
+                    <i id="user" class="fa-solid fa-user" style=" border-radius: 50%; border: solid 1px #fff; padding: 8px;" ></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid col-sm-12 col-md-10 col-lg-10 d-flex justify-content-center h-75 mt-2 pt-5">
+        <div class="row col-12 flex-lg-row-reverse main_computation">
+            <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
+                <img class="col-10" src="./Assets/finalLogo.png" alt="" />
+            </div>
+            <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
+                <div class="computaion-box" id="computaion-box">
+                    <div class="computationfrm text-white p-3">
+                        <h3 class="text-center">Sample Housing Computation</h3>
+                        <form class="form" id="formCompution">
+                            <div class="mb-1 mt-1">
+                                <label for="loanCompute">What do you want to Compute?</label>
+                                <select class="form-control" id="loanCompute" name="paymentPeriod" required>
+                                    <option value=""></option>
+                                    <option value="option1">How much you can borrow based on your income?</option>
+                                    <option value="option2">How much you can borrow based on the value of the property
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="mb-1 mt-1">
+                                <label id="desired" for="loanAmount">Desire Loan Amount? / Monthly Income?</label>
+                                <input type="number" class="form-control" id="loanAmount" name="loan-amount" />
+                            </div>
+                            <div class="mb-1 mt-1">
+                                <label for="loanPayment" class="form-label">Preferred Payment Period.</label>
+                                <select class="form-control" id="loanPayment" name="loanPayment" required>
+                                    <option value=""></option>
+                                    <option value="1">1 year</option>
+                                    <option value="2">2 year</option>
+                                    <option value="3">3 year</option>
+                                    <option value="4">4 year</option>
+                                    <option value="5">5 year</option>
+                                    <option value="6">6 year</option>
+                                    <option value="7">7 year</option>
+                                    <option value="8">8 year</option>
+                                    <option value="9">9 year</option>
+                                    <option value="10">10 year</option>
+                                    <option value="11">11 year</option>
+                                    <option value="12">12 year</option>
+                                    <option value="13">13 year</option>
+                                    <option value="14">14 year</option>
+                                    <option value="15">15 years</option>
+                                    <option value="16">16 year</option>
+                                    <option value="17">17 year</option>
+                                    <option value="18">18 year</option>
+                                    <option value="19">19 year</option>
+                                    <option value="20">20 years</option>
+                                    <option value="21">21 years</option>
+                                    <option value="22">22 years</option>
+                                    <option value="23">23 years</option>
+                                    <option value="24">24 years</option>
+                                    <option value="25">25 years</option>
+                                    <option value="26">26 years</option>
+                                    <option value="27">27 years</option>
+                                    <option value="28">28 years</option>
+                                    <option value="29">29 years</option>
+                                    <option value="30">30 years</option>
+                                </select>
+                            </div>
+                            <div class="mb-1 mt-1">
+                                <label for="paymentPeriod" class="form-label">Preferred Fixed Pricing Period:</label>
+                                <select class="form-control" id="paymentPeriod" name="paymentPeriod" required>
+                                    <option value=""></option>
+                                    <option value="0.0575">1 Year; 5.75%</option>
+                                    <option value="0.0625">3 Years; 6.25%</option>
+
+                                    <option value="0.065">5 Years; 6.5%</option>
+
+                                    <option value="0.07125">10 Years; 7.125%</option>
+                                    <option value="0.0775">15 years; 7.75%</option>
+
+                                    <option value="0.085">20 years; 8.5%</option>
+
+                                    <option value="0.09125">25 years; 9.125%</option>
+
+                                    <option value="0.0975">30 years; 9.75%</option>
+                                </select>
+                            </div>
+                            <div>
+                                <button type="button" class="bn632-hover bn25" onclick="myComputation()"
+                                    data-bs-toggle="collapse" data-bs-target="#computation">
+                                    Compute
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse" id="computation">
+                <div class="computation" id="computationBox">
+                    <div id="error" style="display: none">
+                        <h4>What do you want to compute?</h4>
+                    </div>
+
+                    <div class="otherInfo" id="info1" style="display: none">
+                        <div>
+                            <p>You can approximately loan <span id="myAmount"></span> based on your Gross Monthly
+                                Income.</p>
+                        </div>
+                        <div>
+                            <h4>Other indicative figures:</h4>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <p>Principal & Interest</p>
+                            <span id="myInterest"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <p>Downpayment</p>
+                            <span id="myDownpayment"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <p>Monthly Interest</p>
+                            <span id="myMortage"></span>
+                        </div>
+                    </div>
+
+                    <div class="otherInfo" id="info2" style="display: none">
+                        <div>
+                            <p>You can approximately loan <span id="myAmount2"></span> based on the appraised value of
+                                the property.</p>
+                        </div>
+                        <div>
+                            <h4 class="indicative">Other indicative figures:</h4>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <p>Principal & Interest</p>
+                            <span id="myInterest2"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between">
+                            <p>Monthly Interest</p>
+                            <span id="myMortage2"></span>
+                        </div>
+                    </div>
+
+                    <div class="reminder" id="reminder">
+                        <h4>Please be reminded that:</h4>
+                        <ol>
+                            <li>Result appeared on this calculator is for reference only and NOT official.</li>
+                            <li>Actual loanable amount may vary depending on Pag-IBIG Fund’s validation and evaluation.
+                            </li>
+                            <li>Fixed pricing period is how long you want to lock-in your chosen rate.</li>
+                            <li>Terms and conditions apply.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="weather.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
