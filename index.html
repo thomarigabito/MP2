@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata Section -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="./Assets/finalLogo.png" />
+
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet" />
@@ -16,22 +22,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Whisper&display=swap" rel="stylesheet" />
 
+    <!-- Title -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="buttons.css" />
     <title>BBR</title>
   </head>
   <body>
+    <!-- Header Section -->
     <header class="p-3 ps-5 pe-5">
       <div class="container-fluid">
+        <!-- Navbar -->
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
             <img src="./Assets/finalLogo.png" alt="" width="50" height="42" />
           </a>
 
+          <!-- Navigation Links -->
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li><a href="index.html" class="nav-link px-2 text-secondary">Home</a></li>
             <li><a href="model.html" class="nav-link px-2 text-white">Features</a></li>
           </ul>
+
+          <!-- Sign-up Button -->
           <div class="text-end">
             <a href="loginpage.html"><button class="bn13">Sign-up</button></a>
           </div>
@@ -39,11 +51,15 @@
       </div>
     </header>
 
+    <!-- Main Content Section -->
     <div class="container-fluid col-sm-12 col-md-10 col-lg-10 d-flex justify-content-center h-75 mt-2 pt-5">
       <div class="row col-12 flex-lg-row-reverse main_computation">
+        <!-- Image Section -->
         <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
           <img class="col-10" src="./Assets/finalLogo.png" alt="" />
         </div>
+
+        <!-- Computation Box Section -->
         <div class="col-sm-12 col-lg-6 d-flex justify-content-center align-items-center">
           <div class="computaion-box" id="computaion-box">
             <div class="computationfrm text-white p-3">
@@ -117,6 +133,8 @@
                   </select>
                 </div>
                 <div>
+
+                  <!-- Compute Button -->
                   <button type="button" class="bn632-hover bn25" onclick="myComputation()" data-bs-toggle="collapse" data-bs-target="#computation">
                     Compute
                   </button>
@@ -126,6 +144,7 @@
           </div>
         </div>
 
+        <!-- Computation Results Section -->
         <div class="collapse" id="computation">
           <div class="computation" id="computationBox">
             <div id="error" style="display: none">
@@ -170,6 +189,7 @@
               </div>
             </div>
 
+            <!-- Reminder Section -->
             <div class="reminder" id="reminder">
               <h4>Please be reminded that:</h4>
               <ol>
@@ -183,6 +203,8 @@
         </div>
       </div>
     </div>
+
+    <!-- JavaScript Files -->
     <script src="index.js"></script>
     <script src="weather.js"></script>
     <script
