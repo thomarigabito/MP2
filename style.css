@@ -1,5 +1,7 @@
+/* Font Import */
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
+/* Body Styling */
 body {
   background-image: url("./Assets/RealEstateInterior1.jpg");
   background-size: cover;
@@ -13,16 +15,19 @@ body {
   font-weight: bolder;
 }
 
+/* Header Styling */
 header {
   background-color: rgb(108, 149, 167);
 }
+
+/* Computation Box Styling */
 .computaion-box {
   backdrop-filter: brightness(0.8) blur(10px);
   border-radius: 10px;
   text-transform: uppercase;
 }
 
-/*------------- Computation Output ----------------*/
+/*------------- Computation Output Styling----------------*/
 .collapse {
   width: 100%;
   display: flex;
@@ -64,6 +69,7 @@ h4 {
   font-weight: bolder;
 }
 
+/* Reminder Styling */
 .reminder {
   flex-basis: 50%;
   padding: 0.5rem;
@@ -83,19 +89,26 @@ h4 {
   color: #ffffff;
 }
 
+/* Button Styling */
 .bn25 {
   font-weight: 200;
   font-size: 18px;
 }
+
+/* Label Styling */
 label {
   font-size: 14px;
   font-weight: bold;
 }
+
+/* Input Styling */
 input {
   line-height: 16px;
   font-weight: bold;
   color: #333;
 }
+
+/* Responsive Design */
 @media only screen and (max-width: 320px) {
   .container-fluid {
     margin: 0;

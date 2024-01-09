@@ -1,3 +1,4 @@
+// Array of products
 const product = [
   {
     id: 0,
@@ -100,6 +101,7 @@ const product = [
   },
 ];
 
+// Array of categories (using Set to get unique items based on title)
 const categories = [
   ...new Set(
     product.map((item) => {
@@ -108,6 +110,7 @@ const categories = [
   ),
 ];
 
+// Event listener for the search bar
 document.getElementById("searchBar").addEventListener("keyup", (e) => {
   const searchData = e.target.value.toLowerCase();
   const filteredData = categories.filter((item) => {
@@ -115,6 +118,8 @@ document.getElementById("searchBar").addEventListener("keyup", (e) => {
   });
   displayItem(filteredData);
 });
+
+// Event listener for the price bar
 document.getElementById("priceBar").addEventListener("keyup", (e) => {
   const searchData = e.target.value.toLowerCase();
   const filteredData = categories.filter((item) => {
@@ -123,6 +128,7 @@ document.getElementById("priceBar").addEventListener("keyup", (e) => {
   displayItem(filteredData);
 });
 
+// Function to display items based on filtered data
 const displayItem = (items) => {
   document.getElementById("root").innerHTML = items
     .map((item) => {
@@ -144,28 +150,38 @@ const displayItem = (items) => {
     })
     .join("");
 };
+
+// Initial display of all categories
 displayItem(categories);
 
-//Feedback/Comment Section
 
-// Initialize postsData array
+//Feedback Section- Arrays used= "postsData" and the "replies" property 
+      //*(For fundamental data structure in programming that allows you to store and manipulate collections of data.)*
+
+// Initialize postsData array to store posts and replies
 let postsData = [];
 
 // Function to publish a post
 function publishPost() {
+  // Get input values from the form
   let postText = document.getElementById('postText').value;
   let authorName = document.getElementById('authorName').value || 'Anonymous';
+  // Create a new post object
   let newPost = {
     text: postText,
     author: authorName,
-    replies: [],
+    replies: [], // Reply array to store replies for the post
     likes: 0,
     loves: 0,
     unlikes: 0
   };
 
+  // Add the new post to the postsData array
   postsData.push(newPost);
+  // Save postsData to local storage, Convert postsData array to a JSON string and store it in local storage
+      //*(JSON.stringify() is used to serialize a JavaScript object (or value) into a string representation that can be easily stored, transmitted, or shared.)*
   localStorage.setItem('postsData', JSON.stringify(postsData));
+  // Show updated posts
   showPosts();
 
   // Clear the text area and author name after publishing
@@ -175,37 +191,52 @@ function publishPost() {
 
 // Function to show posts
 function showPosts() {
+  // Retrieve stored postsData from local storage or initialize an empty array
   let storedPosts = JSON.parse(localStorage.getItem('postsData')) || [];
   let postsSection = $('#postsSection');
   postsSection.empty(); // Clear existing posts
 
+  // Loop through each stored post and render it
   storedPosts.forEach(function (post, index) {
     let postHtml = `
-      <div class="commentoutput">
+      <div class="col-sm-12">
         <p class="author-name">${post.author}: ${post.text}</p>
-        <button type="button" class="btn" onclick="toggleLike(${index})">
-          <span class="glyphicon glyphicon-thumbs-up"></span>
+
+        <!-- Like button and count -->
+        <button type="button" class="btn btn-primary" onclick="toggleLike(${index})">
+          <span class="glyphicon glyphicon-thumbs-up"></span> Like
         </button>
         <span id="likesCount${index}" class="like-icon">${post.likes || 0}</span>
-        <button type="button" class="btn" onclick="toggleLove(${index})">
-          <span class="glyphicon glyphicon-heart"></span>
+
+        <!-- Love button and count -->
+        <button type="button" class="btn btn-danger" onclick="toggleLove(${index})">
+          <span class="glyphicon glyphicon-heart"></span> Love
         </button>
         <span id="lovesCount${index}" class="love-icon">${post.loves || 0}</span>
-        <button type="button" class="btn" onclick="toggleUnlike(${index})">
-          <span class="glyphicon glyphicon-thumbs-down"></span>
+        
+        <!-- Unlike button and count -->
+        <button type="button" class="btn btn-warning" onclick="toggleUnlike(${index})">
+          <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
         </button>
         <span id="unlikesCount${index}" class="unlike-icon">${post.unlikes || 0}</span>
-        <br>
+        <br />
+
+        <!-- Textarea for replying to the post -->
         <textarea id="replyText${index}" rows="2" placeholder="Write a reply"></textarea>
-        <button type="button" class="btn btn-info replybtn" onclick="replyToPost(${index})">Reply</button>
-        <br>
+        <button type="button" class="btn btn-info" onclick="replyToPost(${index})">Reply</button>
+        <br />
+
+        <!-- Container for displaying replies -->
         <div id="repliesSection${index}">
           <!-- Replies will be dynamically added here -->
+
         </div>
       </div>
     `;
 
     postsSection.append(postHtml);
+
+
     renderReplies(index);
   });
 
@@ -213,23 +244,31 @@ function showPosts() {
   $('#postCount').text(storedPosts.length);
 }
 
+
 // Function to render replies for a post
 function renderReplies(postIndex) {
   let repliesSection = $('#repliesSection' + postIndex);
   repliesSection.empty(); // Clear existing replies
 
+  // Loop through each reply for the current post and render it
   postsData[postIndex].replies.forEach(function (reply, replyIndex) {
     let replyHtml = `
       <div class="col-sm-12">
         <p class="author-name">${reply.author}: ${reply.text}</p>
+
+        <!-- Like button and count for reply -->
         <button type="button" class="btn btn-primary" onclick="toggleLike(${postIndex}, ${replyIndex})">
           <span class="glyphicon glyphicon-thumbs-up"></span> Like
         </button>
         <span id="likesCount${postIndex}-${replyIndex}" class="like-icon">${reply.likes || 0}</span>
+
+        <!-- Love button and count for reply -->
         <button type="button" class="btn btn-danger" onclick="toggleLove(${postIndex}, ${replyIndex})">
           <span class="glyphicon glyphicon-heart"></span> Love
         </button>
         <span id="lovesCount${postIndex}-${replyIndex}" class="love-icon">${reply.loves || 0}</span>
+
+        <!-- Unlike button and count for reply -->
         <button type="button" class="btn btn-warning" onclick="toggleUnlike(${postIndex}, ${replyIndex})">
           <span class="glyphicon glyphicon-thumbs-down"></span> Unlike
         </button>
@@ -243,8 +282,11 @@ function renderReplies(postIndex) {
 
 // Function to reply to a post
 function replyToPost(postIndex) {
+  // Get reply text and author name from the form
   let replyText = document.getElementById('replyText' + postIndex).value;
   let authorName = document.getElementById('authorName').value || 'Anonymous'; // Changed from 'authorName' + postIndex to 'authorName'
+
+  // Create a new reply object
   let newReply = {
     text: replyText,
     author: authorName,
@@ -253,8 +295,13 @@ function replyToPost(postIndex) {
     unlikes: 0
   };
 
+  // Add the new reply to the replies array of the current post
   postsData[postIndex].replies.push(newReply);
+
+  // Render updated replies for the current post
   renderReplies(postIndex);
+
+  // Save postsData to local storage
   localStorage.setItem('postsData', JSON.stringify(postsData));
 
   // Clear the reply text area and author name after replying
